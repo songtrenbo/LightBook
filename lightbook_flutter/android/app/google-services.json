@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "678882744772",
+    "project_id": "theta-strata-313406",
+    "storage_bucket": "theta-strata-313406.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:678882744772:android:e9a1e5ec20ef07b4226c91",
+        "android_client_info": {
+          "package_name": "com.example.lightbook_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "678882744772-8a1ro5uqnnqs31vipqp3o00t5iqnl8qe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD47GBOo48vuFudtisQR4x7hrGG4k20ExI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "678882744772-8a1ro5uqnnqs31vipqp3o00t5iqnl8qe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
