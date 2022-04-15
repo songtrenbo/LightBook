@@ -80,10 +80,11 @@ class _SignInFormState extends State<SignInForm> {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           TextFieldInput(
-                              textEditingController: _emailController,
-                              hintText: 'Mời nhập Email',
-                              textInputType: TextInputType.text,
-                              icon: Icons.email),
+                            textEditingController: _emailController,
+                            hintText: 'Mời nhập Email',
+                            textInputType: TextInputType.text,
+                            icon: Icons.email,
+                          ),
                           SizedBox(
                             height: 25,
                           ),

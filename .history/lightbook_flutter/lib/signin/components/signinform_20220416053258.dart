@@ -3,8 +3,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:lightbook_flutter/homepage/homepage.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:lightbook_flutter/signup/components/signupform.dart';
-import 'package:lightbook_flutter/signup/signuppage.dart';
 import 'package:lightbook_flutter/widgets/text_field_input.dart';
 
 import '../../resources/auth_methods.dart';
@@ -80,10 +78,11 @@ class _SignInFormState extends State<SignInForm> {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           TextFieldInput(
-                              textEditingController: _emailController,
-                              hintText: 'Mời nhập Email',
-                              textInputType: TextInputType.text,
-                              icon: Icons.email),
+                            textEditingController: _emailController,
+                            hintText: 'Mời nhập Email',
+                            textInputType: TextInputType.text,
+                            icon: Icons.phone,
+                          ),
                           SizedBox(
                             height: 25,
                           ),
@@ -97,6 +96,7 @@ class _SignInFormState extends State<SignInForm> {
                           SizedBox(
                             height: 25,
                           ),
+                          
                           SizedBox(
                               height: 50,
                               width: MediaQuery.of(context).size.width,
@@ -128,38 +128,6 @@ class _SignInFormState extends State<SignInForm> {
                               )),
                           SizedBox(
                             height: 5,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Container(
-                                child: const Text(
-                                  'Bạn chưa có tài khoản?',
-                                  style: TextStyle(color: Colors.white),
-                                ),
-                                padding:
-                                    const EdgeInsets.symmetric(vertical: 8),
-                              ),
-                              GestureDetector(
-                                onTap: () => Navigator.of(context).push(
-                                  MaterialPageRoute(
-                                    builder: (context) {
-                                      return SignUpPage();
-                                    },
-                                  ),
-                                ),
-                                child: Container(
-                                  child: const Text(
-                                    ' Đăng ký ngay.',
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.white),
-                                  ),
-                                  padding:
-                                      const EdgeInsets.symmetric(vertical: 8),
-                                ),
-                              ),
-                            ],
                           ),
                         ],
                       ),

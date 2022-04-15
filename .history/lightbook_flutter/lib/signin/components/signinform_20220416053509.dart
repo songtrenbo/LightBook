@@ -4,7 +4,6 @@ import 'package:flutter/services.dart';
 import 'package:lightbook_flutter/homepage/homepage.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:lightbook_flutter/signup/components/signupform.dart';
-import 'package:lightbook_flutter/signup/signuppage.dart';
 import 'package:lightbook_flutter/widgets/text_field_input.dart';
 
 import '../../resources/auth_methods.dart';
@@ -80,10 +79,11 @@ class _SignInFormState extends State<SignInForm> {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           TextFieldInput(
-                              textEditingController: _emailController,
-                              hintText: 'Mời nhập Email',
-                              textInputType: TextInputType.text,
-                              icon: Icons.email),
+                            textEditingController: _emailController,
+                            hintText: 'Mời nhập Email',
+                            textInputType: TextInputType.text,
+                            icon: Icons.phone,
+                          ),
                           SizedBox(
                             height: 25,
                           ),
@@ -134,7 +134,7 @@ class _SignInFormState extends State<SignInForm> {
                             children: [
                               Container(
                                 child: const Text(
-                                  'Bạn chưa có tài khoản?',
+                                  'Dont have an account?',
                                   style: TextStyle(color: Colors.white),
                                 ),
                                 padding:
@@ -143,14 +143,12 @@ class _SignInFormState extends State<SignInForm> {
                               GestureDetector(
                                 onTap: () => Navigator.of(context).push(
                                   MaterialPageRoute(
-                                    builder: (context) {
-                                      return SignUpPage();
-                                    },
+                                    builder: (context) { SignUpForm()},
                                   ),
                                 ),
                                 child: Container(
                                   child: const Text(
-                                    ' Đăng ký ngay.',
+                                    ' Signup.',
                                     style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                         color: Colors.white),

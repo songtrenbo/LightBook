@@ -3,8 +3,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:lightbook_flutter/homepage/homepage.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:lightbook_flutter/signup/components/signupform.dart';
-import 'package:lightbook_flutter/signup/signuppage.dart';
 import 'package:lightbook_flutter/widgets/text_field_input.dart';
 
 import '../../resources/auth_methods.dart';
@@ -80,10 +78,11 @@ class _SignInFormState extends State<SignInForm> {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           TextFieldInput(
-                              textEditingController: _emailController,
-                              hintText: 'Mời nhập Email',
-                              textInputType: TextInputType.text,
-                              icon: Icons.email),
+                            textEditingController: _emailController,
+                            hintText: 'Mời nhập Email',
+                            textInputType: TextInputType.text,
+                            icon: Icons.phone,
+                          ),
                           SizedBox(
                             height: 25,
                           ),
@@ -129,37 +128,37 @@ class _SignInFormState extends State<SignInForm> {
                           SizedBox(
                             height: 5,
                           ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Container(
-                                child: const Text(
-                                  'Bạn chưa có tài khoản?',
-                                  style: TextStyle(color: Colors.white),
-                                ),
-                                padding:
-                                    const EdgeInsets.symmetric(vertical: 8),
-                              ),
-                              GestureDetector(
-                                onTap: () => Navigator.of(context).push(
-                                  MaterialPageRoute(
-                                    builder: (context) {
-                                      return SignUpPage();
-                                    },
-                                  ),
-                                ),
+                          SizedBox(
+                              height: 50,
+                              width: MediaQuery.of(context).size.width,
+                              child: InkWell(
+                                onTap: loginUser,
                                 child: Container(
-                                  child: const Text(
-                                    ' Đăng ký ngay.',
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.white),
-                                  ),
+                                  child: !_isLoading
+                                      ? const Text(
+                                          'Đăng Nhập',
+                                          style: TextStyle(
+                                              fontSize: 18,
+                                              color: Colors.white),
+                                        )
+                                      : const CircularProgressIndicator(
+                                          color: Colors.white,
+                                        ),
+                                  width: double.infinity,
+                                  alignment: Alignment.center,
                                   padding:
-                                      const EdgeInsets.symmetric(vertical: 8),
+                                      const EdgeInsets.symmetric(vertical: 12),
+                                  decoration: const ShapeDecoration(
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.all(
+                                          Radius.circular(10.0),
+                                        ),
+                                      ),
+                                      color: Color(0xFF353535)),
                                 ),
-                              ),
-                            ],
+                              )),
+                          SizedBox(
+                            height: 5,
                           ),
                         ],
                       ),
