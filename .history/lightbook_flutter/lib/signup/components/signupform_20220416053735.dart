@@ -1,27 +1,32 @@
+import 'dart:typed_data';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:lightbook_flutter/homepage/homepage.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:lightbook_flutter/signup/components/signupform.dart';
-import 'package:lightbook_flutter/signup/signuppage.dart';
+import 'package:lightbook_flutter/resources/auth_methods.dart';
+import 'package:lightbook_flutter/signin/signinpage.dart';
 import 'package:lightbook_flutter/widgets/text_field_input.dart';
+import 'package:image_picker/image_picker.dart';
 
-import '../../resources/auth_methods.dart';
 import '../../utils/utils.dart';
 
-class SignInForm extends StatefulWidget {
+class SignUpForm extends StatefulWidget {
   @override
-  _SignInFormState createState() => _SignInFormState();
+  _SignUpFormState createState() => _SignUpFormState();
 }
 
-class _SignInFormState extends State<SignInForm> {
+class _SignUpFormState extends State<SignUpForm> {
   final _formKey = GlobalKey<FormState>();
   bool _value = false;
 
   var prefs;
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _confirmPasswordController =
+      TextEditingController();
+  final TextEditingController _nameController = TextEditingController();
   bool _isLoading = false;
 
   @override
@@ -29,27 +34,38 @@ class _SignInFormState extends State<SignInForm> {
     super.dispose();
     _emailController.dispose();
     _passwordController.dispose();
+    _confirmPasswordController.dispose();
+    _nameController.dispose();
   }
 
-  void loginUser() async {
+  void signUpUser() async {
+    //set loading to true
     setState(() {
       _isLoading = true;
     });
-    String res = await AuthMethods().loginUser(
-        email: _emailController.text, password: _passwordController.text);
-    if (res == 'success') {
+    // signup user using auth method
+    String res = await AuthMethods().signUpUser(
+        email: _emailController.text,
+        password: _passwordController.text,
+        confirmPassword: _confirmPasswordController.text,
+        name: _nameController.text);
+
+    // if string returned is sucess, user has been created
+    if (res == "success") {
       setState(() {
         _isLoading = false;
       });
+      // navigate to the home screen
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(builder: (context) {
-          return HomePage();
+          return SignInPage();
         }),
       );
     } else {
       setState(() {
         _isLoading = false;
       });
+      // show the error
       showSnackBar(context, res);
     }
   }
@@ -80,10 +96,20 @@ class _SignInFormState extends State<SignInForm> {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           TextFieldInput(
-                              textEditingController: _emailController,
-                              hintText: 'Mời nhập Email',
-                              textInputType: TextInputType.text,
-                              icon: Icons.email),
+                            textEditingController: _nameController,
+                            hintText: 'Mời nhập tên',
+                            textInputType: TextInputType.text,
+                            icon: Icons.perm_contact_cal,
+                          ),
+                          SizedBox(
+                            height: 25,
+                          ),
+                          TextFieldInput(
+                            textEditingController: _emailController,
+                            hintText: 'Mời nhập Email',
+                            textInputType: TextInputType.text,
+                            icon: Icons.email,
+                          ),
                           SizedBox(
                             height: 25,
                           ),
@@ -97,15 +123,25 @@ class _SignInFormState extends State<SignInForm> {
                           SizedBox(
                             height: 25,
                           ),
+                          TextFieldInput(
+                            textEditingController: _confirmPasswordController,
+                            hintText: 'Mời nhập lại mật khẩu',
+                            textInputType: TextInputType.text,
+                            icon: Icons.lock,
+                            isPass: true,
+                          ),
+                          SizedBox(
+                            height: 25,
+                          ),
                           SizedBox(
                               height: 50,
                               width: MediaQuery.of(context).size.width,
                               child: InkWell(
-                                onTap: loginUser,
+                                onTap: signUpUser,
                                 child: Container(
                                   child: !_isLoading
                                       ? const Text(
-                                          'Đăng Nhập',
+                                          'Đăng ký',
                                           style: TextStyle(
                                               fontSize: 18,
                                               color: Colors.white),
@@ -144,13 +180,13 @@ class _SignInFormState extends State<SignInForm> {
                                 onTap: () => Navigator.of(context).push(
                                   MaterialPageRoute(
                                     builder: (context) {
-                                      return SignUpPage();
+                                      return SignInPage();
                                     },
                                   ),
                                 ),
                                 child: Container(
                                   child: const Text(
-                                    ' Đăng ký ngay.',
+                                    ' Đăng  ngay.',
                                     style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                         color: Colors.white),

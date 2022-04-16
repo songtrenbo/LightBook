@@ -80,10 +80,11 @@ class _SignInFormState extends State<SignInForm> {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           TextFieldInput(
-                              textEditingController: _emailController,
-                              hintText: 'Mời nhập Email',
-                              textInputType: TextInputType.text,
-                              icon: Icons.email),
+                            textEditingController: _emailController,
+                            hintText: 'Mời nhập Email',
+                            textInputType: TextInputType.text,
+                            icon: Icons.phone,
+                          ),
                           SizedBox(
                             height: 25,
                           ),
@@ -150,7 +151,7 @@ class _SignInFormState extends State<SignInForm> {
                                 ),
                                 child: Container(
                                   child: const Text(
-                                    ' Đăng ký ngay.',
+                                    ' Signup.',
                                     style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                         color: Colors.white),

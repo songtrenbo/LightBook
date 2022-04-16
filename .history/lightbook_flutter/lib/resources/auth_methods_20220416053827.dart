@@ -59,7 +59,7 @@ class AuthMethods {
         );
         res = "success";
       } else {
-        res = "Mời nhập email và mật khẩu";
+        res = "Please enter all the fields";
       }
     } catch (err) {
       return err.toString();
