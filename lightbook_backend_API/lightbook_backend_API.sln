@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lightbook_backend_API", "lightbook_backend_API\lightbook_backend_API.csproj", "{F7B74A14-000B-4AC0-B511-B2E2E0AA5CDF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lightbook_shared", "lightbook_shared\lightbook_shared.csproj", "{CD912685-8E22-4126-A55D-B33629247D2F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F7B74A14-000B-4AC0-B511-B2E2E0AA5CDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7B74A14-000B-4AC0-B511-B2E2E0AA5CDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7B74A14-000B-4AC0-B511-B2E2E0AA5CDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD912685-8E22-4126-A55D-B33629247D2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD912685-8E22-4126-A55D-B33629247D2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD912685-8E22-4126-A55D-B33629247D2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD912685-8E22-4126-A55D-B33629247D2F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
