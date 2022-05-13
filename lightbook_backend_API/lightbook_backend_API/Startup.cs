@@ -1,3 +1,7 @@
+using AutoMapper;
+using lightbook_backend_API.Data;
+using lightbook_backend_API.Data.Mapping;
+using lightbook_backend_API.Interfaces;
 using lightbook_backend_API.Model;
 using lightbook_backend_API.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -33,7 +37,7 @@ namespace lightbook_backend_API
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddControllers().AddNewtonsoftJson(opt => opt.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore); ;
+            services.AddControllers().AddNewtonsoftJson(opt => opt.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore); 
             //services.AddSwaggerGen(c =>
             //{
             //    c.SwaggerDoc("v1", new OpenApiInfo { Title = "lightbook_backend_API", Version = "v1" });
@@ -82,9 +86,15 @@ namespace lightbook_backend_API
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Jwt:SymmetricKey"]))
                 };
             });
+            
 
             services.AddAuthorization();
+            services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IBookService, BookService>();
+
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());  
+
             services.AddCors(options =>
             {
                 options.AddPolicy("AllowOrigins",
@@ -114,6 +124,8 @@ namespace lightbook_backend_API
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
+
+            
 
             app.UseEndpoints(endpoints =>
             {

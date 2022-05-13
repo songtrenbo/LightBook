@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace lightbook_backend_API.Model
 {
-    [Table("Authors")]
-    public class Author
+    [Table("Roles")]
+    public class Role
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
@@ -16,6 +16,7 @@ namespace lightbook_backend_API.Model
         [MaxLength(100)]
         [Required]
         public string Name { get; set; }
-        public List<AuthorBook> AuthorBooks { get; set; }
+        public List<User> Users { get; set; }
+
     }
 }

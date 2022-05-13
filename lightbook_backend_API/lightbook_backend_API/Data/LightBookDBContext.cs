@@ -1,10 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using lightbook_backend_API.Model;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace lightbook_backend_API.Model
+namespace lightbook_backend_API.Data
 {
     public class LightBookDBContext: DbContext
     {
@@ -24,6 +25,11 @@ namespace lightbook_backend_API.Model
         public DbSet<Comment> Comments { get; set; }
         public DbSet<Favorite> Favorites { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<Role> Roles {get;set;}
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

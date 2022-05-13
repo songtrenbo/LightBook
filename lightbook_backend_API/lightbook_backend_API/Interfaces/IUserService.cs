@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace lightbook_backend_API.Services
+namespace lightbook_backend_API.Interfaces
 {
     public interface IUserService
     {
