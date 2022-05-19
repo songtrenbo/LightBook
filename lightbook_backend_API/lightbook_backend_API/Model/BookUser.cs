@@ -16,8 +16,6 @@ namespace lightbook_backend_API.Model
         public int ID { get; set; }
         [Required]
         public string Content { get; set; }
-        [DefaultValue(0)]
-        public Nullable<int> Pages { get; set; }
         public Nullable<System.DateTime> LastRead { get; set; }
         [DefaultValue(false)]
         public Nullable<bool> IsFinished { get; set; }
@@ -28,6 +26,7 @@ namespace lightbook_backend_API.Model
         [Required]
         [ForeignKey("Book")]
         public int BookID { get; set; }
+        public int Chapter { get; set; }
         public Book Book { get; set; }
         
     }

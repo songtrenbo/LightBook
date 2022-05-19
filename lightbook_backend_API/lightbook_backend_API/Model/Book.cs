@@ -22,7 +22,7 @@ namespace lightbook_backend_API.Model
         [Required]
         public string Review { get; set; }
         [DefaultValue(0)]
-        public Nullable<int> Pages { get; set; }
+        public Nullable<double> RatePoint { get; set; }
         [Required]
         [MaxLength(500)]
         public string Picture { get; set; }

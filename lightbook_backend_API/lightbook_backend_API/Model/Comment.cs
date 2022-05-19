@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel;
 
 namespace lightbook_backend_API.Model
 {
@@ -22,5 +23,8 @@ namespace lightbook_backend_API.Model
         [ForeignKey("Book")]
         public int BookID { get; set; }
         public Book Book { get; set; }
+        [DefaultValue(0)]
+        public Nullable<double> RatePoint { get; set; }
+        public DateTime DateComment { get; set; }
     }
 }
