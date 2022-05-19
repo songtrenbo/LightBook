@@ -52,6 +52,7 @@ namespace lightbook_backend_API.Services
                 PhoneNumber = model.PhoneNumber,
                 Name = model.Name,
                 Password = hasher.HashPassword(null, model.Password),
+                RoleID = 2,
                 Avatar = "https://banner2.cleanpng.com/20180402/ojw/kisspng-united-states-avatar-organization-information-user-avatar-5ac20804a62b58.8673620215226654766806.jpg"
             };
             var result = await _lightBookDBContext.Users.AddAsync(user);

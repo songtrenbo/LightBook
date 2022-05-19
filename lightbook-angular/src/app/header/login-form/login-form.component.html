@@ -1,0 +1,29 @@
+<div class="section full-height">
+    <input class="modal-btn" type="checkbox" id="modal-btn" name="modal-btn" />
+    <label for="modal-btn">Login</label>
+    <div class="modal">
+        <div class="modal-wrap">
+            <div class="login-box">
+                <h2>Login</h2>
+                <form>
+                    <div class="user-box">
+                        <input type="text" required [(ngModel)]="user.userName" name="userName">
+                        <label>Username</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="password" required [(ngModel)]="user.password" name="password">
+                        <label>Password</label>
+                    </div>
+                    <a class="button-login d-flex justify-content-center" (click)="login()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Login
+                    </a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>

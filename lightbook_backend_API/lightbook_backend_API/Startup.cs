@@ -100,7 +100,7 @@ namespace lightbook_backend_API
                 options.AddPolicy("AllowOrigins",
                     builder =>
                     {
-                        builder.WithOrigins("http://localhost:4000")
+                        builder.WithOrigins("http://localhost:4200")
                             .AllowAnyHeader()
                             .AllowAnyMethod();
                     });

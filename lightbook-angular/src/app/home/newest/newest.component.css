@@ -1,0 +1,55 @@
+*{
+    z-index: 1;
+}
+.carousel-item{
+    transition: all 0.7s ease 0s;
+}
+.card {
+    width: 95%;
+    height: 280px;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.card__image {
+    width: 100%;
+    height: auto;
+}
+
+.card__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: black;
+    transform: translateY(100%);
+    transition: .2s ease-in-out;
+    opacity: 0.7;
+}
+
+.card:hover .card__overlay {
+    transform: translateY(0);
+}
+
+.card__header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Black_flag.svg/2560px-Black_flag.svg.png");
+    transform: translateY(-100%);
+    transition: .2s ease-in-out;
+    backdrop-filter: blur(2px);
+}
+
+
+.card:hover .card__header {
+    transform: translateY(0);
+}
+
+.price{
+    color: rgb(15, 252, 15);
+    font-weight: normal;
+}
+
+
