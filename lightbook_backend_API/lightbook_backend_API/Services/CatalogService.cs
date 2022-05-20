@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using AutoMapper;
-using lightbook_backend_API.Extentions;
+using lightbook_backend_API.Extensions;
 using lightbook_backend_API.Interfaces;
 using lightbook_backend_API.Model;
 using lightbook_shared;
@@ -49,8 +49,14 @@ namespace lightbook_backend_API.Services
         {
             if (!String.IsNullOrEmpty(catalogQueryCriteria.Search))
             {                
-                catalogQuery = catalogQuery.Where(b => b.Name.Contains(catalogQueryCriteria.Search));
-                
+                string searchStr = UnSignExtension.ConvertToUnSign(catalogQueryCriteria.Search).ToLower();
+                catalogQuery = catalogQuery.Where(delegate (Catalog c)
+                {
+                    if (UnSignExtension.ConvertToUnSign(c.Name).IndexOf(searchStr, StringComparison.CurrentCultureIgnoreCase) >= 0)
+                        return true;
+                    else
+                        return false;
+                }).AsQueryable();
             }
             if (catalogQueryCriteria.Id != null)
             {

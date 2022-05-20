@@ -199,7 +199,7 @@ values(
 	N'Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "1", 
@@ -228,7 +228,7 @@ values(
 	N'Thuở xa xưa, Thần Tộc ở vùng đất Đại Vân Đình xinh đẹp phải cách ly khỏi Vùng Đất Mới - nơi sinh ra Nhân Tộc - sau khi chiến thắng cuộc Đại Phân Tranh lần thứ hai. Thần Nhân được truyền dạy rằng vì Nhân Tộc muốn chiến thắng Thần Tộc nên đã tạo ra một Lời Nguyền Huyền Lực để chuyển sinh Độc Tôn Đại Đế mang trong người sức mạnh từ Năng Lượng Tối. Độc Tôn Đại Đế có sứ mệnh mở ra cuộc Đại Phân Tranah một lần nữa nhầm thôn tính Đại Vân Đình và cướp đi cây Trường Sinh - cung cấp Năng Lượng Sáng giúp Thần Tộc mạnh mẽ từ thuở khai nguyên. Để ngăn chặn điều đó xảy ra, Thần Tộc đã lập nên một Lời Nguyền Thần Lực để chuyển sinh Vệ Nữ. Vệ Nữ mang sứ mệnh tìm ra Đại Đế thông qua Ấn Ký, từ đó Bát Thần Bộ - tập hợp tám Thần Nhân mạnh mẽ nhất - sẽ loại trừ Lời Nguyền Huyền Lực mãi mãi.\nThời gian trôi qua, mọi chuyện đã lùi dần vào quá khứ xa xôi. Vùng Đất Mới đã bị Nhân Tộc chia cắt thành những quốc gia riêng biệt và đắm chìm trong những cuộc chiến tranh, càng không còn ký ức về sự tồn tại của Thần Tộc. Thần Tộc vẫn sống yên bình phía sau dãy Thiên Cổ Vân Sơn nhưng luôn luôn cảnh giác với mối nguy ở đất Nhân Tộc.\nCả hai lời nguyền đã không bao giờ thức tỉnh, cho đến mùa đông của một vạn năm sau...',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/f3dfff9c-1661-4a27-91ea-bef79d0a0643.jpeg?itok=S-G1BR6f',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "1-1", 
@@ -267,7 +267,7 @@ values(
 	N'Truyện Cho tôi xin một vé đi tuổi thơ là sáng tác mới nhất của nhà văn Nguyễn Nhật Ánh. Nhà văn mời người đọc lên chuyến tàu quay ngược trở lại thăm tuổi thơ và tình bạn dễ thương của 4 bạn nhỏ. Những trò chơi dễ thương thời bé, tính cách thật thà, thẳng thắn một cách thông minh và dại dột, những ước mơ tự do trong lòng… khiến cuốn sách có thể làm các bậc phụ huynh lo lắng rồi thở phào. Không chỉ thích hợp với người đọc trẻ, cuốn sách còn có thể hấp dẫn và thực sự có ích cho người lớn trong quan hệ với con mình.',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/cho-toi-mot-ve-di-tuoi-tho.jpg?itok=0RW_HSAW',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "1", 
@@ -296,7 +296,7 @@ values(
 	N'Đọc Kính Vạn Hoa, tôi cảm ơn Nguyễn Nhật Ánh đã dày công phản ánh những sinh hoạt muôn mặt của lứa tuổi học trò. Từ cách học với các thủ thuật “phổ thơ” để ghi nhớ thuộc lòng các công thức Toán, Lý, Hóa, Anh văn… đến lối làm thơ, kể vè, dựng hoạt cảnh để học tập các môn Văn, Sử. Từ trò chơi bóng đá, thi giải câu đố… ở sân trường đến những chuyến đi nghỉ hè khám phá các vùng xa. Từ việc tìm hiểu (và yêu mến) những người thân trong gia đình, thầy cô giáo đến việc làm quen với những bà con lao động đủ các nghề nghiệp: bán hàng rong, hốt rác, diễn thế thân (cascadeur), đạo diễn điện ảnh, nghệ sĩ ngôi sao, cầu thủ siêu hạng… Một độc giả - Võ Hồng Quân lớp 10C3, PTTH chuyên Hà Nam đã đưa Kính Vạn Hoa vào “Kho vàng kiến thức”, tôi muốn gọi Kính Vạn Hoa là một bộ “Tiểu bách khoa cho thiếu nhi”. (Nhà văn Văn Hồng - Nguyên Tổng biên tập NXB Kim Đồng)',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/kinh-van-hoa-nguyen-nhat-anh-1.jpg?itok=44DnJhil',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "1-1", 
@@ -340,7 +340,7 @@ values(
 	N'Một thế giới bí ẩn, một thế giới không bao giờ thuộc về bạn, một thế giới phiêu lưu đầy cam go bất ngờ nơi mà những mối quan hệ Tình yêu, Quyền lực và Thù hận đan xen!Hải Băng - một cô gái băng lãnh, khó hiểu. Một đôi mắt màu nâu khói trong veo. Một gương mặt thuần khiết và đầy hấp lực. Một trái tim mà nước mắt đã làm đóng thành băng, khiến người ta phải "Say! Ngay từ cái nhìn đầu tiên".',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/thien-than-bong-toi.jpg?itok=sNr9ovuV',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "1", 
@@ -369,7 +369,7 @@ values(
 	N'Trong ngày toàn thắng vĩ đại 30 tháng 4 nǎm 1975 kết thúc quá trình phấn đấu lâu dài của dân tộc có phần hy sinh đóng góp thầm lặng của những chiến sĩ tình báo. Mặt trận mà họ chiến đấu hầu hết không nổ súng, lại là nơi thử thách nghiêm khắc nhất bộ thần kinh cùng các đòi hỏi cao lòng dũng cảm, trí thông minh, sự nhạy bén.\n\nVán bài lật ngửa phản ánh một trong vô số khía cạnh phong phú của cuộc đấu tranh giữa một thời điểm hết sức tế nhị của đất nước: sau hiệp định Genève. Câu chuyện có diễn biến nhanh, cách viết thông minh, lôi cuốn, lời thoại sắc sảo, Ván bài lật ngửa vừa tái hiện một cách sống động lịch sử, đồng thời mang lịch sử đến với người đọc một cách tinh tế, chân thực, gần gũi.\n\nVới Ván bài lật ngửa, nhà văn Nguyễn Trương Thiên Lý không chỉ mô tả lịch sử “chính thống” ở cái bề nổi của nó, mà đi sâu khám phá cuộc sống muôn vẻ, sinh động diễn tiến bên dưới, cho chúng ta một cái nhìn bao quát mà chi tiết về cuộc đấu tranh ngầm nhưng không kém phần gay go, quyết liệt, góp phần làm nên thắng lợi chung.',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/van-bai-lat-ngua-tap.jpg?itok=OT6KO68V',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "1", 
@@ -408,7 +408,7 @@ values(
 	N'Truyện lấy bối cảnh ở Nam Kỳ vào những năm đầu thế kỉ XX.\n\nĐơn giản chỉ là một câu chuyện, một mối tình. Mối tình ấy không lãng mạn bởi những phút giây đầu vụng dại và kết thúc bằng cuộc hôn nhân. Mối tình của hai nhân vật bắt đầu từ hôn nhân và kết thúc cho tới khi cả hai lìa bỏ cuộc đời.\n\nCó lẽ là quá viễn vông khi tác giả viết về một tình yêu vĩnh cửu. Nhưng nếu bạn nghĩ, trên đời không có gì là không thể... thì chuyện tồn tại thứ tình yêu vĩnh cửu, tại sao lại không?\nĐơn giản ở chỗ... chỉ cần mình gặp được đúng người, người có thể yêu mình bất chấp để mình có thể yêu người bất chấp.\nThuở ban đầu, anh vì yêu mà yêu, để cô vì được mà yêu. Để rồi, theo ngày tháng, anh vì yêu mà yêu, vì được yêu mà thêm yêu... và rồi... từ đó, cô trở thành kẻ yêu... chỉ vì... yêu.\nPhức tạp ở chỗ... điều đơn giản ấy như mặt trời giữa muôn vạn vì sao thôi!\n\nCó một số tình tiết 18+\n\nfacebook: @https://www.facebook.com/tacgiaThiNgocThuAn/\nĐây là nơi mình muốn mình bày tỏ cảm xúc với các nhân vật của truyện.(chưa có link ở đây, nó nằm ở phần bình luận với cái tên "Rũ bóng nghiêng chiều").',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/ijph823.jpg?itok=dvKVBrOe',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "1", 
@@ -437,7 +437,7 @@ values(
 	N'Mùa hè là khoảng thời gian mà học trò không còn lo lắng chuyện học hành và cũng là mùa để họ vui chơi giải trí. Mùa hè này, anh chàng Chương còm sẽ về quê ngoại để đổi gió và nghỉ ngơi sau chín tháng dài học hành căng thẳng với đầy nỗi âu lo. Nơi quê ngoại Chương sẽ làm gì và học hỏi được những gì? Xin mời các bạn cùng đón đọc Hạ Ðỏ để biết được toàn bộ nội dung câu chuyện này.',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/ha-do.jpg?itok=7gnzXJne',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "1", 
@@ -466,7 +466,7 @@ values(
 	N'Truyện dài lấy bối cảnh tại trường đại học Oxford - Anh xoay quanh mối tình của cô sinh viên Việt Nam và người trợ giảng Bồ Đào Nha, với một kết thúc có hậu.\n\n“Oxford thương yêu” lôi cuốn người dọc bằng những đoạn tả cảnh thiên nhiên tuyệt đẹp, những quan niệm sống cởi mở và hướng thiện của một lớp thanh niên trưởng thành trong giai đoạn đất nước được đổi mới.\n\nỞ nhiều đoạn, tác phẩm được khắc họa như một bức tranh lung linh màu sắc và sống động hiện thực.',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/oxford-thuong-yeu.jpg?itok=3K2uLCtX',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "1", 
@@ -495,7 +495,7 @@ values(
 	N'“Sai lầm của những đứa ế chồng là chuyên gia đi tụ tập với những đứa… ế chồng còn lại”.\n\n“Gái già xì-tin” là câu chuyện của một cô gái thú vị, là sự chờ đợi ngọt ngào và những diễn biến tình cảm rất đỗi dịu dàng nhưng vô cùng mãnh liệt. Đó là nơi mà giữa cuộc sống bộn bề này bạn tìm thấy được sự lạc quan yêu đời, những khoảng lặng bình yên giản dị mà thật nhiều ý nghĩa.\n\nHãy đừng nghĩ rằng tên truyện sẽ ngăn bạn khỏi danh sách những độc giả phù hợp. Có thể bạn không phải” gái già”, có thể bạn còn rất trẻ hay đã lớn hơn, là con gái hay là con trai, bạn đang sống trong những tình cảm ngọt lịm, hay đang gặp cách trở đắng cay, tôi tin rằng bạn đều tìm thấy một phần của mình trong câu chuyện ấy…',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/gai-gia-xi-tin.jpg?itok=6uvNwCpz',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "1", 
@@ -529,7 +529,7 @@ values(
 	N'Phan Tĩnh Yên: tốt nghiệp loại xuất sắc Học viện cảnh sát nhưng được biết đến nhiều hơn với cái danh con gái của Đại tá Phan Thanh Nguyên.\n\nKiến Nhất Đông: từng là cảnh sát tuyến một, sau chuyển về làm nghiên cứu.\n\nMột vụ án giết người liên hoàn xảy ra ở các thành phố lân cận, mô phỏng kẻ giết người Jack The Ripper, cách thức kì lạ, thủ đoạn tàn bạo và khả năng phản trinh sát cực kỳ cao, chuyên án “Học trò của Jack” lập ra và giao cho đội cảnh sát 1 Thành phố Đồng Vân chịu trách nhiệm chính, Đội trưởng Thanh với sự giới thiệu của một giáo sư tâm lý của học viện cảnh sát, tìm tới một cảnh sát đã từ lâu “không màn sự đời” nhờ hắn giúp đỡ.\n\nMột chuỗi các vụ án xảy ra đều có liên quan đến nhau, đồng thời liên quan đến cái chết ngày trước của Đại tá Phan Thanh Nguyên, kéo theo những hận thù, ân oán từ thế hệ trước…\n\nAi là kẻ đứng sau bức màn?\n\nĐan xen một chút là mối tình “cách biệt thế hệ” của chú cố vấn “làm cái gì cũng lo” và đứa nhỏ “làm cái gì cũng liều”',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/cover.jpg?itok=5p07730o',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "1", 
@@ -553,7 +553,7 @@ values(
 	N'Cảnh báo về nội dung: Đây là một câu chuyện hoàn toàn không có thật. Mọi tình tiết đều được hư cấu\nGiới thiệu truyện:\nTừ cái chết của một vị luật sư trẻ tuổi với hàng loạt các uẩn khúc. Một vụ án tưởng chừng không có một chút dấu vết làm đau đầu các điều tra viên lại dần dần được vén màn bởi một vị thám tử quái đản với sự giúp sức của một bác sĩ mắc chứng tâm thần phân liệt. Và rồi, trò chơi cúp bắt giữa tên sát nhân và họ cuối cùng sẽ dẫn tới đâu. Đằng sau sự thật đó rốt cuộc là những bí mật gì...',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/tro_choi_tu_than.jpg?itok=QX9v-Ty5',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "1-1", 
@@ -577,7 +577,7 @@ values(
 	N'“Những vụ án chưa được tìm ra cũng giống như những bài toán chưa có lời giải. Có những lúc lí giải tại sao còn khó hơn kết quả của nó rất nhiều”.\n\nThanh Lâm là đội trưởng đội điều tra của cục cảnh sát thành phố.\n\nTại nơi đây, rất nhiều vụ án rắc rối và phức tạp đã diễn ra.\n\nCùng với sự hỗ trợ của Hải Yến, vợ chưa cưới của anh, đồng thời cũng là một bác sĩ giải phẫu tử thi, những bức màn bí mật đó đều lần lượt được sáng tỏ.\n\nĐằng sau mỗi vụ án, người ta sẽ thấy có những cái bẫy mà hung thủ dàn dựng ra, lừa gạt nạn nhân và cũng để đánh lạc hướng điều tra của cảnh sát.\n\nTuy nhiên, tội ác không bao giờ lọt lưới trước pháp luật. Cho dù chúng có được dàn dựng tinh vi đến đâu cũng sẽ lần lượt bị phanh phui và đưa ra ánh sáng.\ntag',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/11224424_1658555811023896_8874237683850602413_n_1.jpg?itok=FFchwxpj',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "1", 
@@ -601,7 +601,7 @@ values(
 	N'Một nhóm học sinh nội trú kinh hoàng nhận ra ngôi trường của họ đang bị tấn công bởi một kẻ sát nhân bí ẩn. Trong khi từng người trong họ lần lượt bị sát hại, những kẻ còn sống sót cố truy tìm danh tính của kẻ thủ ác trước khi quá muộn. Liệu đó có phải là Kẹo Mật – một nữ sinh tâm thần từng gây ra một vụ thảm sát ở nơi này trong quá khứ. Hay đây thực chất là một âm mưu khéo léo của một kẻ nào đó trong số những học sinh ở đây?\n\n​Cảnh báo: Truyện được viết theo phong cách slasher nên sẽ có rất nhiều cảnh gái đẹp trai đẹp đi lang thang thơ thẩn một mình, sau đó thì la hét, rồi rượt đuổi, rồi té ngã, rồi bị đâm bị chém bằng đủ thứ vật dụng linh tinh và chết. Bạn đọc cân nhắc khi xem.',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/morning-glories_19.jpg?itok=csoHXz5b',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "1-1", 
@@ -625,7 +625,7 @@ values(
 	N'Có ai đã từng nghĩ những thứ đẹp đẽ, trong sáng như Mặt Trăng hay Ngôi Sao lại nhuốm đầy máu người dưới đêm khuya tĩnh lặng?!\nCó ai đã từng ngồi ngẩn ngơ mơ về một ngày mai tươi sáng, triển vọng của bản thân, ước mơ cao cả trong tương lai? Nếu có thì xin hãy cẩn thận, ước mơ như một nguồn suối ngon lành, ngọt ngất, có thể độc chết bạn đấy!\nCâu chuyện không quá rùng rợn, ma mị nhưng sẽ cố gắng hấp dẫn các độc giả vào thế giới của những điều kỳ bí!\nPhần 1 cũng như là quyển đầu sẽ theo chân các cảnh sát trong Tổ trọng án cao cấp lật tìm ra những bí ẩn khiến cả thế giới phải nghi hoặc, thượng cấp phải đóng hồ sơ lại! Từ những chuyện bình thường như giải cứu con tin lại vô tình phát hiện ra một chuyện kì lạ để từ đó rơi vào một thế giới mà bản thân chưa từng biết đến!\nTại sao những thứ tưởng chừng như giản đơn kia lại mang trong mình bí mật to lớn đến thế?\nCó lẽ Ma, Người và Thần Tiên đâu dễ dàng gì phân biệt?\nMa trong tim, thân là người, miệng lưỡi phun hoa sen!\n*Toàn bộ câu chuyện đều là hư cấu* Nguồn: Vnkings.com\n\nLịch đăng: 1, 2 tuần/chương\nNgoan (tác giả) muốn đem đến cho các bạn độc giả của mình những tác phẩm hay, giải trí nhưng hơn hết là vẽ nên một bức tranh toàn cảnh luôn canh cánh trong lòng Ngoan. Ngoan rất thích Stephen King và mong có thể trở thành một nhà văn như ông.\nXin lỗi vì sự chậm trễ của Ngoan nhưng mong mọi người thông cảm và luôn ủng hộ Ngoan hết mình nhé! Các bạn độc giả có thể gọi Ngoan là Tiểu L nha (bản thân thích tên này lắm, thấy cute cute sao ấy). Yêu mọi người!',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/newdesign_1_original_1.jpg?itok=nASOMEf9',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "1", 
@@ -648,7 +648,7 @@ values(
 	N'Khi ấy, Tôn Hồi vẫn đang đi học, để kiểu tóc ngắn giống đầu bê con, khắp cơ thể toát ra năng lượng dồi dào, ngập tràn sức sống. Trong mắt cô không có anh, mà anh bị điên rồi nên mới làm tất cả vì cô.\n\nMột hôm nào đó, Tôn Hồi làm bài trắc nghiệm tâm lý trên mạng, cô hỏi anh: "Ba việc anh đều phải làm mỗi ngày là gì?"\n\nVẫn đang chăm chú đọc báo, anh trả lời: "Ăn, ngủ, yêu Hồi Hồi."\n\nTôn Hồi kinh hãi: "Anh không cần đi ị à?"\n\nAnh: "..."\n\nMột câu thôi: Anh đánh hạ bầu trời này cho em, em tuyệt đối không được phép liếc ai khác đâu đấy!',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/choi-doc.jpg?itok=dJrpm3HD',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "1", 
@@ -671,7 +671,7 @@ values(
 	N'Thánh Tông Hoàng Đế lên ngôi năm mười tám tuổi, không ngừng cải cách chính sách trị nước, tổ chức thi cử tuyển chọn nhân tài, trọng dụng quan lại thanh liêm, thẳng tay trừng phạt kẻ phạm tội bất kể địa vị. Dưới thời Hồng Đức, dân chúng đời sống ấm no, trên đồng bông lúa trĩu nặng, khói bếp nghi ngút vươn lên những mái nhà san sát.\n\nTrong Nam Hoa Kinh của Trang Tử - chương Nội Thiên - thiên Đại Tông Sư, trích phần hỏi đáp giữa Nam Bá Tử Quỳ và Trang Tử: “kỳ vi vật vô bất tương dã, vô bất nghênh dã, vô bất hủy dã, vô bất thành dã, kỳ danh vi anh ninh”. Dịch nghĩa là “đã là vật thì không lúc nào không đưa, không lúc nào không đón, không lúc nào không hủy, không lúc nào không thành, tên nó là anh ninh" (một số bản dịch là oanh ninh). Nếu đọc một câu này thì sẽ không hiểu rõ, nhưng đọc cả đoạn đối thoại của Nam Bá Tử Quỳ và Trang Tử sẽ thấy ý Trang Tử là: muốn dạy Đạo cho người có tài thánh nhân nhưng không có đạo thánh nhân thì phải gạt thiên hạ, gạt vật và gạt sống ra ngoài lúc đó mới thông suốt Đạo, thông suốt rồi có thể thấy được một điều duy nhất còn tồn tại là đúng đắn. Cho nên anh ninh (chạm yên - Nhượng Tống dịch) nghĩa là tiếp xúc với ngoại vật mà không bị dao động và vẫn giữ được tinh thần bình thản điềm đạm. Đây cũng là tinh thần phá án được duy trì xuyên suốt mạch truyện, luôn giữ vững tinh thần và đầu óc không để nó bị loạn bởi những vật xung quanh, cuối cùng là tìm được hung thủ.',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/anh_bia_chinh_2.jpg?itok=oafbf7Ak',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "1", 
@@ -689,7 +689,7 @@ values(
 	N'Lâm Ngôn đứng trước bồn rửa mặt nhìn vào chính mình trong gương,sơmi trắng,quần bò, gương mặt thực thanh tú sạch sẽ,đáng tiếc bộ dáng đã tiều tụy đến mức người không ra người,hai tròng mắt che kín tơ máu,dưới mí mắt là hai luồng thâm đen nặng nề làm cho người ta như già thêm vài tuổi.\n\nTừ khi bị vật kia đeo bám,hắn đã liên tục vài ngày không có hảo hảo ngủ một giấc.\n\nLâm Ngôn dùng sức vỗ vỗ mặt,muốn đánh cho ửng ra một chút huyết sắc, mở vòi nước định đánh răng,màu gạch men đen bóng từ bồn rửa mặt phản chiếu hình ảnh của hắn,không đúng, không chỉ là của hắn. Lâm Ngôn nhìn chằm chằm vào ảnh ngược, khuôn mặt trên đó bắt đầu vặn vẹo biến đổi,môi không khỏi run rẩy,một trận gió theo cửa sổ thổi vào,đèn bên trong giống như bị nghẽn mạch, liên tục chớp nháy vài cái.\n\n',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/dao-mo-dao-ra-quy.jpg?itok=TYfhGuSx',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "1", 
@@ -712,7 +712,7 @@ values(
 	N'Truyện diễn biến theo từng giai đoạn, từ lúc còn nhỏ đến giai đoạn trưởng thành rồi quan hệ xã hội, những nổi đau tổn thương sâu sắc...\n\nChúng ta không ngừng tìm hiểu nguyên nhân cũng như tìm hiểu động cơ xuất phát của những kẻ phạm tội, phải tìm kiếm những niềm vui nỗi buồn sự an lạc và yếu ớt nhất của họ, không những thử đặt mình vào hoàn cảnh của họ mà còn phải cảm thông cho họ, tha thứ cho họ, không phải để cho tội ác một lý do trốn tránh, không phải để bái phục trước sự phức tạp của nhân tính, không phải để xét lại mâu thuẫn xã hội, càng không phải để dị hóa cả chính mình thành quái vật.\n\nChúng ta chỉ đang tìm cho mình, và cho những người vẫn gửi gắm kỳ vọng vào thế giới này – một lời giải thích công bằng mà thôi.',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/newdesign_1_original_1.jpg?itok=nASOMEf9',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "1-1", 
@@ -735,7 +735,7 @@ values(
 	N'Truyện mang nhiều yếu tố tâm lý biến thài cùng với các loại hành vi dị thường, cốt truyện xoay quanh việc điều tra và phá án. Sẽ có rất nhiều vụ án kỳ quái cùng nhiều mỹ nữ xuất hiện xen kẽ.\n\nCường thế buồn bực tao công vs thiên nhiên ngốc phúc hắc thuộc tính không rõ thụ.\n\nXen kẽ cặp đôi phụ: tử triền lạn đả công vs hoa hoa công tử thụ.\n\nNhững đứa bé liên tiếp mất tích một cách bí ẩn, xác chết trong cống thoát nước, xác chết sống dậy mà giết người, đường phố bị tàn phá bởi việc ném bom một cách điên cuồng, thảm án diệt môn cùng hàng chữ máu để lại trên tường...\n\nTóm lại, nếu muốn tìm hiểu nguồn gốc, bản chất của tội ác thì cứ vào xem.',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/hoai-dao.jpg?itok=tTxxct3C',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "1", 
@@ -759,7 +759,7 @@ values(
 	N'Bạn đã bao giờ tự hỏi mình những câu hỏi này chưa?\nTại sao một người rất giàu và một người khác lại rất nghèo?\nTại sao một người thành công trong kinh doanh trong khi một người khác thất bại trong cùng một mảng kinh doanh đó?\nTại sao một người cầu nguyện cho sự giàu có nhưng không nhận được câu trả lời và một thành viên khác trong gia đình anh ta cầu nguyện và nhận được kết quả ngay lập tức?\nTại sao một người sử dụng lời khẳng định cho tiền bạc và thành công nhưng trở nên nghèo hơn và một người khác sử dụng cùng một lời khẳng định và nhận được kết quả tuyệt vời?\nCuốn sách này trả lời tất cả các câu hỏi đã nói ở trên, rất thực tế và dễ dàng thực hành. Nó dành cho tất cả những ai muốn trải nghiệm sự giàu có vốn đã ở xung quanh họ. Bạn đang ở đây để có một cuộc sống đầy đủ, hạnh phúc và có tất cả số tiền bạn cần để làm bất cứ điều gì bạn muốn ở bất cứ thời điểm nào. Tiền nên được lưu chuyển tự do trong cuộc sống của bạn và luôn luôn có một khoản thặng dư dành cho bạn.',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/713q23nrmbl._sx318_bo1204203200_.jpg?itok=aH6wAu70',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "0", 
@@ -782,7 +782,7 @@ values(
 	N'Bạn Có Quyền Trở Nên Giàu Có\nBạn sinh ra đã có quyền giàu có. Bạn giàu có nhờ vào việc sử dụng những nguồn lực vô tận của Vũ Trụ, và một khi tâm thức bạn đầy những ý niệm tốt đẹp thì công việc của bạn cũng sẽ trở nên hiệu quả hơn và mang lại cho bạn nhiều tiền bạc và giàu có hơn.\n\nChính cảm giác là một thể thống nhất với Vũ Trụ ngay trong tim bạn làm cho bạn giàu có, và bạn giàu có theo đúng thái độ tinh thần và niềm tin vào những điều tốt đẹp của bạn. Tất cả sự giàu có trong Vô Lượng- nằm bên trong và bên ngoài bạn- là dành cho bạn để tận hưởng.\n\nKhông có phẩm hạnh gì trong sự nghèo khó, thực tế đó là một căn bệnh tâm thần cần phải bị xóa bỏ khỏi trái đất này. Bạn ở đây để tìm ra vị trí đích thực của mình cho cuộc sống và cống hiến tài năng của mình cho thế giới. Bạn ở đây là để phát triển và khai phá bản thân mình một cách tuyệt vời từ những tiềm năng mà bạn đã được ban tặng, và mang đến sự giàu có về tinh thần, trí tuệ và vật chất. Hãy học cách bao quanh bản thân mình bởi cái đẹp và sự giàu có và nhận ra những quyền không thể thay đổi của bạn- đó là quyền sống, tự do, bình an và giàu có. Đó là quyền Thiêng Liêng của bạn để thế hiện sức mạnh, sự thanh lịch và sự giàu có của một con Người Vô Hạn.',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/41pn5vjk7pl.jpg?itok=I3ambMUo',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "1", 
@@ -805,7 +805,7 @@ values(
 	N'Cuốn tiểu sử với tiêu đề ngắn gọn “Steve Jobs” do cựu thư ký tòa soạn của tạp chí “Time”, Walter Isaacson biên soạn, dựa trên 40 cuộc phỏng vấn với Steve Jobs trong 2 năm cùng các cuộc phỏng vấn với hơn 100 người thân, bạn bè, đồng nghiệp và đối thủ của ông, khi vừa được phát hành trên Amazon đã liên tục đứng vị trí số 1 danh sách sách bán chạy nhất của cả Amazon lẫn Barnes & Nobles. Đây cũng là cuốn tiểu sử đầu tiên và duy nhất nhận được sự đồng ý của Steve Jobs. Walter Isaacson cũng là người viết tiểu sử nổi tiếng, với 2 tác phẩm viết về Benjamin Franklin và Albert Einstein.\n\nCuốn sách Steve Jobs tiết lộ nhiều thông tin chưa từng được kể về Steve Jobs như tính cách cay nghiệt, kỳ dị, chuyện ông chiến đấu với bệnh ung thư, những mối quan hệ lãng mạn của ông và cuộc hôn nhân với bà Laurene P Và trên hết đó là quá trình ông đã gây dựng và chèo lái Apple đi đến thành công như ngày hôm nay với không ít sai lầm cũng như những ám ảnh không thôi về sự hoàn hảo. Tác phẩm vì thế đã cung cấp cho người đọc một cái nhìn sâu sắc về nhân cách và cả những thành tựu của cuộc đời Steve Jobs. Đó là một cuốn sách chứa đựng những điều Steve Jobs muốn nói với thế giới.',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/tieu-su-steve-jobs.jpg?itok=Ob4HQjkh',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "0", 
@@ -828,7 +828,7 @@ values(
 	N'Trên đường băng là tập hợp những bài viết được ưa thích trên Facebook của Tony Buổi Sáng. Nhưng khác với một tập tản văn thông thường, nội dung các bài được chọn lọc có chủ đích, nhằm chuẩn bị về tinh thần, kiến thức…cho các bạn trẻ vào đời. Sách gồm 3 phần: “Chuẩn bị hành trang”, “Trong phòng chờ sân bay” và “Lên máy bay”, tương ứng với những quá trình một bạn trẻ phải trải qua trước khi “cất cánh” trên đường băng cuộc đời, bay vào bầu trời cao rộng.\n\nNhững bài viết của Tony sinh động, thiết thực, hài hước và xuất phát từ cái tâm trong sáng của một người đi trước nhiều kinh nghiệm. Anh viết về thái độ với sự học và kiến thức nói chung, cách ứng phó với những trắc trở thử thách khi đi làm, cách sống hào sảng nghĩa tình văn minh…truyền cảm hứng cho các bạn trẻ sống hết mình, trọn vẹn từng phút giây. Tuy đối tượng độc giả chính mà cuốn sách hướng đến là các bạn trẻ, nhưng độc giả lớn tuổi hơn vẫn có thể đọc sách để hiểu và có cách hỗ trợ con em mình một cách đúng đắn, chứ không “ủ” con quá kỹ để rồi tạo ra một thế hệ yếu ớt, không biết tự lập. Những người đi làm nhiều năm đọc sách cũng có thể nhìn lại con đường đi của mình, tự ngẫm đó đã phải là con đường mình muốn đi chưa, bởi thay đổi không bao giờ là quá muộn.',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/tony-buoi-sang.jpg?itok=PoBf-9TX',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "1", 
@@ -851,7 +851,7 @@ values(
 	N'"Người Bán Hàng Vĩ Đại Nhất Thế Giới" của Og Mandino là một hành trình dài về câu chuyện của Hafid, một cậu bé lạc đà nghèo, ở Jerusalem cổ đại. Người thanh niên đã học được từ một thương nhân giàu có và thành công về những bí quyết để trở thành một người bán hàng vĩ đại.\n\nCuốn sách này được gói gọn trong mười cuốn da dê giúp bạn trở thành một Người bán hàng vĩ đại nhất thế giới, tuy nhiên nó không chỉ dạy bạn cách “bán hàng”, mà nó còn là một cuốn sách dạy bạn làm người, giúp bạn trở thành người “vĩ đại nhất” trong lĩnh vực mà mình đã chọn. Nội dung cuốn sách này được đúc rút từ những kinh nghiệm xương máu mà nhờ đó nó đã biến các ước mơ của cổ nhân thành hiện thực chứ không phải do một cá nhân nào đó tưởng tượng ra trong khi lại chưa được thực nghiệm kiểm chứng cả. Mỗi người đều có quyền tự do lựa chọn con đường để thực hiện giấc mơ của mình tuỳ thuận với nhận thức riêng của họ. Quyển sách này là một trong những con đường có thể giúp bạn đạt được ước mơ của mình. Cho đến nay, “Người bán hàng vĩ đại nhất Thế giới” được dịch ra 25 ngôn ngữ và đã bán ra hơn 50 triệu bản, trở thành cuốn sách bán chạy nhất Thế giới.\n\n"Người Bán Hàng Vĩ Đại Nhất Thế Giới" có một cốt truyện rất độc đáo và thú vị cùng văn phong tài tình và cuốn hút. Mỗi người trong chúng ta đều là một nhà kinh doanh, dù ta thuộc ngành nghề nào. Bởi vì quan trọng nhất là ta phải tiếp thị được bản thân mình cho chính mình, chỉ khi đó ta mới tìm được hạnh phúc và sự bình yên trong tâm hồn. Hãy đọc thật cẩn thận, tiếp thu và lưu từng chi tiết trong cuốn sách này, và nó sẽ giúp bất cứ người nào trở thành nhà kinh doanh tài ba nhất.',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/nguoi-ban-hang-vi-dai-nhat-the-gioi.jpg?itok=gxqxNzlZ',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "1", 
@@ -874,7 +874,7 @@ values(
 	N'Có một bí quyết ẩn giấu dưới mọi thành công. Các vị tướng từ thời cổ đại biết bí quyết đó. Những người tiên phong khi đến Châu Mỹ biết bí quyết đó. Các lái buôn Á Đông sử dụng nó. Giờ đây, Chin-Ning Chu - chuyên gia có uy tín nhất về tư tưởng kinh doanh - giảng giải về quy luật tự nhiên đã gắn liền các động thái tinh thần với sự thành công tuyệt đối. Phối hợp cả triết lý Đông và Tây, " Mặt Dày Tâm Đen"  cho biết cách vận dụng sức mạnh tích cực khôn lường đang ẩn tàng bên trong mỗi chúng ta - và cách giải phóng sức mạnh ghê gớm đó.',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/mat-day-tam-den.jpg?itok=_k2_5_81',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "1-1", 
@@ -897,7 +897,7 @@ values(
 	N'Dám Nghĩ Lớn! – tác phẩm nổi tiếng thế giới về những ý tưởng và phương pháp tư duy độc đáo và hiệu quả đã làm thay đổi một cách kỳ diệu cuộc đời của hàng triệu người qua nhiều thế hệ. Qua quyển sách này, Tiến sĩ David Schwartz trình bày một cách sinh động và dễ hiểu cách tư duy giúp bạn đạt được mục tiêu cao nhất trong công việc, cuộc sống và trong cộng đồng của bạn. Bạn không cần phải thông minh tuyệt đỉnh hay tài năng xuất chúng mới đạt được thành công lớn lao, bạn chỉ cần rèn luyện và áp dụng thường xuyên tư duy Dám Nghĩ Lớn.',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/dam-nghi-lon.jpg?itok=oynYeBdB',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "1-1", 
@@ -920,7 +920,7 @@ values(
 	N'"Việc đọc cuốn sách này là một trong những bước tiến quan trọng nhất trong sự nghiệp của bất kỳ nhà quản lý nào"\n\nTrong các tổ chức kinh doanh theo hướng tập thể ngày nay, mỗi nhà quản lý là một nhà lãnh đạo. Cuốn sách hấp dẫn và đầy tính giáo dục này sẽ mang đến cho bạn các kỹ năng và kiến thức tâm lý mà mọi nhà quản lý/ lãnh đạo đều cần có để thúc đẩy, trao quyền hành động và hợp nhất nhân viên của mình một cách có hiệu quả.\n\n"Tôi ước gì cuốn sách này xuất hiện vào thời điểm khi chúng tôi thực hiện chương trình đào tạo cho các nhà quản lý chương trình mới. Mặc dù luôn hài lòng về kiến thức của mình nhưng hầu hết các nhà lãnh đạo đều không nghiên cứu về tâm lý học của thuật lãnh đạo và đây có vẻ như là nguyên nhân gây ra nhiều rắc rối trong sự nghiệp của họ. Tâm lý học dành cho lãnh đạo chứa đựng cái nhìn thấu đáo về những thách thức này đồng thời đề xuất các phương pháp tiếp cận hiệu quả và thực tiễn để đạt được các mục tiêu kinh doanh" - Candice L.Phelan, PhD.',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/tam-ly-hoc-danh-cho-lanh-dao.jpg?itok=fhp_9SJ1',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "0", 
@@ -943,7 +943,7 @@ values(
 	N'Những bước ngoặt lớn của cuộc đời như rời xa giảng đường êm ả hoặc khởi đầu một sự nghiệp mới thường khiến ta nhụt chí. Phải đối mặt với một rừng những lựa chọn trong khi hiểu rằng sẽ chẳng có ai cho ta biết mình đang lựa chọn đúng hay sai thật đáng sợ. Chẳng có con đường vẽ sẵn hay công thức viết sẵn nào cho thành công, thậm chí việc quyết định mình nên bắt đầu thế nào và ở đâu cũng đã rất khó khăn rồi.\n\nHiểu được những khó khăn, đặc biệt của những người trẻ, trước các bước ngoặt như thế trong cuộc đời, tác giả – một doanh nhân, một giáo viên, một nhà khoa học – đã dồn tâm huyết viết nên những chia sẻ tuy nhẹ nhàng và khiêm nhường, nhưng thật sâu sắc. Những trang sách chứa đầy ví dụ thú vị, cả trong phòng học lẫn trong phòng họp, về những con người sẵn sàng phấn đấu để vượt xa các tiêu chuẩn ở mức “vừa đủ”, thách thức các giả định hay quan điểm đã thành lối mòn, không bao giờ bỏ lỡ cơ hội để vươn tới tiềm năng cao nhất, và nhờ đó đạt tới những thành công vang dội.\n\nThông qua quyển sách, tác giả còn muốn các độc giả, đặc biệt là độc giả trẻ, sẽ được trang bị đủ sự tự tin để biến căng thẳng thành sự hào hứng, biến thử thách thành các cơ hội, và cứ sau mỗi lần vấp ngã lại đứng lên trưởng thành hơn.\n\nThông điệp cốt lõi của quyển sách có thể tóm gọn như sau: “Hãy cho phép mình táo bạo và xuất sắc!”',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/neu-toi-biet-duoc-khi-con-20.jpg?itok=wJDC4A7D',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "1-1", 
@@ -966,7 +966,7 @@ values(
 	N'Think & Grow Rich - Nghĩ Giàu Và Làm Giàu là một trong những cuốn sách bán chạy nhất mọi thời đại. Đã hơn 60 triệu bản được phát hành với gần trăm ngôn ngữ trên toàn thế giới và được công nhận là cuốn sách tạo ra nhiều triệu phú hơn, một cuốn sách truyền cảm hứng thành công nhiều hơn bất cứ cuốn sách kinh doanh nào trong lịch sử.\n\nTác phẩm này đã giúp tác giả của nó, Napoleon Hill, được tôn vinh bằng danh hiệu “người tạo ra những nhà triệu phú”. Đây cũng là cuốn sách hiếm hoi được đứng trong top của rất nhiều bình chọn theo nhiều tiêu chí khác nhau - bình chọn của độc giả, của giới chuyên môn, của báo chí.',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/newdesign_1_original_1.jpg?itok=nASOMEf9',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "0", 
@@ -989,7 +989,7 @@ values(
 	N'Hắn tuổi GÀ, người bé như con CHUỘT.\n\nSuốt ngày hùng hục như TRÂU. \n\nChạy loăng quăng khắp nơi như con NGỰA.\n\nThế mà vẫn bị mắng mỏ như một con CHÓ. \n\nCái loại tưng tửng sống không uốn éo được như RẮN, lủi thủi làm việc. \n\nĐồng nghiệp bảo đồ MÈO đội lốt HỔ, tinh tướng nói như RỒNG leo rồi làm culi bán sức. \n\nThế nên mặt hắn lúc nào cũng nhăn như con KHỈ. \n\nTối đi làm về mệt phờ nằm lăn ra ngủ như LỢN.\n\nCó mơ giấc mơ hồng, sáng mai dậy nụ cười DÊ thế?',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/bac-si.jpg?itok=TMebR_TM',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "0", 
@@ -1012,7 +1012,7 @@ values(
 	N'Hồi Ký Về Thảm Họa Everest - Tan Biến là hồi ức sau cùng về mùa leo núi tang tóc nhất trong lịch sử Everest, Jon Krakauer đã đưa người đọc từng bước một từ Kathmandu lên đến đỉnh núi chết chóc, mở ra một câu chuyện nghẹt thở, làm người đọc rùng mình và kinh hãi.',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/hoi-ky-ve-tham-hoa-everest-tan-bien.jpg?itok=lh_H1cSw',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "0", 
@@ -1035,7 +1035,7 @@ values(
 	N'Đường Xưa Mây Trắng là cuốn sách kể chuyện đời đức Phật Thích Ca qua con mắt của chú bé chăn trâu Svasti, sau xuất gia, trở thành một vị đệ tử của Phật. Đó là chú bé cúng dường cỏ bồ đề cho sa môn Tất Đạt Đa tĩnh tọa suốt 49 ngày trước khi thành đạo.\n\nTác phẩm là một thiên anh hùng ca tỏ bày lòng ngưỡng mộ chân thành trước một lối sống gương mẫu đầy những hành vi và mục đích cao cả, thu hút bạn đọc bởi nhân cách vĩ đại của Buddha qua cái nhìn và ngòi bút của Thầy Thích Nhất Hạnh.\n\nĐường Xưa Mây Trắng đã bán được hơn 1 triệu bản tại bắc Mỹ và được dịch ra hơn 20 thứ tiếng; trong đó có tiếng Hindu. Chính vì thế mà nhà tỉ phú Ấn Độ Bhupendra Kuman Modi sau khi đọc Đường Xưa Mây Trắng đã nói với phóng viên tờ Hollywood Reporter: "Tôi tìm được Đường Xưa Mây Trắng từ hai năm nay, cuốn sách đã thay đổi đời tôi và nay đến lượt tôi phải chia sẻ hạnh phúc ấy với thế giới ".\n\nÔng đã quyết định tài trợ 120 triệu USD để các nhà làm sản xuất dựa theo Đường Xưa Mây Trắng dựng thành phim.\n\nTỉ phú Bhupendra Kuman Modi hy vọng bộ phim có thể được chọn chiếu ở Liên hoan phim Cannes 2008.',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/duong-xua-may-trang.jpg?itok=Yohm9luU',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "1", 
@@ -1058,7 +1058,7 @@ values(
 	N'Bảng lảng và trần trụi...\n\nTrong một thời gian dài bao cấp, ấn tượng về những trang báo thời sự là chúng khô khan, vắng bóng tính giải trí, và dường như sẽ nhanh chóng bị quên lãng trong các thư viện cũ kỹ. Những đã có một người chuyên tâm đi lục lại những trang thông tin hết thời ấy, chắp nối lại chúng và thổi hồn vào đấy thành những ghi chép khảo cứu sống động.\n\nĐó là Nguyễn Ngọc Tiến.\n\nCho đến giờ, những khảo cứu của anh về một Hà Nội qua chiều dài lịch sử đã thành thương hiệu trong làng văn. Đọc những trang viết từ nhiều cuốn sách được tập hợp qua nhiều năm tháng miệt mài làm việc, tập trung quanh câu chuyện về một mảnh đất nhiều thăng trầm, người ta có thể thấy Nguyễn Ngọc Tiến tựa như một sử nhân của Hà Nội.\n\nVấn đề mà Đi xuyên Hà Nội tiếp nối các cuốn sách trước của cùng tác giả chính là giá trị của những trang truyện - sử phong tục xã hội, điều các chính sử thường bỏ qua, đặc biệt cần thiết ở một đô thị hậu thuộc địa. Sự lựa chọn đề tài đa dạng, gần gũi đời sống thường nhật cũng làm nên sự sống động của cuốn sách. Tất cả dựng nên một cách tự nhiên chân dung một Hà Nội vừa tài hoa vừa xô bồ, cổ kính mà luôn đầy chất đương đại.\n\nKhả năng bao trùm các đề tài về nơi này của Nguyễn Ngọc Tiến tiếp tục khẳng định một điều: còn rất nhiều thứ của Hà Nội xứng đáng để các nhà văn viết thật hay.',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/di-xuyen-ha-noi.jpg?itok=FWIj4hPB',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "1", 
@@ -1081,7 +1081,7 @@ values(
 	N'Tựa đề cuốn sách này biểu thị khát vọng của tất cả các nước đang phát triển, nhưng tiếc thay, cho đến nay, số thành đạt rất ít. Singapore là một trong số rất ít đó. Vì thế, hồi ký về những năm đầu thời kỳ độc lập được viết bởi người cha sáng lập đất nước này - ông Lý Quang Diệu - sẽ rất lý thú đối với nhân dân các nước đang phát triển và những ai quan tâm đến vận mệnh của đất nước họ. Câu chuyện được kể thẳng thắn bằng văn phong rất trong sáng và thú vị. Cuốn sách có sức thu hút kỳ lạ. (Trích lời của Kofi A.Annan, Tổng Thư ký Liên Hiệp Quốc).',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/bi-quyet-hoa-rong-lich-su-singapore.jpg?itok=x6x3WK74',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "1", 
@@ -1104,7 +1104,7 @@ values(
 	N'Văn học Việt Nam thời xưa có nhiều tác phẩm có giá trị to lớn về mặt nhân văn và nghệ thuật, đã được công nhận và chứng thực qua thời gian. Bộ sách Việt Nam danh tác bao gồm loạt tác phẩm đi cùng năm tháng như: Số đỏ (Vũ Trọng Phụng), Việc làng (Ngô Tất Tố), Gió đầu mùa, Hà Nội băm sáu phố phường (Thạch Lam), Miếng ngon Hà Nội (Vũ Bằng), Vang bóng một thời (Nguyễn Tuân). Hy vọng bộ sách sau khi tái bản sẽ giúp đông đảo tầng lớp độc giả thêm hiểu, tự hào và nâng niu kho tàng văn học nước nhà.',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/mieng-ngon-ha-noi.jpg?itok=lhzvE37Y',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "1", 
@@ -1127,7 +1127,7 @@ values(
 	N'Gia đình nhà họ Tống ảnh hưởng tới chánh sách của tổng thống Mỹ Roosevelt về Á Châu trong một thời gian khá lâu dài. Những người nhà họ Tống rất giỏi khoa giao tế, và biết cách mua chuộc các chính khách Hoa Kỳ.\n\nNgoài ra sự thành công của họ còn nhờ một phần lớn vào sự ủng hộ của Henry Luce, một nhà truyền giáo Mỹ rất có thế lực tại Trung Hoa. Các tạp chí Time và Life của Henry Luce đã tạo huyền thoại quanh gia đình nhà họ Tống, mô tả họ là những người yêu chuộng dân chủ, và là những anh hùng dân tộc của Trung Hoa.\n\nChúng ta hãy theo dõi cuộc đời của ba chị em nhà họ Tống, để xem họ đã đem lại vinh quang cho dòng họ nhà chồng và dòng họ Tống như thế nào, và ảnh hưởng của họ đối với chính trường Trung Hoa đầu thế kỷ 20 ra sao.',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/3-chi-em-ho-tong.jpg?itok=Sw0dp-IK',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "1", 
@@ -1150,7 +1150,7 @@ values(
 	N'Có ai đã từng nghĩ những thứ đẹp đẽ, trong sáng như Mặt Trăng hay Ngôi Sao lại nhuốm đầy máu người dưới đêm khuya tĩnh lặng?!\nCó ai đã từng ngồi ngẩn ngơ mơ về một ngày mai tươi sáng, triển vọng của bản thân, ước mơ cao cả trong tương lai? Nếu có thì xin hãy cẩn thận, ước mơ như một nguồn suối ngon lành, ngọt ngất, có thể độc chết bạn đấy!\nCâu chuyện không quá rùng rợn, ma mị nhưng sẽ cố gắng hấp dẫn các độc giả vào thế giới của những điều kỳ bí!\nPhần 1 cũng như là quyển đầu sẽ theo chân các cảnh sát trong Tổ trọng án cao cấp lật tìm ra những bí ẩn khiến cả thế giới phải nghi hoặc, thượng cấp phải đóng hồ sơ lại! Từ những chuyện bình thường như giải cứu con tin lại vô tình phát hiện ra một chuyện kì lạ để từ đó rơi vào một thế giới mà bản thân chưa từng biết đến!\nTại sao những thứ tưởng chừng như giản đơn kia lại mang trong mình bí mật to lớn đến thế?\nCó lẽ Ma, Người và Thần Tiên đâu dễ dàng gì phân biệt?\nMa trong tim, thân là người, miệng lưỡi phun hoa sen!\n*Toàn bộ câu chuyện đều là hư cấu* Nguồn: Vnkings.com\n\nLịch đăng: 1, 2 tuần/chương\nNgoan (tác giả) muốn đem đến cho các bạn độc giả của mình những tác phẩm hay, giải trí nhưng hơn hết là vẽ nên một bức tranh toàn cảnh luôn canh cánh trong lòng Ngoan. Ngoan rất thích Stephen King và mong có thể trở thành một nhà văn như ông.\nXin lỗi vì sự chậm trễ của Ngoan nhưng mong mọi người thông cảm và luôn ủng hộ Ngoan hết mình nhé! Các bạn độc giả có thể gọi Ngoan là Tiểu L nha (bản thân thích tên này lắm, thấy cute cute sao ấy). Yêu mọi người!',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/chet-duoi-tay-trung-quoc.jpg?itok=AJJHf6u1',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "1", 
@@ -1173,7 +1173,7 @@ values(
 	N'Từ hơn nửa thế kỷ trước đây, phong trào Thơ mới đã có những đóng góp đáng kể vào sự phát triển của nền văn học trước Cách mạng tháng Tám của đất nước. Các thi sĩ của thuở ấy đã đem lại cho bạn đọc một tiếng nói mới, phản ánh khá trung thực tâm trạng của cả một lớp thanh niên tiểu tư sản trong cuộc sống có nhiều đau buồn, trăn trở và đôi khi bế tắc trước hiện trạng của đất nước thời bấy giờ. Với sự đổi mới mạnh mẽ của hình thức nghệ thuật, Thơ mới thật sự đã thu hút được sự chú ý của khá đông bạn đọc yêu thơ và đó cũng là một đóng góp có ý nghĩa vào sự phát triển của thể loại và chứng minh khả năng biểu đạt phong phú của tiếng Việt.\n\nNgay lúc bấy giờ, hai tác giả Hoài Thanh và Hoài Chân đã sớm nhận ra giá trị ấy và đã kịp thời sưu tầm, giới thiệu các thành tựu của phong trào Thơ mới qua tác phẩm Thi nhân Việt Nam và đã cho xuất bản vào đầu năm 1942.\n\nThi nhân Việt Nam là sự khám phá và đánh giá đầu tiên đối với Thơ mới. Chúng ta đều biết việc lựa chọn tác phẩm và tác giả đương thời, nhất là những người mới xuất hiện trên văn đàn, là một việc hết sức khó khăn, nhưng với sự cảm thụ khá sâu sắc và với cái nhìn tinh tế, các tác giả đã chọn được một chùm hoa giàu hương sắc trong vườn Thơ mới để gửi tặng những người yêu thơ. Chính vì thế, Thi nhân Việt Nam đã được bạn đọc cả nước đón nhận và tán thưởng.\n\nHơn nửa thế kỷ đã trôi qua, việc thẩm định lại những giá trị có thể có những thay đổi, nhưng để bảo đảm tính lịch sử của một tác phẩm đã xuất hiện trước đây, chúng tôi cho in nguyên văn của tác phẩm.\n\nNgoài ra, để giúp bạn đọc có thêm tư liệu tham khảo, sách có thêm phần Lời cuối sách của nhà văn Từ Sơn, trưởng nam của nhà văn Hoài Thanh.',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/thi-nhan-viet-nam.jpg?itok=L87aLEr1',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "1", 
@@ -1196,7 +1196,7 @@ values(
 	N'Trong số tác phẩm của Vũ Bằng, Thương Nhớ Mười Hai là tác phẩm đặc sắc nhất, tiêu biểu cho tình cảm và phong cách viết của ông. Tác phẩm được đặt bút từ Tháng Giêng 1960 và mất mười một năm mới hoàn thành vào năm 1971 với độ dày 250 trang.\n\nMười hai ở đây là mười hai tháng trong năm mà theo lời tác giả “mỗi tháng lại có những cái đẹp não nùng riêng, nỗi nhớ nhung riêng…”. Thông qua mười hai tháng ấy, Vũ Bằng đã gởi gắm những hồi ức đẹp đẽ của mình về Hà Nội, nơi chốn xa xôi ông luôn hướng về với những phong tục của người Bắc Việt, những thói quen sinh hoạt, những thú vui ẩm thực giản dị mà đầy tính nghệ thuật và trên tất cả là hình bóng người vợ đảm đang dịu hiền đang còn xa cách…\n\nThương nhớ mười haiThương nhớ mười haiNhân vật tôi ở miền Nam mà lòng luôn nhớ thương miền Bắc. Nỗi lòng ấy da diết và khắc khoải tựa thanh gỗ mục, bề ngoài đẹp đẽ mà bên trong đã rệu nát tự bao giờ. Ông biết thế là bất công nhưng tình yêu mà, đã yêu thì bao giờ người mình yêu cũng là đẹp nhất. Ông còn thầm cảm ơn sự bất công ấy bởi nó đã cho ông nhận ra mình yêu Bắc Việt đến dường nào…mà càng yêu thì lại càng nhớ…',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/thuong-nho-muoi-hai.gif?itok=htmcF7fZ',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "1", 
@@ -1219,7 +1219,7 @@ values(
 	N'Lịch sử nhà Trần vốn dĩ có nhiều sóng gió, đặc biệt là chốn cung cấm đầy rẫy mưu mô. Bộ truyện sẽ theo chân cháu gái của Hưng Đạo Đại Vương, kể từ lúc nàng nhập cung cho đến khi trở thành Hoàng hậu.',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/c1dabfc2-e431-4b6a-8aca-1b7bfb561cf0.png?itok=DIL7Dlwa',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "0", 
@@ -1243,7 +1243,7 @@ values(
 	N'Báo điện tử Một Thế Giới xin giới thiệu loạt bài về chống ngoại xâm phương Bắc và bắt đầu về cuộc chiến thần thánh phạt Tống của Lý Thường Kiệt.',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/ly-thuong-kiet.jpg?itok=f-gycQM0',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "1", 
@@ -1266,7 +1266,7 @@ values(
 	N'Ngày 19/5/1999, tại Royal Albert Hall, London, Lạt ma 14 - lãnh tụ tinh thần Tây Tạng đã có buổi nói chuyên sâu sắc về đạo đức cho thiên niên kỷ mới trước rất đông khán thính giả, trong đó ông - người yêu hòa bình có lẽ hàng đầu nhân loại đã dành những lời sau về chiến tranh: "... Tôi nghĩ đó (chiến tranh) là những quan niệm lỗi thời. Ngày xưa quyền lợi các quốc gia còn có tính cách độc lập riêng rẽ, các cộng đồng như làng xóm đều có thể tự túc. Trong khung cảnh đó quan niệm về chiến tranh, về quân đội còn có nghĩa lý: nếu bên ta thắng trận thì bên địch phải thua.\n\nNhưng ngày nay, tình trạng đó đã thay đổi hoàn toàn. Không chỉ các làng xóm mà ngay cả quốc gia hay đại lục, cũng không còn độc lập nhiều, nhất là về kinh tế. Trong hoàn cảnh đó, khi tiêu diệt hàng xóm của bạn là bạn tự tiêu diệt. Vậy nên tôi cho rằng lối suy nghĩ và chính sách xưa cũ nay đã lỗi thời..."\n\nThật sự như vậy, dễ dàng nhận ra rằng chiến tranh đã đồng hành với nhân loại chúng ta trong suốt chiều dài lịch sử như là một người bạn đường bất đắc dĩ! Ngày nay tư tưởng về chiến tranh đã là tư tưởng lạc hậu cần bài bác triệt để, nhưng thật khó để nói điều đó trong những hoàn cảnh lịch sử nhất định trước đây, khi con người ta sinh ra lớn lên trong tinh thần chiến tranh mãnh liệt, giống như một người tướng của Napoleon từng tuyên bố: "Ba mươi tuổi mà chưa chết thì chưa phải là tướng!"\n\nCuốn sách này ra đời với mong muốn tóm lược cuộc đời của những nhân vật quân sự lớn trong hàng ngàn năm đau thương đó của nhân loại, với sự đa dạng về tính cách và số phận của những con người vĩ đại lại chỉ được tóm tắt trong sự hiểu biết hạn hẹp của người viết thì sẽ không thể tránh khỏi những sai sót, rất mong nhận được sự thông cảm của người đọc.\n\nMột niềm vui lớn của bất kỳ người viết sử nào đó chính là được vinh dự kể cho bạn đọc nghe về quá khứ hàng ngàn năm của nhân loại.\n\nBên cạnh đó, khi bạn lần giở cuốn sách này để đi theo dòng thời gian, từ Hannibal Barca cho tới khi khép lại quyển sách với người anh hùng gần chúng ta nhất là đại tướng Võ Nguyên Giáp, nếu độc giả thấy lời nào ca ngợi những người anh hùng của một thời xa cũ, và giá như từ đó bạn có thể nhận ra giá trị mà mình đang có để hát lên những lời ca khác ngợi ca hòa bình của thời đại chúng ta, thì niềm vui khi ấy của người viết sử chúng tôi sẽ là trọn vẹn.',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/unnamed.jpg?itok=dJtu6fW0',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "1-1", 
@@ -1289,7 +1289,7 @@ values(
 	N'Phạm Xuân Ẩn (sinh ngày 12/9/1927, mất ngày 20/9/2006) tham gia hoạt động cách mạng từ đầu thập niên 1950, năm 1953 được kết nạp Đảng và được giao nhiệm vụ hoạt động điệp báo. Nhằm tạo vỏ bọc tốt hơn để có thể thâm nhập sâu hơn vào giới chức chính quyền và quân đội Sài Gòn, năm 1957 ông được cấp trên bố trí cho sang Mỹ học ngành báo chí. Năm 1959, Phạm Xuân Ẩn về nước, làm việc cho Hãng tin Reuters và sau đó là tạp chí hàng đầu Time, New York Herald Tribune của Mỹ. Với kiến thức uyên bác, hiểu biết rộng, cương trực và tài năng giao tiếp, ngoại giao khác biệt, độc đáo theo kiểu lãng tử, hào hoa, ngang tàng, “chửi thề như bắp rang”, xuất hiện với phong cách thượng lưu, thừa hưởng văn hóa được đào tạo chính qui từ Mỹ, ông đã thâm nhập và là bạn tri kỷ với các tướng lĩnh, trùm an ninh mật vụ cả Mỹ và Sài Gòn, giới báo chí Việt Nam Cộng Hòa và Mỹ cũng như các chính khách chóp bu của chính quyền Sài Gòn để khai thác những thông tin tuyệt mật mang tầm chiến lược cho cuộc đối đầu của Bắc Việt Nam với Mỹ và chính quyền Sài Gòn. Cuộc đời hoạt động tình báo đầy ly kỳ hấp dẫn nhưng cũng vô cùng hiểm nguy của Phạm Xuân Ẩn với bí danh X6 thuộc cụm tình báo H63 được thể hiện một cách trung thực, sinh động trong cuốn Điệp viên hoàn hảo X6 được bổ sung cập nhật mới.\n\nSau 6 năm, cuốn sách với những thông tin có giá trị lịch sử giờ đây lại được ra mắt bạn đọc qua một bản dịch đầy đủ và cập nhật nhiều thông tin chưa từng được công bố do chính Phạm Xuân Ẩn tiết lộ với tác giả Larry Berman có ghi âm. Với lời hứa chỉ được công bố những thông tin này từng giai đoạn sau khi Phạm Xuân Ẩn mất, Larry Berman đã mất 6 năm để cân nhắc để từng bước công bố thông tin của người đã khuất.',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/diep-vien-hoan-hao.gif?itok=K5ljk0ae',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "0", 
@@ -1312,7 +1312,7 @@ values(
 	N'Tôi đã sống một cuộc đời thường có cả điều đúng, có cả điều sai, có cả những đau khổ tự chuốc lấy trong khi đó tôi cũng trút đau khổ lên không ít người khác. Tôi có cả mọi tuổi thơ cay đắng mà không biết đỗ lỗi cho ai. Tôi từng có thể muốn gì được nấy, những thứ mà bất cứ người bình thường nào cũng đều thèm khát. Và ngược lại, tôi cũng phải đối mặt với biết bao sự ê chề trong đó có cả tôi, có cả do người khác gây ra cho tôi. Tóm lại tôi chẳng việc gì phải dựng nên những thứ mà tự nó đã chặt kín trong cuộc đời mình rồi. Nhưng nếu vẫn có ai đó không tin mục đích của tôi khi chấp nhận có cuốn sách này, thì tôi cũng không hề vì thế mà thiếu tôn trọng họ. Chúng ta được đào luyện trong một môi trường mà lòng thành thật không phải lúc nào cũng được đặt ở những vị trí xứng đáng.\n\nĐôi khi tôi lại nghĩ, hình như mình đang " vạch áo cho người xem lưng ".... Tại sao tôi lại phải cứ làm cho những người thân của mình đau lòng? Nhưng hoá ra người đau lòng nhất lại chính là tôi. Giờ đây thì mọi việc đã không thể nào dừng lại được. Thôi thì ai muốn nghĩ gì về tôi là quyền của họ. Tôi chấp nhận cả sự nguyền rủa. Bời vì nếu cuốn sách này trở thành nguyên nhân của những hiểu lầm có thể xảy ra, thì nó cũng đồng thời là một cơ hội để cho tôi tự thanh tẩy tâm hồn mình. Mục đích lớn nhất của tôi là sám hối mặc dù tôi biết không phải mọi sự sám hối đều được tha thứ. Tôi muốn tự trừng phạt mình thay cho một sự trừng phạt từ trên cao sớm muộn rồi cũng giáng xuống...',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/le-van-yeu-va-song.jpg?itok=OgmJ03ax',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "0-1", 
@@ -1335,7 +1335,7 @@ values(
 	N'Phạm Duy (sinh ngày 5 tháng 10 năm 1921) tên thật Phạm Duy Cẩn là một nhạc sĩ, ca sĩ, nhà nghiên cứu nhạc của Việt Nam. Ông được coi là một trong những nhạc sĩ lớn của nền tân nhạc với số lượng sáng tác đồ sộ và đa dạng về thể loại, trong đó có những bài đã trở nên rất quen thuộc với người Việt. Ngoài sáng tác, Phạm Duy còn có nhiều công trình khảo cứu về âm nhạc Việt Nam có giá trị. Ông cũng từng giữ chức giáo sư nhạc ngữ tại trường Quốc gia Âm nhạc Sài Gòn. Mặc dù vậy, các quan điểm nhìn nhận về Phạm Duy còn gây nhiều tranh cãi.\n\nKhởi sự đời nhạc trong gánh hát Đức Huy với vai trò ca sĩ hát lưu động. Từng tham gia kháng chiến chống Pháp một thời gian trước khi vào miền Nam để tiếp tục tự do hoạt động âm nhạc. Phạm Duy là một tên tuổi lớn và đầy ảnh hưởng tại miền Nam Việt Nam với những hoạt động tích cực giành cho cả âm nhạc lẫn chính trị, cho đến sau sự kiện 30 tháng 4 năm 1975, khi ông vượt biên sang Hoa Kỳ. Thời kì ở miền Nam và một thời gian dài sau 1975, ông có quan điểm chống Cộng mạnh mẽ thể hiện qua nhiều sáng tác và bình luận, điều đó khiến ông bị phe Cộng Sản phê phán gắt gao. Trong suốt ba mươi năm từ 1975 đến 2005, Phạm Duy bị nhà nước Việt Nam cấm đoán về nhân thân, những ca khúc của ông bị liệt vào loại nhạc quốc cấm. Tuy nhiên tại cộng đồng người Việt hải ngoại, nhạc của ông vẫn được phổ biến rộng rãi.\n\nNăm 2005, ông về Việt Nam định cư và một số ca khúc của ông mới bắt đầu được cho phép phổ biến. Tính cho đến nay, có hơn 50 ca khúc trong số hàng nghìn sáng tác của Phạm Duy được cấp phép.',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/pham-duy.jpg?itok=jCIjCu70',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "0", 
@@ -1358,7 +1358,7 @@ values(
 	N'Em phải đến Harvard học kinh tế là cuốn sách tường thuật và tổng kết lại những kinh nghiệm nuôi dạy con cái từ lúc lọt lòng cho đến khi thành tài của Lưu Vệ Hoa và Trương Hân Vũ, mẹ và cha dượng của cô bé Lưu Diệc Đình - “cô gái Harvard” - thần tượng học tập của giới trẻ Trung Quốc. Sau khi xuất bản, cuốn cẩm nang này đã giữ ngôi vị best-seller trong suốt 16 tháng liên tục, lượng xuất bản lên tới gần 3 triệu bản, nhận được hưởng ứng tích cực chưa từng thấy từ các bậc phụ huynh. \n\nNhân vật chính của cuốn sách - Lưu Diệc Đình, năm 1996 thi đỗ vào trường trung học ngoại ngữ Thành Đô sau một cuộc cạnh tranh khốc liệt. Sau vô số những nỗ lực tích cực và thành tích xuất sắc, đến năm 1999 đã nhận được giấy báo nhập học và học bổng toàn phần của bốn trường Đại học tại Hoa Kỳ, trong đó có Harvard. Sau đó, cô theo học chuyên ngành Kinh tế học và Toán ứng dụng tại Harvard, tháng 6 năm 2003 tốt nghiệp, vào làm việc trong tập đoàn tư vấn Boston (Boston Consulting Group) nổi tiếng. Hiện cô định cư tại Mỹ.',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/em-phai-den-harvard-hoc-kinh-te.gif?itok=58a2BmGQ',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "0", 
@@ -1381,7 +1381,7 @@ values(
 	N'Sử ký là bộ thông sử đầu tiên của Trung Quốc cổ đại. Bộ sử ký lưu giữ, chỉnh lí lại các tư liệu lịch sử vô cùng phong phú trong hơn ba ngàn năm từ thời Ngũ đế vốn có trước sử cho tới giữa thời Tây Hán.\n\nẤn bản này với hình thức mới mẻ, toàn diện, góc nhìn mới, đa tầng, giúp bạn đọc hiểu rõ hơn nguyên tác. Cuốn sách còn có phần phụ như giải thích, dịch nghĩa bằng câu từ tinh tế giúp bạn đọc thưởng thức trọn vẹn nội dung tác phẩm.',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/su-ky-tu-ma-thien.gif?itok=v3XAJeRi',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "0-1", 
@@ -1404,7 +1404,7 @@ values(
 	N'Một hôm, Tuyên Vương đang uống rượu giữa bầy cung nga xinh đẹp, vui chơi ở Tiệm Đài. Chung vô Diệm xin vào yết kiến, tự xưng là người con gái không lấy được chồng của nước Tề, nghe nói Tề Vương là người hiền minh, xin vào hậu cung lo việc quét tước cho vua. Các cung nữ nghe xong bụm miệng cười, Tuyên Vương nghe tâu cũng tức cười nhưng vì lòng hiếu kỳ, ra lệnh cho vào yết kiến. Tuyên Vương hỏi: "Xú phụ! Ngươi sao không chịu ở yên nơi quê hương mà tự tiến tới vua phải chăng ngươi có tài nghệ cao kì?". Vô Diệm đáp: "Không dám nói kì tài cao nghệ, chỉ học được thuật ẩn hình, xin vì đại vương hiến chút nghề mọn để giúp vui". Nói xong liền ẩn mình, không ai thấy nữa.\n\nHôm sau Triệu Vương lại triệu đến làm trò. Vô Diệm không nói, chỉ trừng mắt, cắn răng, giơ tay, vỗ gối... làm 4 động tác và kêu liên tiếp 4 tiếng "hiểm". Tuyên Vương hỏi ý nghĩa ra sao? Vô Diệm nói rằng: "Nay nước Tề có sự uy hiếp của Tần ở phía Tây, Sở phía Nam, đó là nguy hiểm thứ nhất. Đại vương làm nhọc sức dân, hao tốn tiền của, lập Tiệm đài hoa lệ, đó là điều nguy hiểm thứ hai. Trong triều thì biếm người hiền, dùng kẻ nịnh, đó là điều nguy hiểm thứ ba. Đấng quân vương đam mê tửu sắc, không sửa sang chính trị trong nước, đó là điều nguy hiểm thứ tư. Thiếp trừng mắt vì đại vương xét cái biến phong hoả, cắn răng là thay đại vương trừng trị cái miệng chống can gián, giơ tay là vì đại vương đuổi kẻ bề tôi xàm nịnh, vỗ gối là xin đại vương dẹp bỏ cái đài ăn chơi."\n\nTề Tuyên Vương nhận lời can gián, từ đó bỏ yến nhạc, phá Tiệm đài, trừ tôi nịnh, làm cho binh mã mạnh, kho lẫm đầy... lập Chung Vô Diệm làm Vương hậu, và với sự phụ tá của bà, nước Tề trở nên cường thịnh.',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/chung_vo_diem_to_chan.jpg?itok=mm5zMHr2',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "1", 
@@ -1427,7 +1427,7 @@ values(
 	N'Tác phẩm là dòng hồi ức của người lính về chiến tranh và thời tuổi trẻ đã trải qua trong bom đạn. Đó là lòng tiếc thương vô hạn đối với những người cùng thế hệ với mình đã nằm xuống, là ám ảnh về thân phận con người trong thời buổi loạn ly, và thông qua thân phận là sự tái hiện đầy xót xa  về quá khứ, những suy tư nghiền ngẫm về con đường dấn thân của cả một thế hệ sinh ra trong chiến tranh. Bao trùm lên tất cả, là nỗi buồn sâu xa gắn với từng mảnh đời riêng. Tác phẩm đã bước ra khỏi lối mòn về lòng tự hào dân tộc cùng những chiến công và vinh quang tập thể để nêu lên thông điệp về sự ghê tởm, về tính chất hủy diệt của chiến tranh đối với con người.\n\nVào thời điểm ra đời cuối thập niên 1980, “Nỗi buồn chiến tranh” có thể  được xem là tác phẩm văn học Việt Nam hiện đại đầu tiên viết về chiến tranh có cái nhìn khác với quan niệm truyền thống, khẳng định mạnh mẽ vai trò cá nhân trong xã hội, quyền sống, hạnh phúc và đau khổ của con người với tư cách một cá thể độc lập. Tiểu thuyết nhận được giải thưởng Hội Nhà văn Việt Nam năm 1991.',
 	0,
 	N'https://gacsach.club/sites/default/files/styles/book310/public/noi-buon-chien-tranh.jpg?itok=Or0gs5uX',
-	'{
+	N'{
 		"chapters":[
 			{
 				"chuong": "1", 

@@ -17,7 +17,7 @@ namespace lightbook_backend_API.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<PagedResponseModel<CategoryDto>>> GetCategorys([FromQuery] CategoryQueryCriteria categoryQueryCriteria, CancellationToken cancellationToken){
+        public async Task<ActionResult<PagedResponseModel<CategoryDto>>> GetCategories([FromQuery] CategoryQueryCriteria categoryQueryCriteria, CancellationToken cancellationToken){
             var response = await _categoryService.GetByPageAsync(categoryQueryCriteria, cancellationToken);
 
             return Ok(response);

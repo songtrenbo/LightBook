@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Linq.Dynamic.Core;
 
-namespace lightbook_backend_API.Extentions{
+namespace lightbook_backend_API.Extensions{
     public static class DataPagerExtension{
         public static async Task<PagedModel<TModel>> PaginateAsync<TModel>(
             this IQueryable<TModel> query,
@@ -29,12 +29,12 @@ namespace lightbook_backend_API.Extentions{
 
                 var startRow = (paged.CurrentPage -1) * paged.PageSize;
 
-                paged.Items = await query
-                                .Skip(startRow)
-                                .Take(paged.PageSize)
-                                .ToListAsync();
+                var result = query.Skip(startRow)
+                                .Take(paged.PageSize);
 
-                paged.TotalItems = await query.CountAsync(cancellationToken);
+                paged.Items = await Task.FromResult(result.ToList());
+
+                paged.TotalItems = await Task.FromResult(result.Count());
                 paged.TotalPages = (int)Math.Ceiling(paged.TotalItems / (double)paged.PageSize);
 
                 return paged;
