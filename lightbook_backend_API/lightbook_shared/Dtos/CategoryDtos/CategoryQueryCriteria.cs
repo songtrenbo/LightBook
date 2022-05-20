@@ -1,7 +1,7 @@
-namespace lightbook_shared.Dtos.BookDtos
+namespace lightbook_shared.Dtos.CategoryDtos
 {
     public class CategoryQueryCriteria:BaseQueryCriteria
     {
-        public int Id {get;set;}
+        public int? Id {get;set;}
     }
 }

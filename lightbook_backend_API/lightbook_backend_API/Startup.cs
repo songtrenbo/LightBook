@@ -92,6 +92,9 @@ namespace lightbook_backend_API
             services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IBookService, BookService>();
+            services.AddScoped<ICatalogService, CatalogService>();
+            services.AddScoped<ICategoryService, CategoryService>();
+
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());  
 

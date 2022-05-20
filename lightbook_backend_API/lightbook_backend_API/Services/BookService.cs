@@ -60,11 +60,16 @@ namespace lightbook_backend_API.Services
                 );
             }
 
-            if (bookQueryCriteria.Category != null &&
-                bookQueryCriteria.Category.Count() > 0)
-            {
-                bookQuery = bookQuery.Where(x =>
-                    bookQueryCriteria.Category.Any(t => t == (int)x.CategoryID));
+            if(bookQueryCriteria.categoryId != null) {
+                bookQuery = bookQuery.Where(bq => bq.CategoryID == bookQueryCriteria.categoryId);
+            }
+
+            if(bookQueryCriteria.catalogId != null) {
+                bookQuery = bookQuery.Where(bq=>bq.CatalogBooks.Any(cb=>cb.CatalogID==bookQueryCriteria.catalogId));
+            }
+
+            if(bookQueryCriteria.authorId!=null){
+                bookQuery = bookQuery.Where(bq=>bq.AuthorBooks.Any(ab=>ab.AuthorID==bookQueryCriteria.authorId));
             }
 
             return bookQuery;
