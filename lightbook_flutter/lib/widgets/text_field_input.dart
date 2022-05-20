@@ -40,7 +40,7 @@ class TextFieldInput extends StatelessWidget {
             borderRadius: BorderRadius.circular(90),
           ),
           filled: true,
-          contentPadding: const EdgeInsets.all(20),
+          contentPadding: const EdgeInsets.all(10),
           focusColor: Colors.white),
       keyboardType: textInputType,
       obscureText: isPass,

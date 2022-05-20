@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:lightbook_flutter/constant/color.dart';
 import 'package:lightbook_flutter/routes.dart';
 import 'package:firebase_core/firebase_core.dart';
 
@@ -29,6 +30,21 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        // primaryColor: ColorConstants.primaryColor,
+        scaffoldBackgroundColor: ColorConstants.primaryColor,
+        // navigationBarTheme: ColorConstants.navbarColor,
+        appBarTheme: AppBarTheme(
+          color: ColorConstants.navbarColor,
+        ),
+        textTheme: TextTheme(
+          // bodyText1: TextStyle(),
+          bodyText2: TextStyle(),
+        ).apply(
+          displayColor: Colors.white,
+          bodyColor: Colors.white,
+        ),
+      ),
       debugShowCheckedModeBanner: false,
       initialRoute: "/splash",
       routes: routes,

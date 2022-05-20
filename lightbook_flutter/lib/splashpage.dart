@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:lightbook_flutter/constant/color.dart';
+import 'package:lightbook_flutter/homepage/homepage.dart';
 import 'package:lightbook_flutter/signin/signinpage.dart';
 
 class SplashPage extends StatelessWidget {
@@ -14,7 +16,7 @@ class SplashPage extends StatelessWidget {
         child: Container(
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
-          decoration: BoxDecoration(color: Color(0xFF121212), boxShadow: [
+          decoration: BoxDecoration(color: ColorConstants.primaryColor, boxShadow: [
             BoxShadow(
               color: Colors.green.withOpacity(0.4),
               spreadRadius: 2,
@@ -28,7 +30,7 @@ class SplashPage extends StatelessWidget {
                 width: 180,
                 height: 180,
                 child: CircularProgressIndicator(
-                  backgroundColor: Color(0xFF121212),
+                  backgroundColor: ColorConstants.primaryColor,
                   color: Colors.white,
                   strokeWidth: 8,
                 ),

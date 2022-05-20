@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lightbook_flutter/constant/color.dart';
 
 import 'components/body.dart';
 
@@ -9,7 +10,7 @@ class SignInPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      backgroundColor: Color(0xFF121212),
+      backgroundColor: ColorConstants.primaryColor,
       body: Body(),
     );
   }
