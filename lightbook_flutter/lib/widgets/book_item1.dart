@@ -37,7 +37,7 @@ class BookItem1 extends StatelessWidget {
             ),
             SizedBox(
               height: 16,
-              child: Text("${book.name} ${book.id}"),
+              child: Text("${book.name}"),
             ),
           ],
         ),

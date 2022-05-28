@@ -71,7 +71,7 @@ class _BookItem2State extends State<BookItem2> {
                     children: [
                       Expanded(
                         child: Text(
-                          "${widget.book.name} ${widget.book.id}",
+                          "${widget.book.name}",
                           style: TextStyle(fontSize: 20),
                         ),
                       ),
@@ -104,9 +104,9 @@ class _BookItem2State extends State<BookItem2> {
     return !widget.isShowPrice
         ? Text("")
         : Text(
-            "Giá: 20.000",
+            widget.book.price.toString(),
             style: TextStyle(
-              fontSize: 20,
+              fontSize: 16,
               color: Colors.green,
             ),
           );

@@ -30,24 +30,24 @@ class _BodyState extends State<Body> {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Container(
-        padding: EdgeInsets.fromLTRB(16, 128, 16, 0),
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: NetworkImage(widget.book.picture),
-            fit: BoxFit.cover,
-            opacity: 0.5,
-          ),
-          color: Colors.black12,
+    return Container(
+      padding: EdgeInsets.fromLTRB(16, 64, 16, 0),
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: NetworkImage(widget.book.picture),
+          fit: BoxFit.cover,
+          opacity: 0.5,
         ),
+        color: Colors.black12,
+      ),
+      child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(50)),
-                color: Colors.grey,
+                color: Colors.black.withOpacity(.3),
               ),
               child: Padding(
                 padding: const EdgeInsets.all(16.0),
@@ -79,12 +79,18 @@ class _BodyState extends State<Body> {
                           ),
                           Padding(
                             padding: EdgeInsets.only(left: 16, right: 8),
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(4.0),
-                              child: Image.network(
-                                widget.book.picture,
-                                width: 120,
-                                fit: BoxFit.contain,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                border: Border.all(
+                                    width: .5, color: const Color(0xFFFFFFFF)),
+                              ),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(4.0),
+                                child: Image.network(
+                                  widget.book.picture,
+                                  width: 120,
+                                  fit: BoxFit.contain,
+                                ),
                               ),
                             ),
                           ),
@@ -163,13 +169,13 @@ class _BodyState extends State<Body> {
               ),
             ),
             Container(
-              width: MediaQuery.of(context).size.width,
+              height: 500,
               child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
                   itemCount: Utilities.getReadBookContinue().length,
                   itemBuilder: (context, index) {
                     return BookItem2(
-                        book: Utilities.getReadBookContinue()[index]);
+                      book: Utilities.getReadBookContinue()[index],
+                    );
                   }),
             ),
           ],

@@ -18,9 +18,22 @@ namespace lightbook_backend_API.Services
         private readonly IBaseRepository<Book> _bookRepository;
         private readonly IMapper _mapper;
         public BookService(IBaseRepository<Book> bookRepository,
-                            IMapper mapper){
-            _bookRepository=bookRepository;
-            _mapper=mapper;
+                            IMapper mapper)
+        {
+            _bookRepository = bookRepository;
+            _mapper = mapper;
+        }
+
+        public async Task<List<BookDto>> GetAll()
+        {
+            var bookQuery = BookFilter(_bookRepository.Entities.AsQueryable(), new BookQueryCriteria());
+            return _mapper.Map<List<BookDto>>(bookQuery);
+        }
+
+        public async Task<List<BookDto>> GetBookByCategoryId(int categoryId)
+        {
+            var bookQuery = BookFilter(_bookRepository.Entities.AsQueryable(), new BookQueryCriteria { categoryId = categoryId });
+            return _mapper.Map<List<BookDto>>(bookQuery);
         }
 
         public async Task<PagedResponseModel<BookDto>> GetByPageAsync(BookQueryCriteria bookQueryCriteria, CancellationToken cancellationToken)
@@ -37,19 +50,20 @@ namespace lightbook_backend_API.Services
 
             var bookDto = _mapper.Map<IList<BookDto>>(books.Items);
 
-            return new PagedResponseModel<BookDto>{
+            return new PagedResponseModel<BookDto>
+            {
                 CurrentPage = books.CurrentPage,
                 TotalItems = books.TotalItems,
                 TotalPages = books.TotalPages,
                 Items = bookDto
-            };                      
+            };
         }
         private IQueryable<Book> BookFilter(
             IQueryable<Book> bookQuery,
             BookQueryCriteria bookQueryCriteria)
         {
             if (!String.IsNullOrEmpty(bookQueryCriteria.Search))
-            {                
+            {
                 string searchStr = UnSignExtension.ConvertToUnSign(bookQueryCriteria.Search).ToLower();
                 bookQuery = bookQuery.Where(delegate (Book c)
                 {
@@ -62,24 +76,27 @@ namespace lightbook_backend_API.Services
             if (bookQueryCriteria.Id != null)
             {
                 bookQuery = bookQuery.Where(b =>
-                    b.ID==bookQueryCriteria.Id
+                    b.ID == bookQueryCriteria.Id
                 );
             }
 
-            if(bookQueryCriteria.categoryId != null) {
+            if (bookQueryCriteria.categoryId != null)
+            {
                 bookQuery = bookQuery.Where(bq => bq.CategoryID == bookQueryCriteria.categoryId);
             }
 
-            if(bookQueryCriteria.catalogId != null) {
-                bookQuery = bookQuery.Where(bq=>bq.CatalogBooks.Any(cb=>cb.CatalogID==bookQueryCriteria.catalogId));
+            if (bookQueryCriteria.catalogId != null)
+            {
+                bookQuery = bookQuery.Where(bq => bq.CatalogBooks.Any(cb => cb.CatalogID == bookQueryCriteria.catalogId));
             }
 
-            if(bookQueryCriteria.authorId!=null){
-                bookQuery = bookQuery.Where(bq=>bq.AuthorBooks.Any(ab=>ab.AuthorID==bookQueryCriteria.authorId));
+            if (bookQueryCriteria.authorId != null)
+            {
+                bookQuery = bookQuery.Where(bq => bq.AuthorBooks.Any(ab => ab.AuthorID == bookQueryCriteria.authorId));
             }
 
             return bookQuery;
         }
     }
-    
+
 }

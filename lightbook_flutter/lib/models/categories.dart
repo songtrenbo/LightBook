@@ -1,8 +1,17 @@
+import 'dart:convert';
+
 class Categories {
   int id;
   String name;
   Categories({required this.id, required this.name});
+  
+  List<Categories> postFromJson(String str) =>
+      List<Categories>.from(json.decode(str).map((x) => Categories.fromMap(x)));
 
+  factory Categories.fromMap(Map<String, dynamic> json) => Categories(
+        id: json['id'],
+        name: json['name'],
+      );
   static List<Categories> init() {
     List<Categories> data = [
       Categories(id: 1, name: "Văn học"),

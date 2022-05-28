@@ -8,15 +8,32 @@ import 'package:lightbook_flutter/models/categories.dart';
 import 'package:lightbook_flutter/models/utilities.dart';
 import 'package:lightbook_flutter/widgets/book_item1.dart';
 
-class ListBook extends StatelessWidget {
+class ListBook extends StatefulWidget {
   int idCategory;
   ListBook({this.idCategory = 0});
+
+  @override
+  State<ListBook> createState() => _ListBookState();
+}
+
+class _ListBookState extends State<ListBook> {
+  late Future<List<Books>> futureBook;
+
+  @override
+  void initState() {
+    super.initState();
+    futureBook = widget.idCategory != 0
+        ? Utilities().fetchBooksByCategoryId(widget.idCategory)
+        : Utilities().fetchBooks();
+  }
+
   @override
   Widget build(BuildContext context) {
-    final Categories? category =
-        idCategory == 0 ? null : Utilities.getCategoryById(idCategory);
+    final Categories? category = widget.idCategory == 0
+        ? null
+        : Utilities.getCategoryById(widget.idCategory);
     // print(category.id);
-    final List<Books> books = idCategory != 0
+    final List<Books> books = widget.idCategory != 0
         ? Utilities.get5BookByCategoryId(category!.id)
         : Utilities.getPopularBook();
     // print("${books[4].name} ${books[4].id}");
@@ -38,9 +55,9 @@ class ListBook extends StatelessWidget {
                 )),
                 GestureDetector(
                   onTap: () {
-                    if (idCategory != 0)
+                    if (widget.idCategory != 0)
                       Navigator.pushNamed(context, CategoryDetailPage.routeName,
-                          arguments: idCategory);
+                          arguments: widget.idCategory);
                   },
                   child: Text(
                     category?.name == null ? "" : 'Xem tất cả',
@@ -57,16 +74,22 @@ class ListBook extends StatelessWidget {
             Container(
               width: MediaQuery.of(context).size.width,
               height: 150,
-              child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: books.length,
-                  itemBuilder: (context, index) {
-                    Books book = Utilities.getBookById(books[index].id);
-                    // print("${book.id} + ${book.name}");
-                    // print("++++++++${book.id} + ${book.name}++++++");
-                    // print(books.length);
-                    return BookItem1(book: book);
-                  }),
+              child: FutureBuilder<List<Books>>(
+                future: futureBook,
+                builder: (context, snapshot) {
+                  if (snapshot.hasData) {
+                    return ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: 5,
+                      itemBuilder: (_, index) => BookItem1(
+                        book: snapshot.data![index],
+                      ),
+                    );
+                  } else {
+                    return Center(child: CircularProgressIndicator());
+                  }
+                },
+              ),
             )
           ],
         ),

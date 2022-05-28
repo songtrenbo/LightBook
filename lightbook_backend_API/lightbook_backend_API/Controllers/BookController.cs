@@ -17,10 +17,28 @@ namespace lightbook_backend_API.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<PagedResponseModel<BookDto>>> GetBooks([FromQuery] BookQueryCriteria bookQueryCriteria, CancellationToken cancellationToken){
+        public async Task<ActionResult<PagedResponseModel<BookDto>>> GetBooks([FromQuery] BookQueryCriteria bookQueryCriteria, CancellationToken cancellationToken)
+        {
             var response = await _bookService.GetByPageAsync(bookQueryCriteria, cancellationToken);
 
             return Ok(response);
         }
+
+        [HttpGet("all")]
+        public async Task<ActionResult<PagedResponseModel<BookDto>>> GetAllBooks()
+        {
+            var response = await _bookService.GetAll();
+
+            return Ok(response);
+        }
+
+        [HttpGet("{categoryId}")]
+        public async Task<ActionResult<PagedResponseModel<BookDto>>> GetBookByCategoryId(int categoryId)
+        {
+            var response = await _bookService.GetBookByCategoryId(categoryId);
+
+            return Ok(response);
+        }
+
     }
 }

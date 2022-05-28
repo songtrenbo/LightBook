@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using lightbook_shared;
@@ -10,5 +11,7 @@ namespace lightbook_backend_API.Interfaces
         Task<PagedResponseModel<BookDto>> GetByPageAsync(
             BookQueryCriteria bookQueryCriteria,
             CancellationToken cancellationToken);
+        Task<List<BookDto>> GetAll();
+        Task<List<BookDto>> GetBookByCategoryId(int categoryId);
     }
 }

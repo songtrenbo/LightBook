@@ -1,3 +1,6 @@
+import 'package:http/http.dart' as http;
+import 'dart:io';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:lightbook_flutter/constant/color.dart';
@@ -5,6 +8,7 @@ import 'package:lightbook_flutter/routes.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 void main() async {
+  HttpOverrides.global = MyHttpOverrides();
   WidgetsFlutterBinding.ensureInitialized();
   if (kIsWeb) {
     await Firebase.initializeApp(
@@ -49,5 +53,14 @@ class MyApp extends StatelessWidget {
       initialRoute: "/splash",
       routes: routes,
     );
+  }
+}
+
+class MyHttpOverrides extends HttpOverrides {
+  @override
+  HttpClient createHttpClient(SecurityContext? context) {
+    return super.createHttpClient(context)
+      ..badCertificateCallback =
+          (X509Certificate cert, String host, int port) => true;
   }
 }
