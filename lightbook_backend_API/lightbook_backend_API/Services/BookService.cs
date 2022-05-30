@@ -43,6 +43,7 @@ namespace lightbook_backend_API.Services
             var books = await bookQuery
                             .AsNoTracking()
                             .Include(b => b.Category)
+                            .Include(b => b.AuthorBooks).ThenInclude(at => at.Author)
                             .PaginateAsync(
                                 bookQueryCriteria,
                                 cancellationToken
