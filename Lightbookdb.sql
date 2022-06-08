@@ -1446,7 +1446,7 @@ values(
 
 Insert into AuthorBooks(AuthorID, BookID) Values(1,1)
 Insert into AuthorBooks(AuthorID, BookID) Values(2,2)
-Insert into AuthorBooks(AuthorID, BookID) Values(1,2)
+Insert into AuthorBooks(AuthorID, BookID) Values(1,3)
 Insert into AuthorBooks(AuthorID, BookID) Values(1,4)
 Insert into AuthorBooks(AuthorID, BookID) Values(3,5)
 Insert into AuthorBooks(AuthorID, BookID) Values(4,6)

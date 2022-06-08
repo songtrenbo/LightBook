@@ -13,7 +13,4 @@ export class UserService {
   login(data: any): Observable<any> {
     return this.httpClient.post(baseURL+"/login", data);
   }
-  listBooksByCateId(): Observable<any> {
-    return this.httpClient.get(baseURL);
-  }
 }

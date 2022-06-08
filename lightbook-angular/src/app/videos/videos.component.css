@@ -1,0 +1,6 @@
+*{
+    z-index: 1;
+}
+.carousel-item{
+    transition: all 0.7s ease 0s;
+}

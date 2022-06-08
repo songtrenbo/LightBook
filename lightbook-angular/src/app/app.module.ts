@@ -19,6 +19,7 @@ import { BookDetailComponent } from './book-detail/book-detail.component';
 import { CategoryComponent } from './category/category.component';
 import { CartComponent } from './cart/cart.component';
 import { ItemsComponent } from './category/items/items.component';
+import { VideosComponent } from './videos/videos.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { ItemsComponent } from './category/items/items.component';
     CategoryComponent,
     CartComponent,
     ItemsComponent,
+    VideosComponent,
   ],
   imports: [
     BrowserModule,

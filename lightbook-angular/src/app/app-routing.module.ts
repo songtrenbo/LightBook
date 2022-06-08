@@ -5,6 +5,7 @@ import { CartComponent } from './cart/cart.component';
 import { CategoryComponent } from './category/category.component';
 import { HomeComponent } from './home/home.component';
 import { LibraryComponent } from './library/library.component';
+import { VideosComponent } from './videos/videos.component';
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   {path: 'home', component: HomeComponent},
@@ -12,6 +13,7 @@ const appRoutes: Routes = [
   {path: 'cart', component: CartComponent},
   {path: 'category', component: CategoryComponent},
   {path: 'detail', component: BookDetailComponent},
+  {path: 'videos', component: VideosComponent},
 ];
 @NgModule({
   imports: [RouterModule.forRoot(appRoutes)],
