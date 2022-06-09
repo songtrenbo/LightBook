@@ -1,9 +1,9 @@
 <div class="row mt-4">
-    <a class="nav-link text-white h5 col-md-2" href="#">BEST_SELLERS <i class="bi bi-chevron-right"></i></a>
+    <a class="nav-link text-white h5 col-md-2" href="#"> {{catalog?.name}}<i class="bi bi-chevron-right"></i></a>
 </div>
 
 <div class="row">
-    <div id="carouselExampleControlsNoTouching" class="carousel slide w-100" data-bs-ride="carousel" style="width:84%">
+    <div id="{{'carouselExampleControlsNoTouching'+catalog?.id}}" class="carousel slide w-100" data-bs-ride="carousel" style="width:84%">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <div class="cards row">
@@ -20,7 +20,7 @@
                                 <div class="container p-2 text-center">
                                     <span class="text-white fs-4 mt-4 text-truncate"> {{ book.name }}</span> <br>
                                     <span class="text-white">Author: <span
-                                            *ngFor="let author of book.authorBooks.slice(0,1)">{{author.author.name}}</span></span>
+                                            *ngFor="let authorBook of book.authorBooks">{{authorBook.author.name}}</span></span>
                                     <div class="nav-item">
                                         <a class="nav-link" style="text-align:center; gap: 20px; font-size: 20px;">
                                             <span *ngFor="let item of AddStar( book.ratePoint ); let i = index"> <i
@@ -40,7 +40,7 @@
             <div class="carousel-item">
                 <div class="cards row">
                     <div class="col-2" *ngFor="let book of books; let i = index">
-                        <a routerLink="/detail/{{book.id}}" class="card" *ngIf="i >= 6">
+                        <a href="" class="card" *ngIf="i >= 6">
                             <img src="{{ book.picture }}" class="card__image" alt="" />
                             <div class="card__overlay">
                                 <div class="card__header d-flex justify-content-center">
@@ -52,7 +52,7 @@
                                 <div class="container p-2 text-center">
                                     <span class="text-white fs-4 mt-4 text-truncate"> {{ book.name }}</span> <br>
                                     <span class="text-white">Author: <span
-                                            *ngFor="let author of book.authorBooks.slice(0,1)">{{author.author.name}}</span></span>
+                                            *ngFor="let authorBook of book.authorBooks">{{authorBook.author.name}}</span></span>
                                     <div class="nav-item">
                                         <a class="nav-link" style="text-align:center; gap: 20px; font-size: 20px;">
                                             <span *ngFor="let item of AddStar( book.ratePoint ); let i = index"> <i
@@ -71,12 +71,12 @@
             </div>
         </div>
         <button class="carousel-control-prev" style="width: 100px;" type="button"
-            data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+            [attr.data-target]="'#carouselExampleControlsNoTouching'+catalog?.id" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
         <button class="carousel-control-next" style="width: 100px;" type="button"
-            data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+            [attr.data-target]="'#carouselExampleControlsNoTouching'+catalog?.id" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>

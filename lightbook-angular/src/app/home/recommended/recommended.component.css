@@ -46,14 +46,14 @@
 .card:hover .card__header {
     transform: translateY(0);
 }
-.price{
-    color: rgb(15, 252, 15);
-    font-weight: normal;
-}
 
 .price-free{
     color: rgb(252, 15, 15);
     font-weight: normal;
 }
 
+.price{
+    color: rgb(15, 252, 15);
+    font-weight: normal;
+}
 

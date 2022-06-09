@@ -169,9 +169,10 @@ class _BodyState extends State<Body> {
               ),
             ),
             Container(
-              height: 500,
               child: ListView.builder(
                   itemCount: Utilities.getReadBookContinue().length,
+                  physics: NeverScrollableScrollPhysics(),
+                  shrinkWrap: true,
                   itemBuilder: (context, index) {
                     return BookItem2(
                       book: Utilities.getReadBookContinue()[index],

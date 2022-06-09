@@ -5,222 +5,24 @@
 </div>
 <div class="row text-white" style="background-color: #000000;">
     <div class="col-md-12 p-2 container-top">
-        <div class="row row-top mt-2">
+        <div class="row row-top mt-2" *ngFor="let book of books; let i = index" (click)="redirect(book.id)"
+            style="cursor: pointer;">
             <div class="col-md-2 d-flex align-items-center">
-                <span class="fs-2 text-primary ">01</span>
+                <span class="fs-2 text-primary ">{{("00"+(i+1)).slice(-2)}}</span>
             </div>
             <div class="col-md-2 container-img">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/71IJ1HC2a3L.jpg"
-                                class="card_image" alt="" />
+                <img src="{{ book.picture }}" class="card_image" alt="" />
             </div>
             <div class="col-md-8">
-                <span class="fs-6 fw-bold">Mushàei ưethsaldf ưehf lăèh ưè</span>
-                <span class="fs-6">Author: Mr Acxz</span>
+                <span class="fs-6 fw-bold">{{book.name}} </span>
+                <span class="fs-6">Author: <span
+                        *ngFor="let author of book.authorBooks.slice(0,1)">{{author.author.name}}</span></span>
                 <div>
                     <a style="font-size: 15px;">
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="row row-top mt-2">
-            <div class="col-md-2 d-flex align-items-center">
-                <span class="fs-2" style="color: rgb(0, 255, 0);">02</span>
-            </div>
-            <div class="col-md-2 container-img">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/71IJ1HC2a3L.jpg"
-                                class="card_image" alt="" />
-            </div>
-            <div class="col-md-8">
-                <span class="fs-6 fw-bold">Mushàei ưethsaldf ưehf lăèh ưè</span>
-                <span class="fs-6">Author: Mr Acxz</span>
-                <div>
-                    <a style="font-size: 15px;">
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="row row-top mt-2">
-            <div class="col-md-2 d-flex align-items-center">
-                <span class="fs-2" style="color: rgb(255, 38, 0);">03</span>
-            </div>
-            <div class="col-md-2 container-img">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/71IJ1HC2a3L.jpg"
-                                class="card_image" alt="" />
-            </div>
-            <div class="col-md-8">
-                <span class="fs-6 fw-bold">Mushàei ưethsaldf ưehf lăèh ưè</span>
-                <span class="fs-6">Author: Mr Acxz</span>
-                <div>
-                    <a style="font-size: 15px;">
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="row row-top mt-2">
-            <div class="col-md-2 d-flex align-items-center">
-                <span class="fs-2 text-white ">04</span>
-            </div>
-            <div class="col-md-2 container-img">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/71IJ1HC2a3L.jpg"
-                                class="card_image" alt="" />
-            </div>
-            <div class="col-md-8">
-                <span class="fs-6 fw-bold">Mushàei ưethsaldf ưehf lăèh ưè</span>
-                <span class="fs-6">Author: Mr Acxz</span>
-                <div>
-                    <a style="font-size: 15px;">
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="row row-top mt-2">
-            <div class="col-md-2 d-flex align-items-center">
-                <span class="fs-2 text-white ">05</span>
-            </div>
-            <div class="col-md-2 container-img">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/71IJ1HC2a3L.jpg"
-                                class="card_image" alt="" />
-            </div>
-            <div class="col-md-8">
-                <span class="fs-6 fw-bold">Mushàei ưethsaldf ưehf lăèh ưè</span>
-                <span class="fs-6">Author: Mr Acxz</span>
-                <div>
-                    <a style="font-size: 15px;">
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="row row-top mt-2">
-            <div class="col-md-2 d-flex align-items-center">
-                <span class="fs-2 text-white ">06</span>
-            </div>
-            <div class="col-md-2 container-img">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/71IJ1HC2a3L.jpg"
-                                class="card_image" alt="" />
-            </div>
-            <div class="col-md-8">
-                <span class="fs-6 fw-bold">Mushàei ưethsaldf ưehf lăèh ưè</span>
-                <span class="fs-6">Author: Mr Acxz</span>
-                <div>
-                    <a style="font-size: 15px;">
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="row row-top mt-2">
-            <div class="col-md-2 d-flex align-items-center">
-                <span class="fs-2 text-white ">07</span>
-            </div>
-            <div class="col-md-2 container-img">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/71IJ1HC2a3L.jpg"
-                                class="card_image" alt="" />
-            </div>
-            <div class="col-md-8">
-                <span class="fs-6 fw-bold">Mushàei ưethsaldf ưehf lăèh ưè</span>
-                <span class="fs-6">Author: Mr Acxz</span>
-                <div>
-                    <a style="font-size: 15px;">
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="row row-top mt-2">
-            <div class="col-md-2 d-flex align-items-center">
-                <span class="fs-2 text-white ">08</span>
-            </div>
-            <div class="col-md-2 container-img">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/71IJ1HC2a3L.jpg"
-                                class="card_image" alt="" />
-            </div>
-            <div class="col-md-8">
-                <span class="fs-6 fw-bold">Mushàei ưethsaldf ưehf lăèh ưè</span>
-                <span class="fs-6">Author: Mr Acxz</span>
-                <div>
-                    <a style="font-size: 15px;">
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="row row-top mt-2">
-            <div class="col-md-2 d-flex align-items-center">
-                <span class="fs-2 text-white ">09</span>
-            </div>
-            <div class="col-md-2 container-img">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/71IJ1HC2a3L.jpg"
-                                class="card_image" alt="" />
-            </div>
-            <div class="col-md-8">
-                <span class="fs-6 fw-bold">Mushàei ưethsaldf ưehf lăèh ưè</span>
-                <span class="fs-6">Author: Mr Acxz</span>
-                <div>
-                    <a style="font-size: 15px;">
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="row row-top mt-2">
-            <div class="col-md-2 d-flex align-items-center">
-                <span class="fs-2 text-white ">10</span>
-            </div>
-            <div class="col-md-2 container-img">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/71IJ1HC2a3L.jpg"
-                                class="card_image" alt="" />
-            </div>
-            <div class="col-md-8">
-                <span class="fs-6 fw-bold">Mushàei ưethsaldf ưehf lăèh ưè</span>
-                <span class="fs-6">Author: Mr Acxz</span>
-                <div>
-                    <a style="font-size: 15px;">
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                        <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
+                        <span *ngFor="let item of AddStar( book.ratePoint ); let i = index"> <i class="bi bi-star-fill"
+                                aria-hidden="true" style="color:#FFD700"></i></span>
+                        <span *ngFor="let item of AddGrayStar( book.ratePoint ); let i = index"> <i
+                                class="bi bi-star-fill" aria-hidden="true" style="color:#8a8a8a"></i></span>
                     </a>
                 </div>
             </div>

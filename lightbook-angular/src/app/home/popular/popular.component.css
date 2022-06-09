@@ -1,30 +1,36 @@
-*{
-    z-index: 1;
+* {
+  z-index: 1;
 }
-.container-img{
-    width: 60px;
-    height: 60px;
-    overflow: hidden;
-    padding: 0;
+.container-img {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  padding: 0;
 }
-.card_image{
-    width: 60px;
+.card_image {
+  width: 60px;
 }
 
-  .row-top{
-    box-shadow:0 2px 3px 0px rgba(0,0,0,0.25);
-    border-radius:3px;
-    transition:.2s all; 
-  }
-  .container-top:hover .row-top{
-    filter:blur(3px);
-    opacity:.5;
-    transform: scale(.98);
-    box-shadow:none;
-  }
-  .container-top:hover .row-top:hover{
-    transform:scale(1);
-    filter:blur(0px);
-    opacity:1;
-    box-shadow:0 8px 20px 0px rgba(0,0,0,0.125);
-  }
+.row-top {
+  box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  transition: 0.2s all;
+}
+.container-top:hover .row-top {
+  filter: blur(3px);
+  opacity: 0.5;
+  transform: scale(0.98);
+  box-shadow: none;
+}
+.container-top:hover .row-top:hover {
+  transform: scale(1);
+  filter: blur(0px);
+  opacity: 1;
+  box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.125);
+}
+.fs-2 {
+  color: #0d6efd;
+}
+div>div>span.fs-2 + div>div>span.fs-2 {
+  color: rgb(0, 255, 0);
+}

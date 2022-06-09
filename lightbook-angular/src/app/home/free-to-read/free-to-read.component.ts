@@ -1,7 +1,6 @@
-import { HttpParams } from '@angular/common/http';
-import { Component, Input, OnInit } from '@angular/core';
-import { Book } from 'src/models/book.model';
-import { BookService } from 'src/services/book.service';
+import { Component, OnInit } from '@angular/core';
+import { Book } from 'src/app/model/book.model';
+import { BookService } from 'src/app/service/book.service';
 
 @Component({
   selector: 'app-free-to-read',
@@ -9,32 +8,19 @@ import { BookService } from 'src/services/book.service';
   styleUrls: ['./free-to-read.component.css'],
 })
 export class FreeToReadComponent implements OnInit {
-  books!: Book[];
-  // books: any;
-  currentBook = null;
-  currentIndex = -1;
-  name = '';
+  books: Book[] = [];
   constructor(private bookService: BookService) {}
 
   ngOnInit(): void {
-    // this.listBooks();
-    this.books = this.bookService.getBooks();
+    this.getAll();
   }
 
-  // listBooks(): void {
-  //   const params = new HttpParams({
-  //     fromString: `catalogId=4&Limit=6&Page=1`,
-  //   });
-  //   this.bookService.listBooks(params).subscribe(
-  //     (books) => {
-  //       books = books.items;
-  //       this.books = books;
-  //     },
-  //     (error) => {
-  //       console.log(error);
-  //     }
-  //   );
-  // }
+  getAll() {
+    this.bookService.getBooksByCatalogId(4).subscribe((res: any) => {
+      this.books = res.items;
+    });
+  }
+
   AddStar(number: number) {
     var items: number[] = [];
     for (var i = 1; i <= number; i++) {
@@ -42,6 +28,7 @@ export class FreeToReadComponent implements OnInit {
     }
     return items;
   }
+
   AddGrayStar(number: number) {
     var items: number[] = [];
     for (var i = 5 - number; i > 0; i--) {

@@ -1,30 +1,48 @@
 import { Component, OnInit } from '@angular/core';
-import { Book } from 'src/models/book.model';
-import { Category } from 'src/models/category.model';
-import { BookService } from 'src/services/book.service';
+import { Book } from '../model/book.model';
+import { Category } from '../model/category.model';
+import { BookService } from '../service/book.service';
+import { CategoryService } from '../service/category.service';
 
 @Component({
   selector: 'app-category',
   templateUrl: './category.component.html',
-  styleUrls: ['./category.component.css']
+  styleUrls: ['./category.component.css'],
 })
 export class CategoryComponent implements OnInit {
-  cate:Category | undefined;
-  cateName!:string;
-  books!: Book[];
-  cates!: Category[];
-  constructor(private bookService: BookService) {}
+  cate: Category | undefined;
+  cateName: string;
+  books: Book[];
+  cates: Category[];
+  constructor(
+    private bookService: BookService,
+    private categoryService: CategoryService
+  ) {}
 
   ngOnInit(): void {
-    this.cates = this.bookService.getCates();
-    this.books = this.bookService.getBooksByCate(1);
-    this.cate = this.bookService.getCate(1);
+    this.getCategories();
+    this.getBooksByCategoryId();
+    this.getCategoryById();
     this.cateName = this.cate!.name;
   }
-  getIndex(index: number){
-    console.log(index);//clicked index
-    this.books = this.bookService.getBooksByCate(index);
-    this.cate = this.bookService.getCate(index);
+  getIndex(index: number) {
+    this.getBooksByCategoryId(index);
+    this.getCategoryById(index);
     this.cateName = this.cate!.name;
- }
+  }
+  getCategories() {
+    this.categoryService.getAll().subscribe((res: any) => {
+      this.cates = res.items;
+    });
+  }
+  getBooksByCategoryId(categoryId: number = 1) {
+    this.bookService.getBookByCategoryId(categoryId).subscribe((res: any) => {
+      this.books = res;
+    });
+  }
+  getCategoryById(categoryId: number = 1) {
+    this.categoryService.getById(categoryId).subscribe((res: any) => {
+      this.cate = res;
+    });
+  }
 }

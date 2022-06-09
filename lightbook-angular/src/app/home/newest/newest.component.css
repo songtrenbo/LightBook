@@ -47,9 +47,13 @@
     transform: translateY(0);
 }
 
+.price-free{
+    color: rgb(252, 15, 15);
+    font-weight: normal;
+}
+
 .price{
     color: rgb(15, 252, 15);
     font-weight: normal;
 }
-
 

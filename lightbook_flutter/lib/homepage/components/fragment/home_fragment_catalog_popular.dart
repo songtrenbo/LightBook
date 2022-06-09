@@ -25,8 +25,8 @@ class _PopularFragmentState extends State<PopularFragment> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+    return ListView(
+      // crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         ListBook(),
         Padding(
@@ -44,6 +44,7 @@ class _PopularFragmentState extends State<PopularFragment> {
                 child: Container(
                   child: ListView.builder(
                     itemCount: 5,
+                    physics: NeverScrollableScrollPhysics(),
                     shrinkWrap: true,
                     itemBuilder: (_, index) => BookItem2(
                       book: snapshot.data![index],

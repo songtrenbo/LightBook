@@ -1,10 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Book } from 'src/models/book.model';
+import { Book } from 'src/app/model/book.model';
 
 @Component({
   selector: 'app-items',
   templateUrl: './items.component.html',
-  styleUrls: ['./items.component.css']
+  styleUrls: ['./items.component.css'],
 })
 export class ItemsComponent implements OnInit {
   @Input() book!: Book;

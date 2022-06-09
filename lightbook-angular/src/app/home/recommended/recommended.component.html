@@ -1,160 +1,34 @@
 <div class="row mt-4">
     <a class="nav-link text-white h5 col-md-2" href="#">RECOMMENDED <i class="bi bi-chevron-right"></i></a>
 </div>
+
 <div class="row">
     <div id="carouselExampleControlsNoTouching3" class="carousel slide w-100" data-bs-ride="carousel" style="width:84%">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <div class="cards row">
-                    <div class="col-2">
-                        <a href="" class="card">
-                            <img src="https://images-na.ssl-images-amazon.com/images/I/71IJ1HC2a3L.jpg"
-                                class="card__image" alt="" />
+                    <div class="col-2" *ngFor="let book of books; let i = index">
+                        <a [routerLink]="['/detail',book.id]" class="card" *ngIf="i < 6">
+                            <img src="{{ book.picture }}" class="card__image" alt="" />
                             <div class="card__overlay">
                                 <div class="card__header d-flex justify-content-center">
                                     <div class="card__header-text">
-                                        <span class="price fs-3">4.5$</span>
+                                        <span *ngIf="book.price==0" class="price-free fs-3">Free</span>
+                                        <span *ngIf="book.price>0" class="price fs-3">{{book.price}}</span>
                                     </div>
                                 </div>
                                 <div class="container p-2 text-center">
-                                    <span class="text-white fs-4 mt-4 ">The Road</span> <br>
-                                    <span class="text-white">Author: ksdg</span>
+                                    <span class="text-white fs-4 mt-4 text-truncate"> {{ book.name }}</span> <br>
+                                    <span class="text-white">Author: <span
+                                            *ngFor="let author of book.authorBooks.slice(0,1)">{{author.author.name}}</span></span>
                                     <div class="nav-item">
                                         <a class="nav-link" style="text-align:center; gap: 20px; font-size: 20px;">
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-2">
-                        <a href="" class="card">
-                            <img src="data:image/jpeg;base64,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"
-                                class="card__image" alt="" />
-                            <div class="card__overlay">
-                                <div class="card__header d-flex justify-content-center">
-                                    <div class="card__header-text">
-                                        <span class="price-free fs-3">Free</span>
-                                    </div>
-                                </div>
-                                <div class="container p-2 text-center">
-                                    <span class="text-white fs-4 mt-4 ">The Road</span> <br>
-                                    <span class="text-white">Author: ksdg</span>
-                                    <div class="nav-item">
-                                        <a class="nav-link" style="text-align:center; gap: 20px; font-size: 20px;">
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-2">
-                        <a href="" class="card">
-                            <img src="https://images-na.ssl-images-amazon.com/images/I/71IJ1HC2a3L.jpg"
-                                class="card__image" alt="" />
-                            <div class="card__overlay">
-                                <div class="card__header d-flex justify-content-center">
-                                    <div class="card__header-text">
-                                        <span class="price-free fs-3">Free</span>
-                                    </div>
-                                </div>
-                                <div class="container p-2 text-center">
-                                    <span class="text-white fs-4 mt-4 ">The Road</span> <br>
-                                    <span class="text-white">Author: ksdg</span>
-                                    <div class="nav-item">
-                                        <a class="nav-link" style="text-align:center; gap: 20px; font-size: 20px;">
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-2">
-                        <a href="" class="card">
-                            <img src="https://images-na.ssl-images-amazon.com/images/I/71IJ1HC2a3L.jpg"
-                                class="card__image" alt="" />
-                            <div class="card__overlay">
-                                <div class="card__header d-flex justify-content-center">
-                                    <div class="card__header-text">
-                                        <span class="price-free fs-3">Free</span>
-                                    </div>
-                                </div>
-                                <div class="container p-2 text-center">
-                                    <span class="text-white fs-4 mt-4 ">The Road</span> <br>
-                                    <span class="text-white">Author: ksdg</span>
-                                    <div class="nav-item">
-                                        <a class="nav-link" style="text-align:center; gap: 20px; font-size: 20px;">
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-2">
-                        <a href="" class="card">
-                            <img src="https://m.media-amazon.com/images/I/51l652+ym4L.jpg" class="card__image" alt="" />
-                            <div class="card__overlay">
-                                <div class="card__header d-flex justify-content-center">
-                                    <div class="card__header-text">
-                                        <span class="price fs-3">5.7$</span>
-                                    </div>
-                                </div>
-                                <div class="container p-2 text-center">
-                                    <span class="text-white fs-4 mt-4 ">The Road</span> <br>
-                                    <span class="text-white">Author: ksdg</span>
-                                    <div class="nav-item">
-                                        <a class="nav-link" style="text-align:center; gap: 20px; font-size: 20px;">
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-2">
-                        <a href="" class="card">
-                            <img src="https://images-na.ssl-images-amazon.com/images/I/71IJ1HC2a3L.jpg"
-                                class="card__image" alt="" />
-                            <div class="card__overlay">
-                                <div class="card__header d-flex justify-content-center">
-                                    <div class="card__header-text">
-                                        <span class="price fs-3">9.4$</span>
-                                    </div>
-                                </div>
-                                <div class="container p-2 text-center">
-                                    <span class="text-white fs-4 mt-4 ">The Road</span> <br>
-                                    <span class="text-white">Author: ksdg</span>
-                                    <div class="nav-item">
-                                        <a class="nav-link" style="text-align:center; gap: 20px; font-size: 20px;">
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
+                                            <span *ngFor="let item of AddStar( book.ratePoint ); let i = index"> <i
+                                                    class="bi bi-star-fill" aria-hidden="true"
+                                                    style="color:#FFD700"></i></span>
+                                            <span *ngFor="let item of AddGrayStar( book.ratePoint ); let i = index"> <i
+                                                    class="bi bi-star-fill" aria-hidden="true"
+                                                    style="color:#8a8a8a"></i></span>
                                         </a>
                                     </div>
                                 </div>
@@ -165,316 +39,28 @@
             </div>
             <div class="carousel-item">
                 <div class="cards row">
-                    <div class="col-2">
-                        <a href="" class="card">
-                            <img src="https://images-na.ssl-images-amazon.com/images/I/71IJ1HC2a3L.jpg"
-                                class="card__image" alt="" />
+                    <div class="col-2" *ngFor="let book of books; let i = index">
+                        <a routerLink="/detail/{{book.id}}" class="card" *ngIf="i >= 6">
+                            <img src="{{ book.picture }}" class="card__image" alt="" />
                             <div class="card__overlay">
                                 <div class="card__header d-flex justify-content-center">
                                     <div class="card__header-text">
-                                        <span class="price-free fs-3">Free</span>
+                                        <span *ngIf="book.price==0" class="price-free fs-3">Free</span>
+                                        <span *ngIf="book.price>0" class="price fs-3">{{book.price}}</span>
                                     </div>
                                 </div>
                                 <div class="container p-2 text-center">
-                                    <span class="text-white fs-4 mt-4 ">The Road</span> <br>
-                                    <span class="text-white">Author: ksdg</span>
+                                    <span class="text-white fs-4 mt-4 text-truncate"> {{ book.name }}</span> <br>
+                                    <span class="text-white">Author: <span
+                                            *ngFor="let author of book.authorBooks.slice(0,1)">{{author.author.name}}</span></span>
                                     <div class="nav-item">
                                         <a class="nav-link" style="text-align:center; gap: 20px; font-size: 20px;">
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-2">
-                        <a href="" class="card">
-                            <img src="https://images-na.ssl-images-amazon.com/images/I/71IJ1HC2a3L.jpg"
-                                class="card__image" alt="" />
-                            <div class="card__overlay">
-                                <div class="card__header d-flex justify-content-center">
-                                    <div class="card__header-text">
-                                        <span class="price-free fs-3">Free</span>
-                                    </div>
-                                </div>
-                                <div class="container p-2 text-center">
-                                    <span class="text-white fs-4 mt-4 ">The Road</span> <br>
-                                    <span class="text-white">Author: ksdg</span>
-                                    <div class="nav-item">
-                                        <a class="nav-link" style="text-align:center; gap: 20px; font-size: 20px;">
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-2">
-                        <a href="" class="card">
-                            <img src="https://images-na.ssl-images-amazon.com/images/I/71IJ1HC2a3L.jpg"
-                                class="card__image" alt="" />
-                            <div class="card__overlay">
-                                <div class="card__header d-flex justify-content-center">
-                                    <div class="card__header-text">
-                                        <span class="price fs-3">7.8$</span>
-                                    </div>
-                                </div>
-                                <div class="container p-2 text-center">
-                                    <span class="text-white fs-4 mt-4 ">The Road</span> <br>
-                                    <span class="text-white">Author: ksdg</span>
-                                    <div class="nav-item">
-                                        <a class="nav-link" style="text-align:center; gap: 20px; font-size: 20px;">
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-2">
-                        <a href="" class="card">
-                            <img src="https://images-na.ssl-images-amazon.com/images/I/71IJ1HC2a3L.jpg"
-                                class="card__image" alt="" />
-                            <div class="card__overlay">
-                                <div class="card__header d-flex justify-content-center">
-                                    <div class="card__header-text">
-                                        <span class="price-free fs-3">Free</span>
-                                    </div>
-                                </div>
-                                <div class="container p-2 text-center">
-                                    <span class="text-white fs-4 mt-4 ">The Road</span> <br>
-                                    <span class="text-white">Author: ksdg</span>
-                                    <div class="nav-item">
-                                        <a class="nav-link" style="text-align:center; gap: 20px; font-size: 20px;">
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-2">
-                        <a href="" class="card">
-                            <img src="https://images-na.ssl-images-amazon.com/images/I/71IJ1HC2a3L.jpg"
-                                class="card__image" alt="" />
-                            <div class="card__overlay">
-                                <div class="card__header d-flex justify-content-center">
-                                    <div class="card__header-text">
-                                        <span class="price fs-3">8.7$</span>
-                                    </div>
-                                </div>
-                                <div class="container p-2 text-center">
-                                    <span class="text-white fs-4 mt-4 ">The Road</span> <br>
-                                    <span class="text-white">Author: ksdg</span>
-                                    <div class="nav-item">
-                                        <a class="nav-link" style="text-align:center; gap: 20px; font-size: 20px;">
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-2">
-                        <a href="" class="card">
-                            <img src="https://images-na.ssl-images-amazon.com/images/I/71IJ1HC2a3L.jpg"
-                                class="card__image" alt="" />
-                            <div class="card__overlay">
-                                <div class="card__header d-flex justify-content-center">
-                                    <div class="card__header-text">
-                                        <span class="price-free fs-3">Free</span>
-                                    </div>
-                                </div>
-                                <div class="container p-2 text-center">
-                                    <span class="text-white fs-4 mt-4 ">The Road</span> <br>
-                                    <span class="text-white">Author: ksdg</span>
-                                    <div class="nav-item">
-                                        <a class="nav-link" style="text-align:center; gap: 20px; font-size: 20px;">
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="cards row">
-                    <div class="col-2">
-                        <a href="" class="card">
-                            <img src="https://images-na.ssl-images-amazon.com/images/I/71IJ1HC2a3L.jpg"
-                                class="card__image" alt="" />
-                            <div class="card__overlay">
-                                <div class="card__header d-flex justify-content-center">
-                                    <div class="card__header-text">
-                                        <span class="price fs-3">7.7$</span>
-                                    </div>
-                                </div>
-                                <div class="container p-2 text-center">
-                                    <span class="text-white fs-4 mt-4 ">The Road</span> <br>
-                                    <span class="text-white">Author: ksdg</span>
-                                    <div class="nav-item">
-                                        <a class="nav-link" style="text-align:center; gap: 20px; font-size: 20px;">
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-2">
-                        <a href="" class="card">
-                            <img src="https://images-na.ssl-images-amazon.com/images/I/71IJ1HC2a3L.jpg"
-                                class="card__image" alt="" />
-                            <div class="card__overlay">
-                                <div class="card__header d-flex justify-content-center">
-                                    <div class="card__header-text">
-                                        <span class="price fs-3">5.3$</span>
-                                    </div>
-                                </div>
-                                <div class="container p-2 text-center">
-                                    <span class="text-white fs-4 mt-4 ">The Road</span> <br>
-                                    <span class="text-white">Author: ksdg</span>
-                                    <div class="nav-item">
-                                        <a class="nav-link" style="text-align:center; gap: 20px; font-size: 20px;">
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-2">
-                        <a href="" class="card">
-                            <img src="https://images-na.ssl-images-amazon.com/images/I/71IJ1HC2a3L.jpg"
-                                class="card__image" alt="" />
-                            <div class="card__overlay">
-                                <div class="card__header d-flex justify-content-center">
-                                    <div class="card__header-text">
-                                        <span class="price fs-3">9.8$</span>
-                                    </div>
-                                </div>
-                                <div class="container p-2 text-center">
-                                    <span class="text-white fs-4 mt-4 ">The Road</span> <br>
-                                    <span class="text-white">Author: ksdg</span>
-                                    <div class="nav-item">
-                                        <a class="nav-link" style="text-align:center; gap: 20px; font-size: 20px;">
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-2">
-                        <a href="" class="card">
-                            <img src="https://images-na.ssl-images-amazon.com/images/I/71IJ1HC2a3L.jpg"
-                                class="card__image" alt="" />
-                            <div class="card__overlay">
-                                <div class="card__header d-flex justify-content-center">
-                                    <div class="card__header-text">
-                                        <span class="price-free fs-3">Free</span>
-                                    </div>
-                                </div>
-                                <div class="container p-2 text-center">
-                                    <span class="text-white fs-4 mt-4 ">The Road</span> <br>
-                                    <span class="text-white">Author: ksdg</span>
-                                    <div class="nav-item">
-                                        <a class="nav-link" style="text-align:center; gap: 20px; font-size: 20px;">
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-2">
-                        <a href="" class="card">
-                            <img src="https://images-na.ssl-images-amazon.com/images/I/71IJ1HC2a3L.jpg"
-                                class="card__image" alt="" />
-                            <div class="card__overlay">
-                                <div class="card__header d-flex justify-content-center">
-                                    <div class="card__header-text">
-                                        <span class="price fs-3">7.4$</span>
-                                    </div>
-                                </div>
-                                <div class="container p-2 text-center">
-                                    <span class="text-white fs-4 mt-4 ">The Road</span> <br>
-                                    <span class="text-white">Author: ksdg</span>
-                                    <div class="nav-item">
-                                        <a class="nav-link" style="text-align:center; gap: 20px; font-size: 20px;">
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-2">
-                        <a href="" class="card">
-                            <img src="https://images-na.ssl-images-amazon.com/images/I/71IJ1HC2a3L.jpg"
-                                class="card__image" alt="" />
-                            <div class="card__overlay">
-                                <div class="card__header d-flex justify-content-center">
-                                    <div class="card__header-text">
-                                        <span class="price-free fs-3">Free</span>
-                                    </div>
-                                </div>
-                                <div class="container p-2 text-center">
-                                    <span class="text-white fs-4 mt-4 ">The Road</span> <br>
-                                    <span class="text-white">Author: ksdg</span>
-                                    <div class="nav-item">
-                                        <a class="nav-link" style="text-align:center; gap: 20px; font-size: 20px;">
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
-                                            <i class="bi bi-star-fill" aria-hidden="true" style="color:#FFD700"></i>
+                                            <span *ngFor="let item of AddStar( book.ratePoint ); let i = index"> <i
+                                                    class="bi bi-star-fill" aria-hidden="true"
+                                                    style="color:#FFD700"></i></span>
+                                            <span *ngFor="let item of AddGrayStar( book.ratePoint ); let i = index"> <i
+                                                    class="bi bi-star-fill" aria-hidden="true"
+                                                    style="color:#8a8a8a"></i></span>
                                         </a>
                                     </div>
                                 </div>
