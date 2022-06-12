@@ -16,12 +16,34 @@ namespace lightbook_backend_API.Services
     public class BookService : IBookService
     {
         private readonly IBaseRepository<Book> _bookRepository;
+        private readonly IBaseRepository<BookUser> _bookUserRepository;
         private readonly IMapper _mapper;
-        public BookService(IBaseRepository<Book> bookRepository,
+        public BookService(IBaseRepository<Book> bookRepository, IBaseRepository<BookUser> bookUserRepository,
                             IMapper mapper)
         {
             _bookRepository = bookRepository;
+            _bookUserRepository = bookUserRepository;
             _mapper = mapper;
+        }
+
+        public async Task<BookUser> AddBookFreeToLibrary(int bookId, int userid)
+        {
+            var check = _bookUserRepository.Entities.Where(x => x.BookID == bookId && x.UserID == userid).FirstOrDefault();
+            if (check != null)
+            {
+                return check;
+            }
+            var book = await _bookRepository.GetById(bookId);
+            if (book == null) return null;
+            if (book.Price == 0)
+            {
+                await _bookUserRepository.Add(new BookUser()
+                {
+                    BookID = bookId,
+                    UserID = userid,
+                });
+            }
+            return check;
         }
 
         public async Task<List<BookDto>> GetAll()
@@ -34,6 +56,14 @@ namespace lightbook_backend_API.Services
         {
             var bookQuery = BookFilter(_bookRepository.Entities.AsQueryable(), new BookQueryCriteria { categoryId = categoryId });
             return _mapper.Map<List<BookDto>>(bookQuery);
+        }
+
+        public async Task<List<BookUser>> GetBooksLibrary(int userid)
+        {
+            var bookUsers = _bookUserRepository.Entities
+                                    .Where(x => x.UserID == userid)
+                                    .Include(x => x.Book).ToList();
+            return bookUsers;
         }
 
         public async Task<PagedResponseModel<BookDto>> GetByPageAsync(BookQueryCriteria bookQueryCriteria, CancellationToken cancellationToken)

@@ -1,18 +1,16 @@
-﻿using lightbook_backend_API.Data;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using lightbook_backend_API.Data;
 using lightbook_backend_API.Interfaces;
 using lightbook_backend_API.Model;
 using lightbook_backend_API.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace lightbook_backend_API.Services
 {
-    public class UserService: IUserService
+    public class UserService : IUserService
     {
         private readonly LightBookDBContext _lightBookDBContext;
         public UserService(LightBookDBContext lightBookDBContext)
@@ -24,6 +22,7 @@ namespace lightbook_backend_API.Services
             var hasher = new PasswordHasher<User>();
 
             var user = await _lightBookDBContext.Users.FirstOrDefaultAsync(s => s.Username == model.UserName);
+            var role = await _lightBookDBContext.Roles.FirstOrDefaultAsync(s => s.ID == user.RoleID);
             if (user == null)
             {
                 return false;
@@ -35,6 +34,7 @@ namespace lightbook_backend_API.Services
             }
             model.UserId = user.ID;
             model.Name = user.Name;
+            model.Role = role.Name;
             return true;
         }
 

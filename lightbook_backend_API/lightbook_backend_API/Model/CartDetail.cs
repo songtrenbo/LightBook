@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace lightbook_backend_API.Model
@@ -14,7 +10,7 @@ namespace lightbook_backend_API.Model
         [Key]
         public int ID { get; set; }
         [Required]
-        public int Price { get; set; }
+        public int TotalPrice { get; set; }
         [Required]
         [ForeignKey("Cart")]
         public int CartID { get; set; }

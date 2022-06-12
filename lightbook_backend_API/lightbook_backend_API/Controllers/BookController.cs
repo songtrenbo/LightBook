@@ -1,8 +1,11 @@
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using lightbook_backend_API.Interfaces;
+using lightbook_backend_API.Model;
 using lightbook_shared;
 using lightbook_shared.Dtos.BookDtos;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace lightbook_backend_API.Controllers
@@ -24,6 +27,24 @@ namespace lightbook_backend_API.Controllers
             return Ok(response);
         }
 
+        [HttpGet("library")]
+        [Authorize]
+        public async Task<ActionResult<List<BookUser>>> GetBooksLibrary(int userid)
+        {
+            var response = await _bookService.GetBooksLibrary(userid);
+
+            return Ok(response);
+        }
+
+        [HttpPost("{bookid}")]
+        [Authorize]
+        public async Task<ActionResult<BookUser>> AddBookFreeToLibrary(int bookId, int userid)
+        {
+            var response = await _bookService.AddBookFreeToLibrary(bookId, userid);
+
+            return Ok(response);
+        }
+
         [HttpGet("all")]
         public async Task<ActionResult<PagedResponseModel<BookDto>>> GetAllBooks()
         {
@@ -32,7 +53,7 @@ namespace lightbook_backend_API.Controllers
             return Ok(response);
         }
 
-        [HttpGet("{categoryId}")]
+        [HttpGet("category/{categoryId}")]
         public async Task<ActionResult<PagedResponseModel<BookDto>>> GetBookByCategoryId(int categoryId)
         {
             var response = await _bookService.GetBookByCategoryId(categoryId);

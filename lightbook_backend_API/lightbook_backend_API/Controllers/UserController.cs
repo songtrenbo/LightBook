@@ -1,12 +1,4 @@
-﻿using lightbook_backend_API.Interfaces;
-using lightbook_backend_API.Models;
-using lightbook_backend_API.Services;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using Microsoft.IdentityModel.Tokens;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
@@ -14,6 +6,14 @@ using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using lightbook_backend_API.Interfaces;
+using lightbook_backend_API.Models;
+using lightbook_backend_API.Services;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
 
 namespace lightbook_backend_API.Controllers
 {
@@ -68,7 +68,7 @@ namespace lightbook_backend_API.Controllers
             {
                 UserName = model.UserName,
                 Name = model.Name,
-                //Role = model.Role,
+                Role = model.Role,
                 UserId = model.UserId.ToString(),
                 AccessToken = new JwtSecurityTokenHandler().WriteToken(token),
                 RefreshToken = refreshToken,
@@ -174,7 +174,7 @@ namespace lightbook_backend_API.Controllers
         }
 
         [HttpGet]
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult> GetUsersPages()
         {
             try

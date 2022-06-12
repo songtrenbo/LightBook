@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace lightbook_backend_API.Models
+﻿namespace lightbook_backend_API.Models
 {
     public class LoginModel
     {
@@ -11,6 +6,6 @@ namespace lightbook_backend_API.Models
         public string Password { get; set; }
         public string Name { get; set; }
         public int UserId { get; set; }
-        //public string Role { get; set; }
+        public string Role { get; set; }
     }
 }
