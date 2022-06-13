@@ -26,6 +26,13 @@ import { ListBookByCatalogComponent } from './home/list-book-by-catalog/list-boo
 import { CarouselBookByCatalogComponent } from './home/carousel-book-by-catalog/carousel-book-by-catalog.component';
 import { CatalogService } from './service/catalog.service';
 import { UserService } from './service/user.service';
+import { ReadComponent } from './book-detail/read/read.component';
+import { AdminComponent } from './admin/admin.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { BookManagementComponent } from './admin/book-management/book-management.component';
+import { AuthorManagementComponent } from './admin/author-management/author-management.component';
+import { CategoryManagementComponent } from './admin/category-management/category-management.component';
+import { CatalogManagementComponent } from './admin/catalog-management/catalog-management.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +55,13 @@ import { UserService } from './service/user.service';
     VideosComponent,
     ListBookByCatalogComponent,
     CarouselBookByCatalogComponent,
+    ReadComponent,
+    AdminComponent,
+    SidebarComponent,
+    BookManagementComponent,
+    AuthorManagementComponent,
+    CategoryManagementComponent,
+    CatalogManagementComponent,
   ],
   imports: [
     BrowserModule,

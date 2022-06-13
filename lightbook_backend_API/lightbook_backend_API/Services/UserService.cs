@@ -4,6 +4,7 @@ using lightbook_backend_API.Data;
 using lightbook_backend_API.Interfaces;
 using lightbook_backend_API.Model;
 using lightbook_backend_API.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -37,7 +38,7 @@ namespace lightbook_backend_API.Services
             model.Role = role.Name;
             return true;
         }
-
+        [Authorize]
         public async Task<List<User>> GetUsers()
         {
             return await _lightBookDBContext.Users.ToListAsync();

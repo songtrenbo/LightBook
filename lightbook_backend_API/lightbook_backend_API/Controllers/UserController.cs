@@ -49,7 +49,7 @@ namespace lightbook_backend_API.Controllers
             var authClaims = new List<Claim>
             {
                 new Claim(ClaimTypes.Name, model.UserName),
-                //new Claim(ClaimTypes.Role, model.Role),
+                new Claim(ClaimTypes.Role, model.Role),
                 new Claim(ClaimTypes.NameIdentifier, model.Name),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                 new Claim(JwtRegisteredClaimNames.Iat, DateTimeOffset.UtcNow.ToString()),

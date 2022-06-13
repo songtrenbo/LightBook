@@ -31,6 +31,15 @@
 .fs-2 {
   color: #0d6efd;
 }
-div>div>span.fs-2 + div>div>span.fs-2 {
-  color: rgb(0, 255, 0);
+.fs-2-1{
+  color: #f70a0a
 }
+.fs-2-2{
+  color: #ebe723
+}
+.fs-2-3{
+  color: #24ff87
+}
+/* div>div>span.fs-2 + div>div>span.fs-2 {
+  color: rgb(0, 255, 0);
+} */

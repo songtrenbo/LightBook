@@ -25,8 +25,8 @@
         <div class="col-md-12">
             <div class="nav-item">
                 <a class="nav-link" style="text-align:center; gap: 20px; font-size: 20px;">
-                    <span *ngFor="let item of AddStar( book.ratePoint ); let i = index"> <i class="bi bi-star-fill" aria-hidden="true"
-                            style="color:#FFD700"></i></span>
+                    <span *ngFor="let item of AddStar( book.ratePoint ); let i = index"> <i class="bi bi-star-fill"
+                            aria-hidden="true" style="color:#FFD700"></i></span>
                     <span *ngFor="let item of AddGrayStar( book.ratePoint ); let i = index"> <i class="bi bi-star-fill"
                             aria-hidden="true" style="color:#8a8a8a"></i></span>
                 </a>
@@ -35,9 +35,13 @@
     </div>
     <div class="row d-flex justify-content-center">
         <div class="col-md-3">
-            <div class="container-btn">
-                <!-- <a class="btn btn-dark">Add to cart</a> -->
-        <button class="pulse">Add to cart</button>
+            <div *ngIf="book.price>0" class="container-btn">
+                <!-- <a class="btn btn-dark">Add to cart</a> routerLink="/detail/{{book.id}}"-->
+                <button class="pulse" (click)="addToCart(book)">Add to cart</button>
+            </div>
+            <div *ngIf="book.price===0" class="container-btn">
+                <button routerLink="/detail/{{book.id}}/read" class="pulse">Read now</button>
+                <button *ngIf="token!=null" (click)="addToLibrary(book.id)" class="pulse mt-4">Add to library</button>
             </div>
         </div>
     </div>

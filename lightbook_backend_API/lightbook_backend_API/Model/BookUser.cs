@@ -15,18 +15,12 @@ namespace lightbook_backend_API.Model
         [Key]
         public int ID { get; set; }
         [Required]
-        public string Content { get; set; }
-        public Nullable<System.DateTime> LastRead { get; set; }
-        [DefaultValue(false)]
-        public Nullable<bool> IsFinished { get; set; }
-        [Required]
         [ForeignKey("User")]
         public int UserID { get; set; }
         public User User { get; set; }
         [Required]
         [ForeignKey("Book")]
         public int BookID { get; set; }
-        public int Chapter { get; set; }
         public Book Book { get; set; }
         
     }

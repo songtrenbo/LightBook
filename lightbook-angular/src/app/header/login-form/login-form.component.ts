@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/service/user.service';
+import Swal from 'sweetalert2';
+import { HeaderComponent } from '../header.component';
 
 @Component({
   selector: 'app-login-form',
@@ -14,12 +16,12 @@ export class LoginFormComponent implements OnInit {
     password: '',
   };
   submitted = false;
-  constructor(private userService: UserService, private router: Router) {}
+  constructor(private userService: UserService, private router: Router, private header: HeaderComponent) {}
 
   ngOnInit(): void {}
 
   login(): void {
-    let tokenInfo;
+    var tokenInfo;
     const data = {
       userName: this.user.userName,
       password: this.user.password,
@@ -29,14 +31,18 @@ export class LoginFormComponent implements OnInit {
       (response) => {
         tokenInfo = response;
         this.submitted = true;
-        localStorage.setItem('AccessToken', tokenInfo.accessToken);
-        localStorage.setItem('Name', tokenInfo.name);
-        window.location.reload();
-      },
-      (error) => {
-        if (400 === error.response.status) {
-          console.log('wrong username or password');
+        localStorage.setItem('Token', JSON.stringify(tokenInfo));
+        if(tokenInfo.role === "Admin"){
+          this.router.navigate(['/admin']);
         }
+        this.header.ngOnInit();
+      },
+      (error) => {        
+        Swal.fire({
+          icon: 'error',
+          title: 'Please try again',
+          text: 'Wrong username or password!'
+        })
       }
     );
   }

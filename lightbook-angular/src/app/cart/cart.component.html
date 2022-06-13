@@ -1,3 +1,45 @@
-<div class="container">
-    <p>cart works!</p>
+<div class="container mt-4">
+    <div class="container">
+
+        <div *ngIf="cart.length>0" class="mt-5 text-white">
+            <div *ngFor="let book of cart; let i = index"
+                class="container list-group-item mt-3">
+
+                <div class="row">
+                    <div class="col-md-2">
+                        <img src="{{book.picture}}"  style="width:150px" />
+                    </div>
+                    <div class="col-md-8">
+                        <h6 class="text-white fs-3 mt-5">{{book.name}}</h6>
+                        <h5 class="text-white fs-5 mt-4">Author: <span
+                            *ngFor="let author of book.authorBooks.slice(0,1)">{{author.author.name}}</span></h5>
+
+                        <span class="price fs-3 mt-4">{{book.price| currency:'VND':''}} VNĐ</span>
+                    </div>
+                    <div class="col-md-2 d-flex align-items-center">
+                        <div class="check ">
+                            <input type="button" class="btn btn-danger" value="Remove from cart" name="a" (click)="removeFromCart(book)">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="cart.length === 0" class="text-white d-flex justify-content-center align-items-center" style="height: 500px;">
+            <span class="fs-1">Your cart is empty!</span>
+        </div>
+        <div *ngIf="cart.length>0" class="row text-white fs-2">
+            <hr class="text-white mt-5">
+            <div class="col-md-5 d-flex align-items-center">
+                <span>
+                    Total:
+                    <span class="price">{{totalPrice| currency:'VND':''}} VNĐ</span>
+                </span>
+            </div>
+            <div class="col-md-4">
+
+            </div>
+            <button *ngIf="token!=null" (click)="PayMent()" class="col-md-3 btn btn-success fs-5">Payment</button>
+            <span *ngIf="token===null" class="col-md-3 fs-4">Please login to continue</span>
+        </div>
+    </div>
 </div>

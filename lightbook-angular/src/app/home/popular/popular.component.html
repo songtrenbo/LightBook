@@ -5,10 +5,13 @@
 </div>
 <div class="row text-white" style="background-color: #000000;">
     <div class="col-md-12 p-2 container-top">
-        <div class="row row-top mt-2" *ngFor="let book of books; let i = index" (click)="redirect(book.id)"
+        <a routerLink="/detail/{{book.id}}" class="row row-top mt-2 text-decoration-none text-white" *ngFor="let book of books; let i = index" (click)="redirect(book.id)"
             style="cursor: pointer;">
             <div class="col-md-2 d-flex align-items-center">
-                <span class="fs-2 text-primary ">{{("00"+(i+1)).slice(-2)}}</span>
+                <span *ngIf="i==0" class="fs-2 fs-2-1">{{("00"+(i+1)).slice(-2)}}</span>
+                <span *ngIf="i==1" class="fs-2 fs-2-2">{{("00"+(i+1)).slice(-2)}}</span>
+                <span *ngIf="i==2" class="fs-2 fs-2-3">{{("00"+(i+1)).slice(-2)}}</span>
+                <span *ngIf="i>2" class="fs-2">{{("00"+(i+1)).slice(-2)}}</span>
             </div>
             <div class="col-md-2 container-img">
                 <img src="{{ book.picture }}" class="card_image" alt="" />
@@ -26,6 +29,6 @@
                     </a>
                 </div>
             </div>
-        </div>
+        </a>
     </div>
 </div>

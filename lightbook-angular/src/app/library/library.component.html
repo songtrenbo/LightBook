@@ -1,6 +1,6 @@
 <div class="container mt-4">
-<div class="row">
-    <div *ngFor="let book of books" class="col-md-3 d-flex justify-content-center">
+<div *ngIf="token!=null" class="row">
+    <div *ngFor="let item of books" class="col-md-3 d-flex justify-content-center">
         <div class="component">
             <ul class="align d-flex justify-content-center">
               <li>
@@ -11,7 +11,7 @@
                   <ul class='hardcover_front'>
                     <li>
                       <div class="coverDesign">
-                        <img src="{{ book.picture }}"
+                        <img src="{{ item.book.picture }}"
                         class="img-fluid" alt="" />
                       </div>
                     </li>
@@ -23,7 +23,7 @@
                   <ul class='page'>
                     <li></li>
                     <li>
-                      <a class="btn btn-outline-dark" href="#" style="margin-top: 90px;">Read now</a>
+                      <a class="btn btn-outline-dark" routerLink="/detail/{{item.book.id}}/read" style="margin-top: 90px;">Read now</a>
                     </li>
                     <li></li>
                     <li></li>
@@ -44,11 +44,12 @@
               </li>
             </ul>
             <div class="container p-2 text-center">
-                <span class="text-white fs-4 mt-4 ">{{ book.name }}</span> <br>
-                <span class="text-white">Author: <span *ngFor="let authorBook of book.authorBooks">{{authorBook.author.name}}</span></span>
-            </div>
+                <span class="text-white fs-4 mt-4 ">{{ item.book.name }}</span>
           </div>
     </div>
     
 </div>
+</div>
+<div *ngIf="token===null" class="text-white d-flex justify-content-center align-items-center mt-5">
+  <h1 class="mt-5 fs-1">Please Login to view your library!</h1>
 </div>

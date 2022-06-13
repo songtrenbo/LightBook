@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Book } from '../model/book.model';
+import { BookUser } from '../model/bookUser.model';
 import { BookService } from '../service/book.service';
 
 @Component({
@@ -8,15 +8,22 @@ import { BookService } from '../service/book.service';
   styleUrls: ['./library.component.css']
 })
 export class LibraryComponent implements OnInit {
-  books: Book[];
+  books: BookUser[];
+  token: any;
   constructor(private bookService: BookService) {}
 
   ngOnInit(): void {
-    // this.listBooks();
-    this.bookService.getBooks().subscribe((res: any) => {
-      this.books = res.items;
+    
+    var tokenStr = localStorage.getItem('Token');
+    this.token = JSON.parse(tokenStr!);
+    if(this.token!=null){
+    this.getLibrary()
+  }
+  }
+  getLibrary() {
+    this.bookService.getLibrary(this.token.userId).subscribe((res: any) => {
+      this.books = res;
     });
   }
-
 
 }

@@ -1,5 +1,5 @@
 const Endpoints = {
-  urlBackend: 'https://localhost:5001/api',
+  urlBackend: 'https://localhost:44379/api',
   
 };
 

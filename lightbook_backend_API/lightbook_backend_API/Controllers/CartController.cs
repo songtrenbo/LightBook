@@ -21,11 +21,11 @@ namespace lightbook_backend_API.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> GetBooks([FromBody] List<BookDto> bookDtos, int userid)
+        public async Task<ActionResult> Payment([FromBody] List<BookDto> bookDtos, int userid)
         {
             var response = _cartService.SaveCart(bookDtos, userid);
 
-            return Ok(true);
+            return Ok(response);
         }
     }
 }

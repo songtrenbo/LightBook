@@ -36,7 +36,7 @@ namespace lightbook_backend_API.Controllers
             return Ok(response);
         }
 
-        [HttpPost("{bookid}")]
+        [HttpPost("{bookId}")]
         [Authorize]
         public async Task<ActionResult<BookUser>> AddBookFreeToLibrary(int bookId, int userid)
         {

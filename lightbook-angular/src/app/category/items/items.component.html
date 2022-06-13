@@ -5,7 +5,7 @@
             <div class="card__header d-flex justify-content-center">
                 <div class="card__header-text">
                     <span *ngIf="book.price==0" class="price-free fs-3">Free</span>
-                    <span *ngIf="book.price>0" class="price fs-3">{{book.price}}</span>
+                    <span *ngIf="book.price>0" class="price fs-3">{{book.price| currency:'VND':''}}</span>
                 </div>
             </div>
             <div class="container p-2 text-center">

@@ -1,0 +1,23 @@
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="header col-md-3" role="banner">
+            <h1 class="logo">
+                <a href="#">Management</a>
+            </h1>
+            <div class="nav-wrap">
+                <nav class="main-nav" role="navigation">
+                    <ul class="unstyled list-hover-slide">
+                        <li><a routerLink="./book-management">Books</a></li>
+                        <li><a routerLink="./author-management">Authors</a></li>
+                        <li><a routerLink="./category-management">Categories</a></li>
+                        <li><a routerLink="./catalog-management">Catalogs</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="col-md-8 mt-4">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
