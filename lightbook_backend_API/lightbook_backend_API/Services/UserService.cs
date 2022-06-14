@@ -38,7 +38,6 @@ namespace lightbook_backend_API.Services
             model.Role = role.Name;
             return true;
         }
-        [Authorize]
         public async Task<List<User>> GetUsers()
         {
             return await _lightBookDBContext.Users.ToListAsync();

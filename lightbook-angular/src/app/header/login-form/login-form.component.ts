@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/service/user.service';
 import Swal from 'sweetalert2';
@@ -34,6 +33,9 @@ export class LoginFormComponent implements OnInit {
         localStorage.setItem('Token', JSON.stringify(tokenInfo));
         if(tokenInfo.role === "Admin"){
           this.router.navigate(['/admin']);
+        }
+        else{
+          this.router.navigate(['/home']);
         }
         this.header.ngOnInit();
       },

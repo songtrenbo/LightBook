@@ -18,7 +18,7 @@
         <div class="col-md-12 text-center">
             <span class="text-white fs-4">{{book.name}}</span>
             <p class="text-white fs-5 mt-3">Author: <span
-                    *ngFor="let authorBook of book.authorBooks">{{authorBook.author.name}} </span></p>
+                *ngFor="let authorBook of book.authorBooks; let i = index">{{authorBook.author.name}}<span *ngIf="i<book.authorBooks.length-1">, </span> </span></p>
         </div>
     </div>
     <div class="row">
