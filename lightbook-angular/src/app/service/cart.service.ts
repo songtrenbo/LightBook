@@ -3,6 +3,8 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import Endpoints from '../constants/Endpoints';
 import { Book } from '../model/book.model';
+import { Cart } from '../model/cart';
+import { CartDetail } from '../model/cartDetail';
 
 const apiUrl = `${Endpoints.urlBackend}/Cart`;
 @Injectable({
@@ -59,6 +61,37 @@ export class CartService {
     return this.httpClient.post(
       `${apiUrl}?userId=${userId}`,
       books,
+      httpOptions
+    );
+  }
+  
+  getCartByUserId(userId: number): Observable<Cart[]> {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'Application/json',
+        Authorization:
+          'Bearer ' + JSON.parse(localStorage.getItem('Token')!).accessToken,
+      }),
+    };
+    return this.httpClient.get<Cart[]>(
+      `${apiUrl}/cart?userid=${userId}`,
+      httpOptions
+    );
+  }
+
+  getCartDetailByCartId(
+    cartId: number,
+    userId: number
+  ): Observable<CartDetail[]> {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'Application/json',
+        Authorization:
+          'Bearer ' + JSON.parse(localStorage.getItem('Token')!).accessToken,
+      }),
+    };
+    return this.httpClient.get<CartDetail[]>(
+      `${apiUrl}/cartDetail?cartId=${cartId}&userid=${userId}`,
       httpOptions
     );
   }

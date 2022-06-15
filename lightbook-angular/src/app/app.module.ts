@@ -32,6 +32,8 @@ import { BookManagementComponent } from './admin/book-management/book-management
 import { AuthorManagementComponent } from './admin/author-management/author-management.component';
 import { CategoryManagementComponent } from './admin/category-management/category-management.component';
 import { CatalogManagementComponent } from './admin/catalog-management/catalog-management.component';
+import { OrderComponent } from './order/order.component';
+import { DetailOrderComponent } from './order/detail-order/detail-order.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +62,8 @@ import { CatalogManagementComponent } from './admin/catalog-management/catalog-m
     AuthorManagementComponent,
     CategoryManagementComponent,
     CatalogManagementComponent,
+    OrderComponent,
+    DetailOrderComponent,
   ],
   imports: [
     BrowserModule,

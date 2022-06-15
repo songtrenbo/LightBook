@@ -1,0 +1,18 @@
+<div class="container mt-4">
+    <div class="container">
+        <div *ngFor="let cart of carts; let i = index" class="container list-group-item mt-3">
+
+            <div class="row" (click)="getIndex(cart.id)">
+                <div class="col-md-2">
+                    <img src="https://icon-library.com/images/white-shopping-cart-icon/white-shopping-cart-icon-9.jpg" style="width:150px" />
+                </div>
+                <div class="col-md-8">
+                    <h6 class="text-white fs-3 mt-5">{{"Order "+ cart.id}}</h6>
+
+                    <span class="price fs-3 mt-4">{{cart.totalPrice| currency:'VND':''}} VNĐ</span>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>

@@ -12,6 +12,8 @@ import { CategoryComponent } from './category/category.component';
 import { HomeComponent } from './home/home.component';
 import { ListBookByCatalogComponent } from './home/list-book-by-catalog/list-book-by-catalog.component';
 import { LibraryComponent } from './library/library.component';
+import { DetailOrderComponent } from './order/detail-order/detail-order.component';
+import { OrderComponent } from './order/order.component';
 
 import { VideosComponent } from './videos/videos.component';
 const appRoutes: Routes = [
@@ -28,6 +30,8 @@ const appRoutes: Routes = [
   { path: 'newest', component: ListBookByCatalogComponent },
   { path: 'free-to-read', component: ListBookByCatalogComponent },
   { path: 'detail/:id/read', component: ReadComponent },
+  { path: 'order', component: OrderComponent },
+  { path: 'orderDetail/:id', component: DetailOrderComponent },
   {
     path: 'admin',
     component: AdminComponent,
@@ -35,7 +39,7 @@ const appRoutes: Routes = [
       { path: 'book-management', component: BookManagementComponent },
       { path: 'author-management', component: AuthorManagementComponent },
       { path: 'category-management', component: CategoryManagementComponent },
-      { path: 'catalog-management', component: CatalogManagementComponent }
+      { path: 'catalog-management', component: CatalogManagementComponent },
     ],
   },
 ];
