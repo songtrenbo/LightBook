@@ -15,6 +15,8 @@ import { CategoryComponent } from './category/category.component';
 import { HomeComponent } from './home/home.component';
 import { ListBookByCatalogComponent } from './home/list-book-by-catalog/list-book-by-catalog.component';
 import { LibraryComponent } from './library/library.component';
+import { DetailOrderComponent } from './order/detail-order/detail-order.component';
+import { OrderComponent } from './order/order.component';
 
 import { VideosComponent } from './videos/videos.component';
 import { BookDetailAdminComponent } from './admin/book-management/book-detail/book-detail.component';
@@ -32,6 +34,8 @@ const appRoutes: Routes = [
   { path: 'newest', component: ListBookByCatalogComponent },
   { path: 'free-to-read', component: ListBookByCatalogComponent },
   { path: 'detail/:id/read', component: ReadComponent },
+  { path: 'order', component: OrderComponent },
+  { path: 'orderDetail/:id', component: DetailOrderComponent },
   {
     path: 'admin',
     component: AdminComponent,
@@ -44,9 +48,13 @@ const appRoutes: Routes = [
       { path: 'author-create', component: AuthorCreateComponent },
       { path: 'author-create/:id/edit', component: AuthorCreateComponent},
       { path: 'category-management', component: CategoryManagementComponent },
+<<<<<<< HEAD
       { path: 'category-create', component: CategoryCreateComponent },
       { path: 'category-create/:id/edit', component: CategoryCreateComponent},
       { path: 'catalog-management', component: CatalogManagementComponent }
+=======
+      { path: 'catalog-management', component: CatalogManagementComponent },
+>>>>>>> b2df40f17d7f531d11c82981dc1a80ecd9ec2be9
     ],
   },
 ];

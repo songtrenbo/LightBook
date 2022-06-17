@@ -4305,7 +4305,7 @@ Những người tồn tại nơi khu ổ chuột này đều đời sống tấ
 
 "Thế lực xấu xa luôn ra đời khi bạn đã rất tuyệt vọng với thế gian bất công, sự liêm chính, công bằng là nơi mà bạn luôn tìm kiếm!" Nhưng tự hỏi nếu mà đi tìm kiếm sự công bằng, liêm chính thì phải chăng đấy là thế lực xấu, tốt chứ nhỉ? Tòa án không phải là tồn tại theo phương thức ấy sao? Không, chính do cách mà ta thực hiện sẽ quyết định tính chất sự việc. Đúng và sai luôn có một ranh giới mỏng manh chắn ngang cả hai khái niệm!
 
-Hành khất rất nhiều, nhà giàu thì lại ít, ấy đã là một sự không cân bằng! Âm dương phân nam nữ cũng như thế, người tốt làm việc xấu nhưng lại được bọc một lớp mang tên "việc tốt" thì "Bằng Khen: Chứng nhận 'Công nhân tốt làm việc tốt'" được phát ra. Ấy thật là kinh dị!
+Hành khất rất nhiều, nhà giàu thì lại ít, ấy đã là một sự không cân bằng! Âm dương phân nam nữ cũng như thế, người tốt làm việc xấu nhưng lại được bọc một lớp mang tên "việc tốt" thì "Bằng Khen: Chứng nhận ''Công nhân tốt làm việc tốt''" được phát ra. Ấy thật là kinh dị!
 
 Có câu "Trời đất vô tình, vạn vật hữu tình", không phải luôn tồn tại mặt đen tối xấu xa mà do chính ta dùng con mắt ấy để nhìn thôi. Nhưng... vấn đề là ở đây! Vì sao ta lại dùng con mắt ấy, con mắt nhìn đời một cách tối tăm, đen đúa, mà không phải dùng con mắt khác nhìn đời tốt hơn? Sự lựa chọn nơi đây đã không được thực hiện...
 
@@ -4434,7 +4434,7 @@ Bỗng bàn tay được một luồng hơi ấm áp, diện tích nhỏ nhắn 
 
 "Cảm ơn thầy..."
 
-"Không, không có người nào ở đây thì em có thể gọi bằng 'anh' không, hay là kêu tên cũng được. Không, cả 'anh' và tên luôn."
+"Không, không có người nào ở đây thì em có thể gọi bằng ''anh'' không, hay là kêu tên cũng được. Không, cả ''anh'' và tên luôn."
 
 Ánh nhìn như rực lửa của người đối diện mình khiến Lương Cúc tim đập rộn ràng như thuở lần đầu mới yêu, cô đã luôn khao khát có người đàn ông nào có thể tim cô đập nhanh như thế và luôn bảo vệ cô như người đàn ông này. Người này đã từng thích cô nhưng cô đã quá mù quáng về cái cảm giác nhất thời như tiếng sét kia khiến cô liền chấp nhận trói buộc bản thân vào người chồng vô dụng ở nhà. Bất tài và có tài, cô đã không lựa chọn đúng người có thể mang lại tương lai cho cô! Nho nhã và nóng nảy, cô thật là đã chọn cái đáp án mà mọi người đều chọn nhưng chỉ đáng tiếc sự lồng ghép của gã chồng ở nhà quá tài ba, lần đầu cô bị sự nhẹ nhàng cùng yêu thương kia thu hút nhưng khi đã về chung một nhà thì tính khí nóng nảy, ra đường thì ngay lập tức yêu chiều đến đáng sợ!
 
@@ -4518,7 +4518,7 @@ Lương Cúc chống lấy cái nạng bên người, tay chỉ lên bên chân 
 
 Kim Trù làm ra biểu cảm mà Lương Cúc đã định liệu sẵn. Cô có chút thất vọng, thất thần quay đi.
 
-"Khoan đã! Đúng là lời cô nói có chút hơi khó tin. Với lại điện thoại của cô vẫn bình thường, không có chút gì gọi là 'trướng nóng đến nướng chín' nhưng dù sao nhân vật tôi đang truy này còn quỷ dị hơn chuyện này rất nhiều. Mà cả hai đều có chút liên quan nhau... có lẽ tôi tin cô đấy! Làm sao được, manh mối đứt gãy, đầu mối lộn xộn cả lên. Dù chỉ là một cơ hội mỏng manh, tôi cũng sẽ cố níu kéo!"
+"Khoan đã! Đúng là lời cô nói có chút hơi khó tin. Với lại điện thoại của cô vẫn bình thường, không có chút gì gọi là ''trướng nóng đến nướng chín'' nhưng dù sao nhân vật tôi đang truy này còn quỷ dị hơn chuyện này rất nhiều. Mà cả hai đều có chút liên quan nhau... có lẽ tôi tin cô đấy! Làm sao được, manh mối đứt gãy, đầu mối lộn xộn cả lên. Dù chỉ là một cơ hội mỏng manh, tôi cũng sẽ cố níu kéo!"
 
 Lương Cúc quay lại, nhìn người đàn ông đang phát ra khí thế quyết tâm, hùng hồn, nhiệt huyết. Lương Cúc bật cười ha hả:
 

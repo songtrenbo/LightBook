@@ -3,7 +3,7 @@
         <div class="container__image" style="background-image: url('{{book.picture}}');">
             <div class="container__info container__author fs-5">{{book.name}}</div>
             <div class="container__info container__location">Author: <span
-                    *ngFor="let authorBook of book.authorBooks">{{authorBook.author.name}} </span></div>
+                    *ngFor="let authorBook of book.authorBooks; let i = index">{{authorBook.author.name}}<span *ngIf="i<book.authorBooks.length-1">, </span> </span></div>
 
         </div>
     </div>

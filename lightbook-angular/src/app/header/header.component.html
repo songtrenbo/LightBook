@@ -1,4 +1,5 @@
 <div class="container-fluid bg-black">
+<<<<<<< HEAD
     <div class="container p-2">
         <div class="row d-flex align-items-center">
             <div class="col-md-2">
@@ -21,37 +22,66 @@
                 <button routerLink="/register" *ngIf="token===null" class="btn button w-100">Register</button>
                 <button (click)="logoutUser()" *ngIf="token!=null" class="btn button w-100">Logout</button>
             </div>
+=======
+  <div class="container p-2">
+    <div class="row d-flex align-items-center">
+      <div class="col-md-2">
+        <a routerLink="/home"><img class="img-responsive" src="../assets/images/Logo.png" style="width:80%">
+        </a>
+      </div>
+      <div class="col-md-5">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search your favorite books ..." aria-label="Search"
+            aria-describedby="button-addon2">
+          <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i
+              class="bi bi-search"></i></button>
+>>>>>>> b2df40f17d7f531d11c82981dc1a80ecd9ec2be9
         </div>
-    </div>    
+      </div>
+      <div class="col-md-1">
+      </div>
+      <div class="col-md-2">
+        <app-login-form *ngIf="token===null"></app-login-form>
+        <span class="text-white fs-4 d-flex justify-content-center" *ngIf="token!=null">Hello, {{token.userName}}</span>
+      </div>
+      <div class="col-md-2">
+        <button routerLink="/register" *ngIf="token===null" class="btn button w-100">Register</button>
+        <button (click)="logoutUser()" *ngIf="token!=null" class="btn button w-100">Logout</button>
+      </div>
+    </div>
+  </div>
 </div>
 <div *ngIf='role!="Admin"' style="background-color:#313131;">
-    <ul class="nav container pt-2">
-        <li class="nav-item"  routerLinkActive="active">
-          <a class="nav-link" aria-current="page" routerLink="/home"><i class="bi bi-house-door-fill text-white"></i></a>
-        </li>
-        <li class="nav-item px-4" routerLinkActive="active" >
-          <a class="nav-link text-white" routerLink="/library">Library</a>
-        </li>
-        <li class="nav-item px-4" routerLinkActive="active">
-          <a class="nav-link text-white" routerLink="/videos">Reading Videos</a>
-        </li>
-        <li class="nav-item px-4" routerLinkActive="active">
-            <a class="nav-link text-white" routerLink="/cart">Cart</a>
-          </li>
-          <li class="nav-item px-4" routerLinkActive="active">
-            <a class="nav-link text-white" routerLink="/popular">Popular</a>
-          </li>
-          <li class="nav-item px-4" routerLinkActive="active">
-            <a class="nav-link text-white" routerLink="/best-sellers">Best-sellers</a>
-          </li>
-          <li class="nav-item px-4" routerLinkActive="active">
-            <a class="nav-link text-white" routerLink="/newest">Newest</a>
-          </li>
-          <li class="nav-item px-4" routerLinkActive="active">
-            <a class="nav-link text-white" routerLink="/free-to-read">Free to read</a>
-          </li>
-          <li class="nav-item px-4" routerLinkActive="active">
-            <a class="nav-link text-white" routerLink="/category">Category</a>
-          </li>
-      </ul>
+  <ul class="nav container pt-2">
+    <li class="nav-item" routerLinkActive="active">
+      <a class="nav-link" aria-current="page" routerLink="/home"><i class="bi bi-house-door-fill text-white"></i></a>
+    </li>
+    <li class="nav-item px-4" routerLinkActive="active">
+      <a class="nav-link text-white" routerLink="/library">Library</a>
+    </li>
+    <li class="nav-item px-4" routerLinkActive="active">
+      <a class="nav-link text-white" routerLink="/videos">Reading Videos</a>
+    </li>
+    <li class="nav-item px-4" routerLinkActive="active">
+      <a class="nav-link text-white" routerLink="/cart">Cart</a>
+    </li>
+    <li class="nav-item px-4" routerLinkActive="active">
+      <a class="nav-link text-white" routerLink="/popular">Popular</a>
+    </li>
+    <li class="nav-item px-4" routerLinkActive="active">
+      <a class="nav-link text-white" routerLink="/best-sellers">Best-sellers</a>
+    </li>
+    <li class="nav-item px-4" routerLinkActive="active">
+      <a class="nav-link text-white" routerLink="/newest">Newest</a>
+    </li>
+    <li class="nav-item px-4" routerLinkActive="active">
+      <a class="nav-link text-white" routerLink="/free-to-read">Free to read</a>
+    </li>
+    <li class="nav-item px-4" routerLinkActive="active">
+      <a class="nav-link text-white" routerLink="/category">Category</a>
+    </li>
+    <li class="nav-item px-4" routerLinkActive="active" *ngIf="token!=null">
+      <a class="nav-link text-white" routerLink="/order">Order</a>
+    </li>
+  </ul>
 </div>

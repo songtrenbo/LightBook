@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -20,9 +21,15 @@ export class HeaderComponent implements OnInit {
 
   logoutUser() {
     localStorage.removeItem('Token');
+<<<<<<< HEAD
     this.router.navigate(['/home']);
     this.token='';
     this.role='';
+=======
+    this.router.navigate(['/home']); 
+    this.token="";   
+    this.role = "";
+>>>>>>> b2df40f17d7f531d11c82981dc1a80ecd9ec2be9
     this.ngOnInit();
   }
 }

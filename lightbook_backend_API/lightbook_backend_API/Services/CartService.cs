@@ -1,9 +1,11 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using lightbook_backend_API.Interfaces;
 using lightbook_backend_API.Model;
 using lightbook_shared.Dtos.BookDtos;
+using Microsoft.EntityFrameworkCore;
 
 namespace lightbook_backend_API.Services
 {
@@ -24,6 +26,23 @@ namespace lightbook_backend_API.Services
             _cartDetailRepository = cartDetailRepository;
             _bookRepository = bookRepository;
             _mapper = mapper;
+        }
+
+        public async Task<List<CartDetail>> GetCartDetailByCartId(int cartId, int userid)
+        {
+            return _cartDetailRepository.Entities
+                                .Where(x => x.Cart.UserID == userid && x.CartID == cartId)
+                                .Include(x => x.Book)
+                                .ThenInclude(x => x.AuthorBooks)
+                                .ThenInclude(x=>x.Author)
+                                .ToList();
+        }
+
+        public async Task<List<Cart>> GetCartByUserId(int userid)
+        {
+            return _cartRepository.Entities
+                                .Where(x => x.UserID == userid)
+                                .ToList();
         }
 
         public async Task<bool> SaveCart(List<BookDto> bookDtos, int userid)
