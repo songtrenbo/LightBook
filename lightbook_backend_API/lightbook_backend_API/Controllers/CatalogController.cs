@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using lightbook_backend_API.Interfaces;
 using lightbook_shared;
 using lightbook_shared.Dtos.CatalogDtos;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace lightbook_backend_API.Controllers
@@ -21,6 +22,20 @@ namespace lightbook_backend_API.Controllers
             var response = await _catalogService.GetByPageAsync(catalogQueryCriteria, cancellationToken);
 
             return Ok(response);
+        }
+        [HttpPost]
+        [Authorize(Roles="Admin")]
+        public async Task<ActionResult> CreateCatalog([FromBody]CatalogDto catalogDto){
+            if(catalogDto ==null){
+                return BadRequest();
+            }
+            else {
+                var createCatalog = await _catalogService.PostCatalog(catalogDto);
+                if(createCatalog==null){
+                    return BadRequest();
+                }
+                return Ok(createCatalog);
+            }
         }
     }
 }

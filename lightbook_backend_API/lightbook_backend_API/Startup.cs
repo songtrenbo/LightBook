@@ -87,6 +87,7 @@ namespace lightbook_backend_API
             services.AddScoped<ICatalogService, CatalogService>();
             services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<ICartService, CartService>();
+            services.AddScoped<IAuthorService, AuthorService>();
 
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());  

@@ -16,5 +16,8 @@ namespace lightbook_backend_API.Interfaces
         Task<List<BookDto>> GetAll();
         Task<List<BookDto>> GetBookByCategoryId(int categoryId);
         Task<BookUser> AddBookFreeToLibrary(int bookId, int userid);
+        Task<BookDto> CreateBook(BookCreateDto bookCreateDto);
+        Task<BookDto> EditBook(BookCreateDto bookCreateDto);
+
     }
 }

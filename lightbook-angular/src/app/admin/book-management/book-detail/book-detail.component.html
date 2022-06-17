@@ -1,0 +1,62 @@
+<div class="container container-book-detail">
+    <div class="row">
+        <div class="col-md-12 d-flex justify-content-center">
+            <div class="card">
+                <div class="imgBox">
+                    <div class="bark"></div>
+                    <img [src]="book.picture">
+                </div>
+                <div class="details">
+                    <p>Review:</p>
+                    <p>{{book.review}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-md-12 text-center">
+            <span class="text-white fs-4">{{book.name}}</span>
+            <p class="text-white fs-5 mt-3">Author: <span
+                    *ngFor="let authorBook of book.authorBooks">{{authorBook.author.name}} </span></p>
+            <span class="fs-5 text-white">Price: <span class="price">{{book.price| currency:'VND':''}}</span></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="nav-item">
+                <a class="nav-link" style="text-align:center; gap: 20px; font-size: 20px;">
+                    <span *ngFor="let item of AddStar( book.ratePoint ); let i = index"> <i class="bi bi-star-fill"
+                            aria-hidden="true" style="color:#FFD700"></i></span>
+                    <span *ngFor="let item of AddGrayStar( book.ratePoint ); let i = index"> <i class="bi bi-star-fill"
+                            aria-hidden="true" style="color:#8a8a8a"></i></span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="row text-white mt-4">
+        <div class="col-md-12 d-flex align-items-center">
+            <i class="bi bi-list-ul fw-bold fs-2"></i> <span class="fs-3">&nbsp;CHAPTER</span>
+        </div>
+        <hr>
+        <div class="col-md-12 d-flex align-items-center m-2">
+            <a class="text-white text-decoration-none fs-4">Chapter 1</a>
+        </div>
+        <div class="col-md-12 d-flex align-items-center m-2">
+            <a class="text-white text-decoration-none fs-4">Chapter 2</a>
+        </div>
+        <div class="col-md-12 d-flex align-items-center m-2">
+            <a class="text-white text-decoration-none fs-4">Chapter 3</a>
+        </div>
+        <div class="col-md-12 d-flex align-items-center m-2">
+            <a class="text-white text-decoration-none fs-4">Chapter 4</a>
+        </div>
+        <div class="col-md-12 d-flex align-items-center m-2">
+            <a class="text-white text-decoration-none fs-4">Chapter 5</a>
+        </div>
+    </div>
+    <h1 class="text-center text-white fs-2">Content</h1>
+    <span class="text-white fs-5 content">
+        {{book.chapter}}
+    </span>
+</div>

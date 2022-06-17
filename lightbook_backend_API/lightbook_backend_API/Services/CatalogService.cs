@@ -43,6 +43,24 @@ namespace lightbook_backend_API.Services
                 Items = catalogDto
             };                      
         }
+        public async Task<CatalogDto> PostCatalog(CatalogDto catalogDto){
+            var catalog = _mapper.Map<Catalog>(catalogDto);
+            var result = await _catalogRepository.Add(catalog);
+            if(result!=null){
+                return _mapper.Map<CatalogDto>(result);
+            } else {
+                return null;
+            }
+        }
+        public async Task<CatalogDto> PutCatalog(CatalogDto catalogDto){
+            var catalog = _mapper.Map<Catalog>(catalogDto);
+            var result = await _catalogRepository.Update(catalog);
+            if(result!=null){
+                return _mapper.Map<CatalogDto>(result);
+            } else {
+                return null;
+            }
+        }
         private IQueryable<Catalog> CatalogFilter(
             IQueryable<Catalog> catalogQuery,
             CatalogQueryCriteria catalogQueryCriteria)

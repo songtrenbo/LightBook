@@ -61,5 +61,33 @@ namespace lightbook_backend_API.Controllers
             return Ok(response);
         }
 
+        [HttpPost]
+        [Authorize(Roles="Admin")]
+        public async Task<ActionResult> CreateBook([FromBody]BookCreateDto bookCreateDto){
+            if(bookCreateDto ==null){
+                return BadRequest();
+            }
+            else {
+                var createBook = await _bookService.CreateBook(bookCreateDto);
+                if(createBook==null){
+                    return BadRequest();
+                }
+                return Ok(createBook);
+            }
+        }
+        [HttpPut]
+        [Authorize(Roles="Admin")]
+        public async Task<ActionResult> EditBook([FromBody]BookCreateDto bookCreateDto){
+            if(bookCreateDto ==null){
+                return BadRequest();
+            }
+            else {
+                var createBook = await _bookService.EditBook(bookCreateDto);
+                if(createBook==null){
+                    return BadRequest();
+                }
+                return Ok(createBook);
+            }
+        }
     }
 }

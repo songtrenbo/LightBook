@@ -12,6 +12,15 @@ namespace lightbook_backend_API.Data.Mapping
     {
         public AutoMapperProfile(){
             CreateMap<Book, BookDto>().ReverseMap();
+            CreateMap<BookCreateDto, Book>()
+                // .ForMember(des=>des.Name,opt=>opt.MapFrom(src=>src.Name))
+                // .ForMember(des=>des.Price,opt=>opt.MapFrom(src=>src.Price))
+                // .ForMember(des=>des.Review,opt=>opt.MapFrom(src=>src.Review))
+                // .ForMember(des=>des.Picture,opt=>opt.MapFrom(src=>src.Picture))
+                // .ForMember(des=>des.Chapter,opt=>opt.MapFrom(src=>src.Chapter))
+                // .ForMember(des=>des.CategoryID,opt=>opt.MapFrom(src=>src.Chapter))
+                // .ForMember(des=>des.AuthorBooks,opt=>opt.Ignore())
+                .ReverseMap();
             CreateMap<Category,CategoryDto>().ReverseMap();
             CreateMap<Catalog,CatalogDto>().ReverseMap();
             CreateMap<Author,AuthorDto>().ReverseMap();

@@ -1,0 +1,116 @@
+<div class="d-flex justify-content-center w-100">
+  <div class="login-box w-75">
+    <h2>{{editMode?"Edit Book":"Create new Book"}}</h2>
+    <form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3 form-floating text-white">
+        <input
+          class="form-control bg-dark text-white"
+          placeholder="Leave a comment here"
+          id="name"
+          formControlName="name"
+        />
+        <label for="name">Name</label>
+      </div>
+      <div class="mb-3 form-floating text-white">
+        <input matInput
+          class="form-control bg-dark text-white"
+          placeholder="Leave a comment here"
+          id="price"
+          formControlName="price"
+        />
+        <label for="price">Price</label>
+      </div>
+      <div class="mb-3 form-floating text-white">
+        <input
+          class="form-control bg-dark text-white"
+          placeholder="Leave a comment here"
+          id="picture"
+          formControlName="picture"
+        />
+        <label for="picture">Picture</label>
+      </div>
+
+      <div class="mb-3 form-floating text-white">
+        <select formControlName="categoryId" class="form-select custom-select bg-dark text-white">
+            <option *ngFor="let category of categories" [value]="category.id">
+                {{ category.name }}
+            </option>
+          </select>
+        <label class="text-white" for="categoryId">Category</label>
+      </div>
+
+    
+      <div class="mb-3 form-floating text-white">
+        <textarea
+          class="form-control bg-dark text-white"
+          placeholder="Leave a comment here"
+          id="review"
+          formControlName="review"
+          style="height: 100px"
+        >
+        </textarea>
+        <label for="review">Review</label>
+      </div>
+      <div class="mb-3 form-floating text-white">
+        <textarea
+          class="form-control bg-dark text-white"
+          placeholder="Leave a comment here"
+          id="chapter"
+          formControlName="chapter"
+          style="height: 100px"
+        >
+        </textarea>
+        <label for="content">Content</label>
+      </div>
+
+      <div class="row mb-3" form>
+        <div class="col-md-12" formArrayName="authors">
+            <div class="row"
+                *ngFor="let authorCtrl of controls; let i = index"
+                [formGroupName]="i">
+                <div class="col-md-10">
+                    <div class="mb-3 form-floating text-white">
+                        <select formControlName="authorId" class="form-select custom-select bg-dark text-white">
+                            <option *ngFor="let author of authors" [value]="author.id">
+                                {{ author.name }}
+                            </option>
+                        </select>
+                        <label class="text-white" for="categoryId">Author</label>
+                    </div>
+                </div>
+                <div class="col-md-2 d-flex align-items-center justify-content-end">
+                <button type="button" class="btn btn-danger" (click)="onRemoveAuthor(i)">Remove</button>
+                </div>
+            </div>
+        </div>
+        
+      </div>
+
+      <hr>
+            <div class="row mb-3">
+                <div class="col-md-12">
+                    <button 
+                        type="button" 
+                        class="btn btn-outline-light"
+                        (click)="onAddAuthor()">Add Author</button>
+                </div>
+            </div>
+      
+      <div class="row">
+        <div class="col-md-5">
+          <button
+            type="submit"
+            [disabled]="!bookForm.valid"
+            class="btn btn-light w-100"
+          >
+          {{editMode?"Save":"Create"}}
+        </button>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-5">
+          <button type="submit" class="btn btn-dark w-100" (click)="onCancel()">Cancel</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

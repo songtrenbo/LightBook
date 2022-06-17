@@ -26,13 +26,20 @@ import { ListBookByCatalogComponent } from './home/list-book-by-catalog/list-boo
 import { CarouselBookByCatalogComponent } from './home/carousel-book-by-catalog/carousel-book-by-catalog.component';
 import { CatalogService } from './service/catalog.service';
 import { UserService } from './service/user.service';
+import { AuthorService } from 'src/app/service/author.service';
 import { ReadComponent } from './book-detail/read/read.component';
 import { AdminComponent } from './admin/admin.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
 import { BookManagementComponent } from './admin/book-management/book-management.component';
 import { AuthorManagementComponent } from './admin/author-management/author-management.component';
 import { CategoryManagementComponent } from './admin/category-management/category-management.component';
 import { CatalogManagementComponent } from './admin/catalog-management/catalog-management.component';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { BookCreateComponent } from './admin/book-management/book-create/book-create.component'
+import { CurrencyPipe } from '@angular/common';
+import { BookDetailAdminComponent } from './admin/book-management/book-detail/book-detail.component';
+import { CategoryCreateComponent } from './admin/category-management/category-create/category-create.component';
+import { CatalogCreateComponent } from './admin/catalog-management/catalog-create/catalog-create.component';
+import { AuthorCreateComponent } from './admin/author-management/author-create/author-create.component';
 
 @NgModule({
   declarations: [
@@ -57,11 +64,15 @@ import { CatalogManagementComponent } from './admin/catalog-management/catalog-m
     CarouselBookByCatalogComponent,
     ReadComponent,
     AdminComponent,
-    SidebarComponent,
     BookManagementComponent,
     AuthorManagementComponent,
     CategoryManagementComponent,
     CatalogManagementComponent,
+    BookCreateComponent,
+    BookDetailAdminComponent,
+    CategoryCreateComponent,
+    CatalogCreateComponent,
+    AuthorCreateComponent,
   ],
   imports: [
     BrowserModule,
@@ -69,8 +80,9 @@ import { CatalogManagementComponent } from './admin/catalog-management/catalog-m
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NgxPaginationModule,
   ],
-  providers: [BookService, CategoryService, CatalogService, UserService],
+  providers: [BookService, CategoryService, CatalogService, UserService, AuthorService, CurrencyPipe],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

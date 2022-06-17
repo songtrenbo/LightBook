@@ -6,7 +6,7 @@
                 </a>
             </div>
             <div class="col-md-5">
-                <div class="input-group">
+                <div *ngIf='role!="Admin"' class="input-group">
                     <input type="text" class="form-control" placeholder="Search your favorite books ..." aria-label="Search" aria-describedby="button-addon2">
                     <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="bi bi-search"></i></button>
                   </div>

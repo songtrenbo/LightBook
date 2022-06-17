@@ -1,1 +1,62 @@
-<h1 class="text-white">Catalogs management</h1>
+<h1 class="text-white">Catalog management</h1>
+<div class="container-fluid">
+  <div class="d-flex mb-5 intro-x">
+    <div class="d-flex align-items-center w-md me-5">
+    <!-- <ReactMultiSelectCheckboxes
+        options={CourseStateFilters}
+        hideSearch={true}
+        placeholderButtonLabel="State"
+        value={selectedType}
+        onChange={handleType}
+      />
+
+      <div class="border p-2">
+        <FunnelFill />
+      </div> -->
+    </div>
+
+    <div class="d-flex align-items-center w-ld ms-auto">
+      <form [formGroup]="searchForm">
+        <div class="input-group">
+          <input
+            class="form-control"
+            id="search"
+            formControlName="search"
+          />
+          <span class="border p-2 pointer btn btn-dark">
+            <i class="bi bi-search"></i>
+          </span>
+        </div>
+      </form>
+    </div>
+
+    <div class="d-flex align-items-center ms-3">
+      <button (click)="onNewCatalog()" class="btn btn-dark p-2">
+        Create new catalog
+      </button>
+    </div>
+  </div>
+</div>
+<div class="mx-auto w-auto">
+
+  <table class="table table-dark table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let catalog of catalogs| paginate: { itemsPerPage: 6, currentPage: p, totalItems: total}, let i = index">
+        <th scope="row">{{catalog.id}}</th>
+        <td>{{catalog.name}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <pagination-controls (pageChange)="pageChangeEvent($event)" class="page"></pagination-controls>
+</div>
+  
+    
+  
+  

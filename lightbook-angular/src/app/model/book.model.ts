@@ -1,3 +1,4 @@
+import { Category } from './category.model';
 import { AuthorBook } from "./authorBook.model";
 
 export class Book {
@@ -10,4 +11,5 @@ export class Book {
   chapter: string;
   categoryID: number;
   authorBooks: AuthorBook[];
+  category: Category;
 }

@@ -10,5 +10,9 @@ namespace lightbook_backend_API.Interfaces
         Task<PagedResponseModel<CatalogDto>> GetByPageAsync(
             CatalogQueryCriteria catalogQueryCriteria,
             CancellationToken cancellationToken);
+        Task<CatalogDto> PostCatalog(CatalogDto catalogDto);
+        Task<CatalogDto> PutCatalog(CatalogDto catalogDto);
+
+
     }
 }

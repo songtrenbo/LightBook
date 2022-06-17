@@ -53,6 +53,11 @@ namespace lightbook_backend_API.Services
             return await query.FirstOrDefaultAsync(filter);
         }
 
+        public async Task<List<T>> GetListByAsync( Expression<Func<T, bool>> filter = null)
+        {
+            return await _dbContext.Set<T>().Where(filter).ToListAsync();
+        }
+
         public async Task<T> GetById(int id)
         {
             return await _dbContext.Set<T>()

@@ -13,6 +13,7 @@ namespace lightbook_backend_API.Interfaces
         Task<T> GetById(int id);
 
         Task<T> GetByAsync(Expression<Func<T, bool>> filter = null, string includeProperties = "");
+        Task<List<T>> GetListByAsync(Expression<Func<T, bool>> filter = null);
 
         Task<IEnumerable<T>> GetAll();
 

@@ -1,1 +1,63 @@
-<h1 class="text-white">Authors management</h1>
+<h1 class="text-white">Author management</h1>
+<div class="container-fluid">
+  <div class="d-flex mb-5 intro-x">
+    <div class="d-flex align-items-center w-md me-5">
+    <!-- <ReactMultiSelectCheckboxes
+        options={CourseStateFilters}
+        hideSearch={true}
+        placeholderButtonLabel="State"
+        value={selectedType}
+        onChange={handleType}
+      />
+
+      <div class="border p-2">
+        <FunnelFill />
+      </div> -->
+    </div>
+
+    <div class="d-flex align-items-center w-ld ms-auto">
+      <form [formGroup]="searchForm">
+        <div class="input-group">
+          <input
+            class="form-control"
+            id="search"
+            formControlName="search"
+          />
+          <span class="border p-2 pointer btn btn-dark">
+            <i class="bi bi-search"></i>
+          </span>
+        </div>
+      </form>
+      
+    </div>
+
+    <div class="d-flex align-items-center ms-3">
+      <button (click)="onNewAuthor()" class="btn btn-dark p-2">
+        Create new author
+      </button>
+    </div>
+  </div>
+</div>
+<div class="mx-auto w-auto">
+
+  <table class="table table-dark table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let author of authors| paginate: { itemsPerPage: 6, currentPage: p, totalItems: total}, let i = index">
+        <th scope="row">{{author.id}}</th>
+        <td>{{author.name}}</td>
+        <td>
+          <a routerLink="/admin/author-create/{{author.id}}/edit" class="text-white"><i class="bi bi-pen"></i></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+    <pagination-controls (pageChange)="pageChangeEvent($event)" class="page"></pagination-controls>
+</div>

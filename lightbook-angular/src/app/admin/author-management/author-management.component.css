@@ -1,0 +1,10 @@
+*{
+    z-index: 3;
+}
+.page{
+    float:right;
+    color: #ffffff89;
+}
+.modal-backdrop{
+    position: relative!important;
+}

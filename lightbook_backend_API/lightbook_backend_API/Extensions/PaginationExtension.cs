@@ -37,7 +37,8 @@ namespace lightbook_backend_API.Extensions
                             .Take(paged.PageSize);
 
             paged.Items = await Task.FromResult(result.ToList());
-            paged.TotalItems = await query.CountAsync(cancellationToken);
+            // paged.TotalItems = await query.CountAsync(cancellationToken);
+            paged.TotalItems = await Task.FromResult(query.Count());
             paged.TotalPages = (int)Math.Ceiling(paged.TotalItems / (double)paged.PageSize);
 
 

@@ -43,7 +43,26 @@ namespace lightbook_backend_API.Services
                 Items = categoryDto
             };                      
         }
-        private IQueryable<Category> CategoryFilter(
+        public async Task<CategoryDto> PostCategory(CategoryDto categoryDto){
+            var category = _mapper.Map<Category>(categoryDto);
+            var result = await _categoryRepository.Add(category);
+            if(result!=null){
+                return _mapper.Map<CategoryDto>(result);
+            } else {
+                return null;
+            }
+        }
+        public async Task<CategoryDto> PutCategory(CategoryDto categoryDto){
+            var category = _mapper.Map<Category>(categoryDto);
+            var getCate = await _categoryRepository.GetById(category.ID);
+            getCate.Name = category.Name;
+            var result = await _categoryRepository.Update(getCate);
+            if(result!=null){
+                return _mapper.Map<CategoryDto>(result);
+            } else {
+                return null;
+            }
+        }        private IQueryable<Category> CategoryFilter(
             IQueryable<Category> categoryQuery,
             CategoryQueryCriteria categoryQueryCriteria)
         {

@@ -17,12 +17,19 @@ namespace lightbook_backend_API.Services
     {
         private readonly IBaseRepository<Book> _bookRepository;
         private readonly IBaseRepository<BookUser> _bookUserRepository;
+        private readonly IBaseRepository<CatalogBook> _catalogBookRepository;
+        private readonly IBaseRepository<AuthorBook> _authorBookRepository;
         private readonly IMapper _mapper;
-        public BookService(IBaseRepository<Book> bookRepository, IBaseRepository<BookUser> bookUserRepository,
-                            IMapper mapper)
+        public BookService(IBaseRepository<Book> bookRepository, 
+                        IBaseRepository<BookUser> bookUserRepository,
+                        IBaseRepository<CatalogBook> catalogBookRepository,
+                        IBaseRepository<AuthorBook> authorBookRepository,
+                        IMapper mapper)
         {
             _bookRepository = bookRepository;
             _bookUserRepository = bookUserRepository;
+            _authorBookRepository = authorBookRepository;
+            _catalogBookRepository = catalogBookRepository;
             _mapper = mapper;
         }
 
@@ -45,7 +52,6 @@ namespace lightbook_backend_API.Services
             }
             return check;
         }
-
         public async Task<List<BookDto>> GetAll()
         {
             var bookQuery = BookFilter(_bookRepository.Entities.AsQueryable(), new BookQueryCriteria());
@@ -68,12 +74,16 @@ namespace lightbook_backend_API.Services
 
         public async Task<PagedResponseModel<BookDto>> GetByPageAsync(BookQueryCriteria bookQueryCriteria, CancellationToken cancellationToken)
         {
-            var bookQuery = BookFilter(_bookRepository.Entities.AsQueryable(), bookQueryCriteria);
+            var bookQuery = BookFilter(_bookRepository.Entities
+                                            .Include(b=>b.Category)
+                                            .Include(b=>b.AuthorBooks)
+                                            .ThenInclude(at=>at.Author)
+                                            .AsQueryable(), 
+                                            bookQueryCriteria
+                                        );
 
             var books = await bookQuery
                             .AsNoTracking()
-                            .Include(b => b.Category)
-                            .Include(b => b.AuthorBooks).ThenInclude(at => at.Author)
                             .PaginateAsync(
                                 bookQueryCriteria,
                                 cancellationToken
@@ -88,6 +98,58 @@ namespace lightbook_backend_API.Services
                 TotalPages = books.TotalPages,
                 Items = bookDto
             };
+        }
+
+        public async Task<BookDto> CreateBook(BookCreateDto bookCreateDto){
+            var book = _mapper.Map<Book>(bookCreateDto);
+            var result = await _bookRepository.Add(book);
+            if(result!=null){
+                foreach(int authorId in bookCreateDto.Authors){
+                    await _authorBookRepository.Add(new AuthorBook(){
+                        AuthorID= authorId,
+                        BookID= result.ID
+                    });
+                }
+                await _catalogBookRepository.Add(new CatalogBook(){
+                    CatalogID= 3,
+                    BookID= result.ID
+                });
+                if(result.Price==0){
+                   await _catalogBookRepository.Add(new CatalogBook(){
+                    CatalogID= 4,
+                    BookID= result.ID
+                }); 
+                }
+                return _mapper.Map<BookDto>(result);
+            } else {
+                return null;
+            }
+        }
+        public async Task<BookDto> EditBook(BookCreateDto bookCreateDto){
+            var book = _mapper.Map<Book>(bookCreateDto);
+            var getBook = await _bookRepository.GetById(book.ID);
+            getBook.Name = book.Name;
+            getBook.Price = book.Price;
+            getBook.Picture = book.Picture;
+            getBook.Review = book.Review;
+            getBook.Chapter = book.Chapter;
+            getBook.CategoryID = book.CategoryID;
+            var result = await _bookRepository.Update(getBook);
+            if(result!=null){
+                var authorBookList = await _authorBookRepository.GetListByAsync(ab=>ab.BookID==result.ID);
+                foreach(var authorBook in authorBookList){
+                    await _authorBookRepository.Delete(authorBook);
+                }
+                foreach(int authorId in bookCreateDto.Authors){
+                    await _authorBookRepository.Add(new AuthorBook(){
+                        AuthorID= authorId,
+                        BookID= result.ID
+                    });
+                }
+                return _mapper.Map<BookDto>(result);
+            } else {
+                return null;
+            }
         }
         private IQueryable<Book> BookFilter(
             IQueryable<Book> bookQuery,
