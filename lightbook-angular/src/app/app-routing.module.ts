@@ -48,13 +48,9 @@ const appRoutes: Routes = [
       { path: 'author-create', component: AuthorCreateComponent },
       { path: 'author-create/:id/edit', component: AuthorCreateComponent},
       { path: 'category-management', component: CategoryManagementComponent },
-<<<<<<< HEAD
       { path: 'category-create', component: CategoryCreateComponent },
       { path: 'category-create/:id/edit', component: CategoryCreateComponent},
       { path: 'catalog-management', component: CatalogManagementComponent }
-=======
-      { path: 'catalog-management', component: CatalogManagementComponent },
->>>>>>> b2df40f17d7f531d11c82981dc1a80ecd9ec2be9
     ],
   },
 ];

@@ -82,7 +82,7 @@ class _BookItem2State extends State<BookItem2> {
                     children: [
                       Expanded(
                         child: Text(
-                          "Tác giả",
+                          "Tác giả: Nguyễn Nhật Ánh",
                           style: TextStyle(fontSize: 16),
                         ),
                       ),

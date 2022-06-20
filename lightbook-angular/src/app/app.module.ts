@@ -33,7 +33,6 @@ import { BookManagementComponent } from './admin/book-management/book-management
 import { AuthorManagementComponent } from './admin/author-management/author-management.component';
 import { CategoryManagementComponent } from './admin/category-management/category-management.component';
 import { CatalogManagementComponent } from './admin/catalog-management/catalog-management.component';
-<<<<<<< HEAD
 import { NgxPaginationModule } from 'ngx-pagination';
 import { BookCreateComponent } from './admin/book-management/book-create/book-create.component'
 import { CurrencyPipe } from '@angular/common';
@@ -41,10 +40,8 @@ import { BookDetailAdminComponent } from './admin/book-management/book-detail/bo
 import { CategoryCreateComponent } from './admin/category-management/category-create/category-create.component';
 import { CatalogCreateComponent } from './admin/catalog-management/catalog-create/catalog-create.component';
 import { AuthorCreateComponent } from './admin/author-management/author-create/author-create.component';
-=======
 import { OrderComponent } from './order/order.component';
 import { DetailOrderComponent } from './order/detail-order/detail-order.component';
->>>>>>> b2df40f17d7f531d11c82981dc1a80ecd9ec2be9
 
 @NgModule({
   declarations: [
@@ -73,16 +70,13 @@ import { DetailOrderComponent } from './order/detail-order/detail-order.componen
     AuthorManagementComponent,
     CategoryManagementComponent,
     CatalogManagementComponent,
-<<<<<<< HEAD
     BookCreateComponent,
     BookDetailAdminComponent,
     CategoryCreateComponent,
     CatalogCreateComponent,
     AuthorCreateComponent,
-=======
     OrderComponent,
     DetailOrderComponent,
->>>>>>> b2df40f17d7f531d11c82981dc1a80ecd9ec2be9
   ],
   imports: [
     BrowserModule,

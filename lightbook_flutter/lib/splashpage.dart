@@ -9,7 +9,7 @@ class SplashPage extends StatelessWidget {
   Widget build(BuildContext context) {
     new Future.delayed(new Duration(seconds: 4), () {
       Navigator.pushNamedAndRemoveUntil(
-          context, HomePage.routeName, (Route<dynamic> route) => false);
+          context, SignInPage.routeName, (Route<dynamic> route) => false);
     });
     return Scaffold(
       body: SafeArea(

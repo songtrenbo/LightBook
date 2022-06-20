@@ -3,11 +3,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:lightbook_flutter/homepage/homepage.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:lightbook_flutter/models/utilities.dart';
 import 'package:lightbook_flutter/signup/components/signupform.dart';
 import 'package:lightbook_flutter/signup/signuppage.dart';
 import 'package:lightbook_flutter/widgets/text_field_input.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
-import '../../resources/auth_methods.dart';
 import '../../utils/utils.dart';
 
 class SignInForm extends StatefulWidget {
@@ -17,40 +18,43 @@ class SignInForm extends StatefulWidget {
 
 class _SignInFormState extends State<SignInForm> {
   final _formKey = GlobalKey<FormState>();
+  final storage = new FlutterSecureStorage();
   bool _value = false;
 
   var prefs;
-  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   bool _isLoading = false;
 
   @override
   void dispose() {
     super.dispose();
-    _emailController.dispose();
+    _usernameController.dispose();
     _passwordController.dispose();
   }
 
   void loginUser() async {
-    setState(() {
-      _isLoading = true;
-    });
-    String res = await AuthMethods().loginUser(
-        email: _emailController.text, password: _passwordController.text);
-    if (res == 'success') {
+    var username = _usernameController.text;
+    var password = _passwordController.text;
+    // setState(() {
+    //   _isLoading = true;
+    // });
+    String res = await Utilities().logIn(username, password);
+    if (res != "null") {
       setState(() {
         _isLoading = false;
       });
+      storage.write(key: "jwt", value: res);
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(builder: (context) {
           return HomePage();
         }),
       );
     } else {
-      setState(() {
-        _isLoading = false;
-      });
-      showSnackBar(context, res);
+      // setState(() {
+      //   _isLoading = false;
+      // });
+      showSnackBar(context, "wrong username or password");
     }
   }
 
@@ -80,10 +84,10 @@ class _SignInFormState extends State<SignInForm> {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           TextFieldInput(
-                              textEditingController: _emailController,
-                              hintText: 'Mời nhập Email',
+                              textEditingController: _usernameController,
+                              hintText: 'Mời nhập Username',
                               textInputType: TextInputType.text,
-                              icon: Icons.email),
+                              icon: Icons.account_circle_sharp),
                           SizedBox(
                             height: 25,
                           ),

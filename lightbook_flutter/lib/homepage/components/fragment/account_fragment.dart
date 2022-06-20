@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:lightbook_flutter/favorite/favorite_page.dart';
 import 'package:lightbook_flutter/models/books.dart';
 import 'package:lightbook_flutter/models/users.dart';
+import 'package:lightbook_flutter/signin/signinpage.dart';
 import 'package:lightbook_flutter/widgets/book_item2.dart';
 import 'package:lightbook_flutter/widgets/widgets.dart';
 
 class AccountFragment extends StatelessWidget {
+  final storage = new FlutterSecureStorage();
   @override
   Widget build(BuildContext context) {
     Users user = Users.init()[1];
@@ -54,7 +57,13 @@ class AccountFragment extends StatelessWidget {
             nameButton: "Đăng xuất",
             icon: Icons.logout,
             colorIcon: Colors.black,
-            onClick: () {},
+            onClick: () {
+              storage.delete(key: "jwt");
+              Navigator.pushNamed(
+                context,
+                SignInPage.routeName,
+              );
+            },
           ),
           BookItem2(
             book: Books.init()[5],

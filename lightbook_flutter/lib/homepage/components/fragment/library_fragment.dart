@@ -7,8 +7,12 @@ import '../../../models/utilities.dart';
 
 class LibraryFragment extends StatelessWidget {
   Books book = Utilities.getBookById(2);
+  late Future<List<Books>> futureBook;
+
+
   @override
   Widget build(BuildContext context) {
+    futureBook = Utilities().getLibrary();
     return Expanded(
       child: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -21,10 +25,32 @@ class LibraryFragment extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            BookItem2(book: Books.init()[5],isShowRate: true,),
-            BookItem2(book: Books.init()[15],isShowRate: true,),
-            BookItem2(book: Books.init()[16],isShowRate: true,),
-            BookItem2(book: Books.init()[24],isShowRate: true,),
+            // BookItem2(book: Books.init()[5],isShowRate: true,),
+            // BookItem2(book: Books.init()[15],isShowRate: true,),
+            // BookItem2(book: Books.init()[16],isShowRate: true,),
+            // BookItem2(book: Books.init()[24],isShowRate: true,),
+                FutureBuilder<List<Books>>(
+          future: futureBook,
+          builder: (context, snapshot) {
+            if (snapshot.hasData) {
+              return Expanded(
+                child: Container(
+                  child: ListView.builder(
+                    itemCount: snapshot.data?.length,
+                    physics: NeverScrollableScrollPhysics(),
+                    shrinkWrap: true,
+                    itemBuilder: (_, index) => BookItem2(
+                      book: snapshot.data![index],
+                      isShowRate: true,
+                    ),
+                  ),
+                ),
+              );
+            } else {
+              return Center(child: CircularProgressIndicator());
+            }
+          },
+        ),
           ],
         ),
       ),

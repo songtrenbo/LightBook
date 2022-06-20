@@ -4,19 +4,20 @@ class Books {
   String name;
   double price;
   String review;
-  int pages;
   String picture;
   String chapter;
   int categoryId;
+  String author;
   Books(
       {required this.id,
       required this.name,
       required this.price,
       required this.review,
-      required this.pages,
       required this.picture,
       required this.chapter,
-      required this.categoryId});
+      required this.categoryId,
+      required this.author}
+      );
       
   List<Books> postFromJson(String str) =>
       List<Books>.from(json.decode(str).map((x) => Books.fromMap(x)));
@@ -26,10 +27,10 @@ class Books {
         name: json['name'],
         price: json['price'] * 1.0,
         review: json['review'],
-        pages: int.parse(json['pages'] ?? "0"),
         picture: json['picture'],
         chapter: json['chapter'],
         categoryId: json['categoryID'],
+        author: ""
       );
   static List<Books> init() {
     List<Books> data = [
@@ -39,11 +40,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+     
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 1,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 2,
@@ -51,11 +53,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+    
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 1,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 3,
@@ -63,11 +66,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+        
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 1,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 4,
@@ -75,11 +79,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+        
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 1,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 5,
@@ -87,11 +92,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+        
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 1,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 6,
@@ -99,11 +105,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+        
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 1,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 7,
@@ -111,11 +118,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+        
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 1,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 8,
@@ -123,11 +131,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+        
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 1,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 9,
@@ -135,11 +144,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+        
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 1,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 10,
@@ -147,11 +157,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+        
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 1,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 11,
@@ -159,11 +170,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+        
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 2,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 12,
@@ -171,11 +183,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+        
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 2,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 13,
@@ -183,11 +196,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+        
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 2,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 14,
@@ -195,11 +209,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+        
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 2,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 15,
@@ -207,11 +222,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+        
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 2,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 16,
@@ -219,11 +235,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+        
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 2,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 17,
@@ -231,11 +248,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+        
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 2,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 18,
@@ -243,11 +261,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+        
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 2,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 19,
@@ -255,11 +274,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+        
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 2,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 20,
@@ -267,11 +287,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+        
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 2,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 21,
@@ -279,11 +300,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+        
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 3,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 22,
@@ -291,11 +313,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+        
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 3,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 23,
@@ -303,11 +326,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+        
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 3,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 24,
@@ -315,11 +339,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+        
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 3,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 25,
@@ -327,11 +352,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+        
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 3,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 26,
@@ -339,11 +365,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+        
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 3,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 27,
@@ -351,11 +378,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+        
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 3,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 28,
@@ -363,11 +391,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+        
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 3,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 29,
@@ -375,11 +404,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+        
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 3,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 30,
@@ -387,11 +417,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+        
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 3,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 31,
@@ -399,11 +430,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+        
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 4,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 32,
@@ -411,11 +443,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+        
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 4,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 33,
@@ -423,11 +456,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+        
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 4,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 34,
@@ -435,11 +469,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+        
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 4,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 35,
@@ -447,11 +482,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+        
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 4,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 36,
@@ -459,11 +495,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+        
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 4,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 37,
@@ -471,11 +508,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+        
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 4,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 38,
@@ -483,11 +521,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+        
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 4,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 39,
@@ -495,11 +534,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+        
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 4,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 40,
@@ -507,11 +547,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+        
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 4,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 41,
@@ -519,11 +560,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+        
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 5,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 42,
@@ -531,11 +573,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+        
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 5,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 43,
@@ -543,11 +586,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+        
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 5,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 44,
@@ -555,11 +599,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+        
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 5,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 45,
@@ -567,11 +612,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+        
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 5,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 46,
@@ -579,11 +625,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+        
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 5,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 47,
@@ -591,11 +638,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+        
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 5,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 48,
@@ -603,11 +651,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+        
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 5,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 49,
@@ -615,11 +664,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+        
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 5,
+         author: "Nguyễn Nhật Ánh"
       ),
       Books(
         id: 50,
@@ -627,11 +677,12 @@ class Books {
         price: 8.0,
         review:
             "Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới thiệu tại Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi suốt câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi, mắt biếc… năm xưa nay đâu (theo lời một bài hát).\nCảnh báo: Truyện có thể khiến bạn buồn cả tuần, chú ý chuẩn bị tinh thần trước khi đọc.",
-        pages: 50,
+        
         picture:
             "https://gacsach.club/sites/default/files/styles/book310/public/mat_biec.gif?itok=9gfKhHHl",
         chapter: "",
         categoryId: 5,
+         author: "Nguyễn Nhật Ánh"
       ),
     ];
     return data;
