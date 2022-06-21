@@ -6,6 +6,7 @@ import 'package:lightbook_flutter/constant/color.dart';
 import 'package:lightbook_flutter/models/books.dart';
 import 'package:lightbook_flutter/models/carts.dart';
 import 'package:lightbook_flutter/widgets/book_item2.dart';
+import 'package:lightbook_flutter/widgets/widgets.dart';
 
 import '../../models/utilities.dart';
 
@@ -20,13 +21,13 @@ class Body extends StatefulWidget {
 
 class _BodyState extends State<Body> {
   Color _colorIcon = Colors.grey;
-  bool isFavorite = false;
-  void favorite() {
-    setState(() {
-      isFavorite = !isFavorite;
-      _colorIcon = isFavorite ? Colors.red : Colors.grey;
-    });
-  }
+  late bool isFree= widget.book.price == 0 ? true : false;
+  // void favorite() {
+  //   setState(() {
+  //     isFavorite = !isFavorite;
+  //     _colorIcon = isFavorite ? Colors.red : Colors.grey;
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -57,26 +58,26 @@ class _BodyState extends State<Body> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          GestureDetector(
-                            onTap: favorite,
-                            child: Padding(
-                              padding: const EdgeInsets.all(5.0),
-                              child: ClipRRect(
-                                borderRadius:
-                                    BorderRadius.circular(30.0), //or 15.0
-                                child: Container(
-                                  height: 55.0,
-                                  width: 55.0,
-                                  color: Colors.white,
-                                  child: Icon(
-                                    Icons.favorite,
-                                    color: _colorIcon,
-                                    size: 45.0,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
+                          // GestureDetector(
+                          //   onTap: favorite,
+                          //   child: Padding(
+                          //     padding: const EdgeInsets.all(5.0),
+                          //     child: ClipRRect(
+                          //       borderRadius:
+                          //           BorderRadius.circular(30.0), //or 15.0
+                          //       child: Container(
+                          //         height: 55.0,
+                          //         width: 55.0,
+                          //         color: Colors.white,
+                          //         child: Icon(
+                          //           Icons.favorite,
+                          //           color: _colorIcon,
+                          //           size: 45.0,
+                          //         ),
+                          //       ),
+                          //     ),
+                          //   ),
+                          // ),
                           Padding(
                             padding: EdgeInsets.only(left: 16, right: 8),
                             child: Container(
@@ -94,40 +95,42 @@ class _BodyState extends State<Body> {
                               ),
                             ),
                           ),
-                          GestureDetector(
-                            onTap: () {
-                              Carts.cart.add(widget.book);
-                            },
-                            child: Padding(
-                              padding: const EdgeInsets.all(5.0),
-                              child: ClipRRect(
-                                borderRadius:
-                                    BorderRadius.circular(30.0), //or 15.0
-                                child: Container(
-                                  height: 55.0,
-                                  width: 55.0,
-                                  color: Colors.white,
-                                  child: Icon(
-                                    Icons.shopping_bag_outlined,
-                                    color: Colors.grey,
-                                    size: 45.0,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
+                          // GestureDetector(
+                          //   onTap: () {
+                          //     Carts.AddBookToCart(widget.book);
+                          //     // toastNotify("Thêm vào giỏ hàng thành công");
+                          //   },
+                          //   child: Padding(
+                          //     padding: const EdgeInsets.all(5.0),
+                          //     child: ClipRRect(
+                          //       borderRadius:
+                          //           BorderRadius.circular(30.0), //or 15.0
+                          //       child: Container(
+                          //         height: 55.0,
+                          //         width: 55.0,
+                          //         color: Colors.white,
+                          //         child: Icon(
+                          //           Icons.shopping_bag_outlined,
+                          //           color: Colors.grey,
+                          //           size: 45.0,
+                          //         ),
+                          //       ),
+                          //     ),
+                          //   ),
+                          // ),
+                          Text(""),
                         ],
                       ),
                       SizedBox(
                         height: 20,
                       ),
                       ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {if (!isFree) {Carts.AddBookToCart(widget.book);}},
                           style: ElevatedButton.styleFrom(
                             primary: ColorConstants.buttonColor,
                           ),
                           child: Text(
-                            "Review",
+                            isFree ? "Thêm vào thư viện" : "Thêm vào giỏ hàng",
                             style: TextStyle(
                               color: Colors.white,
                             ),

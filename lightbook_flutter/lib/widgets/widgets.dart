@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:lightbook_flutter/constant/color.dart';
 
 Widget buttonBorderRound({
@@ -92,4 +93,16 @@ Widget textFieldInput(
     keyboardType: keyboardType,
     obscureText: isPass,
   );
+}
+
+Future<bool?> toastNotify(String msg,
+    {ToastGravity toastGravity = ToastGravity.BOTTOM}) {
+  return Fluttertoast.showToast(
+      msg: msg,
+      toastLength: Toast.LENGTH_SHORT,
+      gravity: toastGravity,
+      timeInSecForIosWeb: 1,
+      // backgroundColor: Colors.red,
+      textColor: Colors.white,
+      fontSize: 16.0);
 }

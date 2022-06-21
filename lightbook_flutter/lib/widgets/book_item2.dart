@@ -35,6 +35,11 @@ class _BookItem2State extends State<BookItem2> {
       _colorIcon = isFavorite ? Colors.red : Colors.grey;
     });
   }
+  
+  @override
+  void dispose() {
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -120,6 +125,7 @@ class _BookItem2State extends State<BookItem2> {
               setState(() {
                 Carts.cart.removeWhere((item) => item.id == widget.book.id);
               });
+              dispose();
             },
             style: ElevatedButton.styleFrom(
               primary: ColorConstants.buttonColor,
