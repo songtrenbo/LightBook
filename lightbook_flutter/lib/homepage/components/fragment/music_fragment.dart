@@ -1,4 +1,6 @@
 
+import 'dart:io';
+
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
@@ -43,9 +45,11 @@ class _MusicFragmentState extends State<MusicFragment> {
 
   Future setAudio() async {
     audioPlayer.setReleaseMode(ReleaseMode.LOOP);
-    String url =
-        'http://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Kangaroo_MusiQue_-_The_Neverwritten_Role_Playing_Game.mp3';
-    await audioPlayer.setUrl(url);
+    // final url = new File('assets/sounds/music.mp3');
+    final player = AudioCache(prefix: 'assets/sounds/');
+    final url = await player.load('music.mp3');
+    
+    await audioPlayer.setUrl(url.path, isLocal: true);
   }
 
   @override
